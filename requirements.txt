@@ -1,0 +1,23 @@
+# NeuroTrace Requirements
+# Neural Network Interpretability Framework
+
+# Core Dependencies
+torch>=2.0.0
+transformers>=4.30.0
+numpy>=1.24.0
+scipy>=1.10.0
+
+# Visualization
+plotly>=5.14.0
+kaleido>=0.2.1
+
+# Data Processing
+pandas>=2.0.0
+tqdm>=4.65.0
+
+# Optional: SAELens (for baseline comparison)
+# sae-lens>=0.1.0
+
+# Development
+pytest>=7.3.0
+black>=23.3.0

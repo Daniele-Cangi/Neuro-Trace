@@ -1,0 +1,37 @@
+{
+  "config": {
+    "model_name_or_path": "gpt2",
+    "device": "cuda",
+    "precision": "fp16",
+    "max_seq_len": 30,
+    "log_level": "info",
+    "seed": 42,
+    "compression": {
+      "use_random_projection": true,
+      "projection_dim": 256,
+      "quantization_bits": 16,
+      "use_topk_sparsity": false,
+      "topk_per_vector": 32
+    },
+    "sae": {
+      "sparsity_lambda": 0.001,
+      "sae_topk_per_token": 32,
+      "sae_dict_mult": 4
+    },
+    "vector_db": {
+      "dim": 256,
+      "metric": "ip",
+      "nlist": 100,
+      "nprobe": 10,
+      "use_ivfpq": true,
+      "sqlite_path": "neurotrace_state_meta.sqlite3"
+    }
+  },
+  "num_examples": 1000,
+  "batch_size": 50,
+  "batches": 20,
+  "total_forward_time_sec": 2.919262647628784,
+  "avg_activations_per_batch": 12.0,
+  "avg_compressed_bytes_per_batch": 9216000.0,
+  "wall_time_sec": 3.542046546936035
+}

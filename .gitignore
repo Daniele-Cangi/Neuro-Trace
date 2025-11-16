@@ -1,0 +1,73 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb
+
+# Data & Models (large files)
+runs/*/activations/*.pt
+runs/*/checkpoints/*.pt
+checkpoints/**/*.pt
+*.safetensors
+*.bin
+
+# Keep metadata
+!runs/*/meta.json
+!runs/*/ioi_dataset.json
+!checkpoints/**/config.json
+
+# Results
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.html
+
+# Keep result JSONs
+!results/**/*.json
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+*.tmp
+
+# Temporary
+temp/
+tmp/

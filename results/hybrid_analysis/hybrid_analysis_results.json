@@ -1,0 +1,598 @@
+{
+  "timestamp": "2025-11-16T19:13:33.816478",
+  "enhanced_sae": {
+    "checkpoint": "checkpoints/layer0_sae/final.pt",
+    "num_features": 3072,
+    "num_examples": 1000,
+    "dead_features": 2649,
+    "dead_fraction": 0.8623046875,
+    "top_features": {
+      "2586": {
+        "activation_freq": 0.9666666984558105,
+        "mean_activation": 7.6542863845825195,
+        "max_activation": 9.95483684539795,
+        "top_examples": [
+          {
+            "text": "Patricia, Timothy, and Bobby were at the garden. Patricia said something to Bobby, then Patricia gave a pen to",
+            "activation": 9.95483684539795
+          },
+          {
+            "text": "Noah, Thomas, and others went to the mall. Noah gave a pen to",
+            "activation": 9.907532691955566
+          },
+          {
+            "text": "When visiting the beach, Douglas and Julie found a phone. Douglas gave it to",
+            "activation": 9.752842903137207
+          },
+          {
+            "text": "Gloria, Harold, and others went to the cinema. Gloria gave a ticket to",
+            "activation": 9.520039558410645
+          },
+          {
+            "text": "Elizabeth, Kathy, and Kimberly were at the restaurant. Elizabeth said something to Kimberly, then Elizabeth gave a pen to",
+            "activation": 9.515961647033691
+          }
+        ]
+      },
+      "2081": {
+        "activation_freq": 0.9333333969116211,
+        "mean_activation": 7.996523857116699,
+        "max_activation": 13.297194480895996,
+        "top_examples": [
+          {
+            "text": "Noah, Thomas, and others went to the mall. Noah gave a pen to",
+            "activation": 13.297194480895996
+          },
+          {
+            "text": "When visiting the beach, Douglas and Julie found a phone. Douglas gave it to",
+            "activation": 13.128270149230957
+          },
+          {
+            "text": "Elizabeth, Kathy, and Kimberly were at the restaurant. Elizabeth said something to Kimberly, then Elizabeth gave a pen to",
+            "activation": 12.877599716186523
+          },
+          {
+            "text": "At the market, Keith met Annie. Later, Keith brought a ticket to",
+            "activation": 12.616120338439941
+          },
+          {
+            "text": "Bobby and Peter decided to go to the airport. On the way, Bobby bought a drink. When they arrived, Bobby gave it to",
+            "activation": 12.336674690246582
+          }
+        ]
+      },
+      "1123": {
+        "activation_freq": 0.9000000357627869,
+        "mean_activation": 8.653212547302246,
+        "max_activation": 19.959688186645508,
+        "top_examples": [
+          {
+            "text": "When Judy and Jeffrey went to the market, Judy gave a key to",
+            "activation": 19.959688186645508
+          },
+          {
+            "text": "Noah, Thomas, and others went to the mall. Noah gave a pen to",
+            "activation": 13.360827445983887
+          },
+          {
+            "text": "When visiting the beach, Douglas and Julie found a phone. Douglas gave it to",
+            "activation": 13.10995864868164
+          },
+          {
+            "text": "Elizabeth, Kathy, and Kimberly were at the restaurant. Elizabeth said something to Kimberly, then Elizabeth gave a pen to",
+            "activation": 12.794731140136719
+          },
+          {
+            "text": "At the market, Keith met Annie. Later, Keith brought a ticket to",
+            "activation": 12.491828918457031
+          }
+        ]
+      },
+      "2264": {
+        "activation_freq": 0.9000000357627869,
+        "mean_activation": 7.526001453399658,
+        "max_activation": 11.499025344848633,
+        "top_examples": [
+          {
+            "text": "Noah, Thomas, and others went to the mall. Noah gave a pen to",
+            "activation": 11.499025344848633
+          },
+          {
+            "text": "When visiting the beach, Douglas and Julie found a phone. Douglas gave it to",
+            "activation": 11.425615310668945
+          },
+          {
+            "text": "Elizabeth, Kathy, and Kimberly were at the restaurant. Elizabeth said something to Kimberly, then Elizabeth gave a pen to",
+            "activation": 11.283590316772461
+          },
+          {
+            "text": "At the market, Keith met Annie. Later, Keith brought a ticket to",
+            "activation": 11.134639739990234
+          },
+          {
+            "text": "Bobby and Peter decided to go to the airport. On the way, Bobby bought a drink. When they arrived, Bobby gave it to",
+            "activation": 10.946993827819824
+          }
+        ]
+      },
+      "65": {
+        "activation_freq": 0.9000000357627869,
+        "mean_activation": 7.734752178192139,
+        "max_activation": 12.200321197509766,
+        "top_examples": [
+          {
+            "text": "Noah, Thomas, and others went to the mall. Noah gave a pen to",
+            "activation": 12.200321197509766
+          },
+          {
+            "text": "When visiting the beach, Douglas and Julie found a phone. Douglas gave it to",
+            "activation": 12.130270957946777
+          },
+          {
+            "text": "Elizabeth, Kathy, and Kimberly were at the restaurant. Elizabeth said something to Kimberly, then Elizabeth gave a pen to",
+            "activation": 11.959760665893555
+          },
+          {
+            "text": "At the market, Keith met Annie. Later, Keith brought a ticket to",
+            "activation": 11.81298542022705
+          },
+          {
+            "text": "Bobby and Peter decided to go to the airport. On the way, Bobby bought a drink. When they arrived, Bobby gave it to",
+            "activation": 11.61363410949707
+          }
+        ]
+      },
+      "2655": {
+        "activation_freq": 0.8666667342185974,
+        "mean_activation": 7.852097988128662,
+        "max_activation": 12.742728233337402,
+        "top_examples": [
+          {
+            "text": "Noah, Thomas, and others went to the mall. Noah gave a pen to",
+            "activation": 12.742728233337402
+          },
+          {
+            "text": "When visiting the beach, Douglas and Julie found a phone. Douglas gave it to",
+            "activation": 12.644889831542969
+          },
+          {
+            "text": "Elizabeth, Kathy, and Kimberly were at the restaurant. Elizabeth said something to Kimberly, then Elizabeth gave a pen to",
+            "activation": 12.504061698913574
+          },
+          {
+            "text": "At the market, Keith met Annie. Later, Keith brought a ticket to",
+            "activation": 12.352179527282715
+          },
+          {
+            "text": "Bobby and Peter decided to go to the airport. On the way, Bobby bought a drink. When they arrived, Bobby gave it to",
+            "activation": 12.183855056762695
+          }
+        ]
+      },
+      "788": {
+        "activation_freq": 0.8666667342185974,
+        "mean_activation": 4.745989799499512,
+        "max_activation": 7.354236125946045,
+        "top_examples": [
+          {
+            "text": "Noah, Thomas, and others went to the mall. Noah gave a pen to",
+            "activation": 7.354236125946045
+          },
+          {
+            "text": "When visiting the beach, Douglas and Julie found a phone. Douglas gave it to",
+            "activation": 7.275234222412109
+          },
+          {
+            "text": "Elizabeth, Kathy, and Kimberly were at the restaurant. Elizabeth said something to Kimberly, then Elizabeth gave a pen to",
+            "activation": 7.1779375076293945
+          },
+          {
+            "text": "At the market, Keith met Annie. Later, Keith brought a ticket to",
+            "activation": 7.067699432373047
+          },
+          {
+            "text": "Bobby and Peter decided to go to the airport. On the way, Bobby bought a drink. When they arrived, Bobby gave it to",
+            "activation": 6.951669692993164
+          }
+        ]
+      },
+      "1981": {
+        "activation_freq": 0.8666667342185974,
+        "mean_activation": 8.163447380065918,
+        "max_activation": 13.501836776733398,
+        "top_examples": [
+          {
+            "text": "Noah, Thomas, and others went to the mall. Noah gave a pen to",
+            "activation": 13.501836776733398
+          },
+          {
+            "text": "When visiting the beach, Douglas and Julie found a phone. Douglas gave it to",
+            "activation": 13.449560165405273
+          },
+          {
+            "text": "Elizabeth, Kathy, and Kimberly were at the restaurant. Elizabeth said something to Kimberly, then Elizabeth gave a pen to",
+            "activation": 13.305959701538086
+          },
+          {
+            "text": "At the market, Keith met Annie. Later, Keith brought a ticket to",
+            "activation": 13.185262680053711
+          },
+          {
+            "text": "Bobby and Peter decided to go to the airport. On the way, Bobby bought a drink. When they arrived, Bobby gave it to",
+            "activation": 13.029563903808594
+          }
+        ]
+      },
+      "2459": {
+        "activation_freq": 0.8333333730697632,
+        "mean_activation": 6.601343154907227,
+        "max_activation": 11.858346939086914,
+        "top_examples": [
+          {
+            "text": "Noah, Thomas, and others went to the mall. Noah gave a pen to",
+            "activation": 11.858346939086914
+          },
+          {
+            "text": "When visiting the beach, Douglas and Julie found a phone. Douglas gave it to",
+            "activation": 11.720078468322754
+          },
+          {
+            "text": "Elizabeth, Kathy, and Kimberly were at the restaurant. Elizabeth said something to Kimberly, then Elizabeth gave a pen to",
+            "activation": 11.538843154907227
+          },
+          {
+            "text": "At the market, Keith met Annie. Later, Keith brought a ticket to",
+            "activation": 11.352261543273926
+          },
+          {
+            "text": "Bobby and Peter decided to go to the airport. On the way, Bobby bought a drink. When they arrived, Bobby gave it to",
+            "activation": 11.146974563598633
+          }
+        ]
+      },
+      "1836": {
+        "activation_freq": 0.8333333730697632,
+        "mean_activation": 1.6890100240707397,
+        "max_activation": 4.695936679840088,
+        "top_examples": [
+          {
+            "text": "When Ronald and Jennifer went to the hospital, Ronald gave a wallet to",
+            "activation": 4.695936679840088
+          },
+          {
+            "text": "At the cinema, Carolyn and Phyllis met. Carolyn passed the card to",
+            "activation": 3.761338710784912
+          },
+          {
+            "text": "Frances and Lawrence decided to go to the garden. On the way, Frances bought a phone. When they arrived, Frances gave it to",
+            "activation": 2.2961878776550293
+          },
+          {
+            "text": "Bobby and Peter decided to go to the airport. On the way, Bobby bought a drink. When they arrived, Bobby gave it to",
+            "activation": 2.003279209136963
+          },
+          {
+            "text": "Catherine and Raymond decided to go to the cafe. On the way, Catherine bought a phone. When they arrived, Catherine gave it to",
+            "activation": 2.0026721954345703
+          }
+        ]
+      },
+      "2476": {
+        "activation_freq": 0.8000000715255737,
+        "mean_activation": 6.0492963790893555,
+        "max_activation": 10.808687210083008,
+        "top_examples": [
+          {
+            "text": "Noah, Thomas, and others went to the mall. Noah gave a pen to",
+            "activation": 10.808687210083008
+          },
+          {
+            "text": "When visiting the beach, Douglas and Julie found a phone. Douglas gave it to",
+            "activation": 10.657575607299805
+          },
+          {
+            "text": "Elizabeth, Kathy, and Kimberly were at the restaurant. Elizabeth said something to Kimberly, then Elizabeth gave a pen to",
+            "activation": 10.426414489746094
+          },
+          {
+            "text": "At the market, Keith met Annie. Later, Keith brought a ticket to",
+            "activation": 10.17293643951416
+          },
+          {
+            "text": "Bobby and Peter decided to go to the airport. On the way, Bobby bought a drink. When they arrived, Bobby gave it to",
+            "activation": 9.914968490600586
+          }
+        ]
+      },
+      "2792": {
+        "activation_freq": 0.8000000715255737,
+        "mean_activation": 4.8688764572143555,
+        "max_activation": 8.396568298339844,
+        "top_examples": [
+          {
+            "text": "Noah, Thomas, and others went to the mall. Noah gave a pen to",
+            "activation": 8.396568298339844
+          },
+          {
+            "text": "When visiting the beach, Douglas and Julie found a phone. Douglas gave it to",
+            "activation": 8.300774574279785
+          },
+          {
+            "text": "Elizabeth, Kathy, and Kimberly were at the restaurant. Elizabeth said something to Kimberly, then Elizabeth gave a pen to",
+            "activation": 8.194150924682617
+          },
+          {
+            "text": "At the market, Keith met Annie. Later, Keith brought a ticket to",
+            "activation": 8.103228569030762
+          },
+          {
+            "text": "Bobby and Peter decided to go to the airport. On the way, Bobby bought a drink. When they arrived, Bobby gave it to",
+            "activation": 7.963362693786621
+          }
+        ]
+      },
+      "1630": {
+        "activation_freq": 0.8000000715255737,
+        "mean_activation": 5.588454246520996,
+        "max_activation": 10.003518104553223,
+        "top_examples": [
+          {
+            "text": "Noah, Thomas, and others went to the mall. Noah gave a pen to",
+            "activation": 10.003518104553223
+          },
+          {
+            "text": "When visiting the beach, Douglas and Julie found a phone. Douglas gave it to",
+            "activation": 9.975066184997559
+          },
+          {
+            "text": "Elizabeth, Kathy, and Kimberly were at the restaurant. Elizabeth said something to Kimberly, then Elizabeth gave a pen to",
+            "activation": 9.869301795959473
+          },
+          {
+            "text": "At the market, Keith met Annie. Later, Keith brought a ticket to",
+            "activation": 9.772469520568848
+          },
+          {
+            "text": "Bobby and Peter decided to go to the airport. On the way, Bobby bought a drink. When they arrived, Bobby gave it to",
+            "activation": 9.64919376373291
+          }
+        ]
+      },
+      "606": {
+        "activation_freq": 0.8000000715255737,
+        "mean_activation": 5.9699482917785645,
+        "max_activation": 10.359378814697266,
+        "top_examples": [
+          {
+            "text": "Noah, Thomas, and others went to the mall. Noah gave a pen to",
+            "activation": 10.359378814697266
+          },
+          {
+            "text": "When visiting the beach, Douglas and Julie found a phone. Douglas gave it to",
+            "activation": 10.212783813476562
+          },
+          {
+            "text": "Elizabeth, Kathy, and Kimberly were at the restaurant. Elizabeth said something to Kimberly, then Elizabeth gave a pen to",
+            "activation": 10.022027969360352
+          },
+          {
+            "text": "At the market, Keith met Annie. Later, Keith brought a ticket to",
+            "activation": 9.83837604522705
+          },
+          {
+            "text": "Bobby and Peter decided to go to the airport. On the way, Bobby bought a drink. When they arrived, Bobby gave it to",
+            "activation": 9.640668869018555
+          }
+        ]
+      },
+      "2509": {
+        "activation_freq": 0.8000000715255737,
+        "mean_activation": 4.507924556732178,
+        "max_activation": 7.255988121032715,
+        "top_examples": [
+          {
+            "text": "Noah, Thomas, and others went to the mall. Noah gave a pen to",
+            "activation": 7.255988121032715
+          },
+          {
+            "text": "When visiting the beach, Douglas and Julie found a phone. Douglas gave it to",
+            "activation": 7.132076740264893
+          },
+          {
+            "text": "Elizabeth, Kathy, and Kimberly were at the restaurant. Elizabeth said something to Kimberly, then Elizabeth gave a pen to",
+            "activation": 6.938908100128174
+          },
+          {
+            "text": "At the market, Keith met Annie. Later, Keith brought a ticket to",
+            "activation": 6.746064186096191
+          },
+          {
+            "text": "Bobby and Peter decided to go to the airport. On the way, Bobby bought a drink. When they arrived, Bobby gave it to",
+            "activation": 6.50398063659668
+          }
+        ]
+      },
+      "842": {
+        "activation_freq": 0.7666667103767395,
+        "mean_activation": 2.321986675262451,
+        "max_activation": 4.190921783447266,
+        "top_examples": [
+          {
+            "text": "Noah, Thomas, and others went to the mall. Noah gave a pen to",
+            "activation": 4.190921783447266
+          },
+          {
+            "text": "When visiting the beach, Douglas and Julie found a phone. Douglas gave it to",
+            "activation": 4.115392684936523
+          },
+          {
+            "text": "Elizabeth, Kathy, and Kimberly were at the restaurant. Elizabeth said something to Kimberly, then Elizabeth gave a pen to",
+            "activation": 4.018561363220215
+          },
+          {
+            "text": "At the market, Keith met Annie. Later, Keith brought a ticket to",
+            "activation": 3.926100969314575
+          },
+          {
+            "text": "Bobby and Peter decided to go to the airport. On the way, Bobby bought a drink. When they arrived, Bobby gave it to",
+            "activation": 3.8190505504608154
+          }
+        ]
+      },
+      "1910": {
+        "activation_freq": 0.7666667103767395,
+        "mean_activation": 2.636446714401245,
+        "max_activation": 4.446287631988525,
+        "top_examples": [
+          {
+            "text": "Noah, Thomas, and others went to the mall. Noah gave a pen to",
+            "activation": 4.446287631988525
+          },
+          {
+            "text": "When visiting the beach, Douglas and Julie found a phone. Douglas gave it to",
+            "activation": 4.384316921234131
+          },
+          {
+            "text": "Elizabeth, Kathy, and Kimberly were at the restaurant. Elizabeth said something to Kimberly, then Elizabeth gave a pen to",
+            "activation": 4.281692981719971
+          },
+          {
+            "text": "At the market, Keith met Annie. Later, Keith brought a ticket to",
+            "activation": 4.205236434936523
+          },
+          {
+            "text": "Bobby and Peter decided to go to the airport. On the way, Bobby bought a drink. When they arrived, Bobby gave it to",
+            "activation": 4.095902919769287
+          }
+        ]
+      },
+      "2012": {
+        "activation_freq": 0.7333333492279053,
+        "mean_activation": 6.48142671585083,
+        "max_activation": 12.15150260925293,
+        "top_examples": [
+          {
+            "text": "Noah, Thomas, and others went to the mall. Noah gave a pen to",
+            "activation": 12.15150260925293
+          },
+          {
+            "text": "When visiting the beach, Douglas and Julie found a phone. Douglas gave it to",
+            "activation": 11.986124038696289
+          },
+          {
+            "text": "Elizabeth, Kathy, and Kimberly were at the restaurant. Elizabeth said something to Kimberly, then Elizabeth gave a pen to",
+            "activation": 11.769407272338867
+          },
+          {
+            "text": "At the market, Keith met Annie. Later, Keith brought a ticket to",
+            "activation": 11.511022567749023
+          },
+          {
+            "text": "Bobby and Peter decided to go to the airport. On the way, Bobby bought a drink. When they arrived, Bobby gave it to",
+            "activation": 11.262886047363281
+          }
+        ]
+      },
+      "2342": {
+        "activation_freq": 0.7000000476837158,
+        "mean_activation": 4.443397521972656,
+        "max_activation": 8.848649978637695,
+        "top_examples": [
+          {
+            "text": "Noah, Thomas, and others went to the mall. Noah gave a pen to",
+            "activation": 8.848649978637695
+          },
+          {
+            "text": "When visiting the beach, Douglas and Julie found a phone. Douglas gave it to",
+            "activation": 8.630864143371582
+          },
+          {
+            "text": "Elizabeth, Kathy, and Kimberly were at the restaurant. Elizabeth said something to Kimberly, then Elizabeth gave a pen to",
+            "activation": 8.405584335327148
+          },
+          {
+            "text": "At the market, Keith met Annie. Later, Keith brought a ticket to",
+            "activation": 8.155115127563477
+          },
+          {
+            "text": "Bobby and Peter decided to go to the airport. On the way, Bobby bought a drink. When they arrived, Bobby gave it to",
+            "activation": 7.907252311706543
+          }
+        ]
+      },
+      "2320": {
+        "activation_freq": 0.7000000476837158,
+        "mean_activation": 5.861154079437256,
+        "max_activation": 11.524855613708496,
+        "top_examples": [
+          {
+            "text": "Noah, Thomas, and others went to the mall. Noah gave a pen to",
+            "activation": 11.524855613708496
+          },
+          {
+            "text": "When visiting the beach, Douglas and Julie found a phone. Douglas gave it to",
+            "activation": 11.415230751037598
+          },
+          {
+            "text": "Elizabeth, Kathy, and Kimberly were at the restaurant. Elizabeth said something to Kimberly, then Elizabeth gave a pen to",
+            "activation": 11.253462791442871
+          },
+          {
+            "text": "At the market, Keith met Annie. Later, Keith brought a ticket to",
+            "activation": 11.038140296936035
+          },
+          {
+            "text": "Bobby and Peter decided to go to the airport. On the way, Bobby bought a drink. When they arrived, Bobby gave it to",
+            "activation": 10.795352935791016
+          }
+        ]
+      }
+    }
+  },
+  "saelens_baseline": {
+    "num_features": 24576,
+    "num_samples": 578,
+    "top_features": {
+      "47": {
+        "activation_freq": 1.0,
+        "max_activation": 5.390588760375977
+      },
+      "24513": {
+        "activation_freq": 1.0,
+        "max_activation": 6.549454212188721
+      },
+      "14118": {
+        "activation_freq": 1.0,
+        "max_activation": 7.683117866516113
+      },
+      "23809": {
+        "activation_freq": 1.0,
+        "max_activation": 11.446195602416992
+      },
+      "23822": {
+        "activation_freq": 1.0,
+        "max_activation": 4.8795342445373535
+      },
+      "1695": {
+        "activation_freq": 1.0,
+        "max_activation": 8.84604263305664
+      },
+      "13963": {
+        "activation_freq": 1.0,
+        "max_activation": 6.007701396942139
+      },
+      "13970": {
+        "activation_freq": 1.0,
+        "max_activation": 5.227679252624512
+      },
+      "13988": {
+        "activation_freq": 1.0,
+        "max_activation": 5.653692245483398
+      },
+      "14013": {
+        "activation_freq": 1.0,
+        "max_activation": 4.1060357093811035
+      }
+    }
+  }
+}

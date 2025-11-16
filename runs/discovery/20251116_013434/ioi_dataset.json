@@ -1,0 +1,1609 @@
+{
+  "metadata": {
+    "num_examples": 100,
+    "num_templates": 10,
+    "num_names": 200
+  },
+  "examples": [
+    {
+      "text": "When Judy and Jeffrey went to the market, Judy gave a key to",
+      "correct_answer": "Jeffrey",
+      "incorrect_answer": "Judy",
+      "template_id": 0,
+      "difficulty": "easy",
+      "metadata": {
+        "name_A": "Judy",
+        "name_B": "Jeffrey",
+        "name_C": "Richard",
+        "location": "market",
+        "object": "key",
+        "action": "passed",
+        "template": "When {A} and {B} went to the {location}, {A} gave a {object} to"
+      }
+    },
+    {
+      "text": "Stephen and Paula were at the library. Stephen handed the ticket to",
+      "correct_answer": "Paula",
+      "incorrect_answer": "Stephen",
+      "template_id": 1,
+      "difficulty": "easy",
+      "metadata": {
+        "name_A": "Stephen",
+        "name_B": "Paula",
+        "name_C": "Edward",
+        "location": "library",
+        "object": "ticket",
+        "action": "gave",
+        "template": "{A} and {B} were at the {location}. {A} handed the {object} to"
+      }
+    },
+    {
+      "text": "At the office, Joseph and Timothy met. Joseph passed the book to",
+      "correct_answer": "Timothy",
+      "incorrect_answer": "Joseph",
+      "template_id": 2,
+      "difficulty": "easy",
+      "metadata": {
+        "name_A": "Joseph",
+        "name_B": "Timothy",
+        "name_C": "Kyle",
+        "location": "office",
+        "object": "book",
+        "action": "passed",
+        "template": "At the {location}, {A} and {B} met. {A} passed the {object} to"
+      }
+    },
+    {
+      "text": "After Julia and Theresa arrived at the cafe, Julia delivered a key to",
+      "correct_answer": "Theresa",
+      "incorrect_answer": "Julia",
+      "template_id": 3,
+      "difficulty": "medium",
+      "metadata": {
+        "name_A": "Julia",
+        "name_B": "Theresa",
+        "name_C": "Jacqueline",
+        "location": "cafe",
+        "object": "key",
+        "action": "delivered",
+        "template": "After {A} and {B} arrived at the {location}, {A} {action} a {object} to"
+      }
+    },
+    {
+      "text": "Gloria, Harold, and others went to the cinema. Gloria gave a ticket to",
+      "correct_answer": "Harold",
+      "incorrect_answer": "Gloria",
+      "template_id": 4,
+      "difficulty": "medium",
+      "metadata": {
+        "name_A": "Gloria",
+        "name_B": "Harold",
+        "name_C": "John",
+        "location": "cinema",
+        "object": "ticket",
+        "action": "offered",
+        "template": "{A}, {B}, and others went to the {location}. {A} gave a {object} to"
+      }
+    },
+    {
+      "text": "When visiting the beach, Harold and Brandon found a gift. Harold gave it to",
+      "correct_answer": "Brandon",
+      "incorrect_answer": "Harold",
+      "template_id": 5,
+      "difficulty": "medium",
+      "metadata": {
+        "name_A": "Harold",
+        "name_B": "Brandon",
+        "name_C": "Peter",
+        "location": "beach",
+        "object": "gift",
+        "action": "handed",
+        "template": "When visiting the {location}, {A} and {B} found a {object}. {A} gave it to"
+      }
+    },
+    {
+      "text": "Patricia, Timothy, and Bobby were at the garden. Patricia said something to Bobby, then Patricia gave a pen to",
+      "correct_answer": "Timothy",
+      "incorrect_answer": "Patricia",
+      "template_id": 6,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Patricia",
+        "name_B": "Timothy",
+        "name_C": "Bobby",
+        "location": "garden",
+        "object": "pen",
+        "action": "gave",
+        "template": "{A}, {B}, and {C} were at the {location}. {A} said something to {C}, then {A} gave a {object} to"
+      }
+    },
+    {
+      "text": "At the museum, Tina met Sarah. Later, Tina handed a bag to",
+      "correct_answer": "Sarah",
+      "incorrect_answer": "Tina",
+      "template_id": 7,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Tina",
+        "name_B": "Sarah",
+        "name_C": "Janet",
+        "location": "museum",
+        "object": "bag",
+        "action": "handed",
+        "template": "At the {location}, {A} met {B}. Later, {A} {action} a {object} to"
+      }
+    },
+    {
+      "text": "Frances and Lawrence decided to go to the garden. On the way, Frances bought a phone. When they arrived, Frances gave it to",
+      "correct_answer": "Lawrence",
+      "incorrect_answer": "Frances",
+      "template_id": 8,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Frances",
+        "name_B": "Lawrence",
+        "name_C": "Nicole",
+        "location": "garden",
+        "object": "phone",
+        "action": "handed",
+        "template": "{A} and {B} decided to go to the {location}. On the way, {A} bought a {object}. When they arrived, {A} gave it to"
+      }
+    },
+    {
+      "text": "Before Daniel and Irene left the station, Daniel wanted to give a drink to",
+      "correct_answer": "Irene",
+      "incorrect_answer": "Daniel",
+      "template_id": 9,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Daniel",
+        "name_B": "Irene",
+        "name_C": "Ethan",
+        "location": "station",
+        "object": "drink",
+        "action": "passed",
+        "template": "Before {A} and {B} left the {location}, {A} wanted to give a {object} to"
+      }
+    },
+    {
+      "text": "When Ronald and Jennifer went to the hospital, Ronald gave a wallet to",
+      "correct_answer": "Jennifer",
+      "incorrect_answer": "Ronald",
+      "template_id": 10,
+      "difficulty": "easy",
+      "metadata": {
+        "name_A": "Ronald",
+        "name_B": "Jennifer",
+        "name_C": "Jordan",
+        "location": "hospital",
+        "object": "wallet",
+        "action": "sent",
+        "template": "When {A} and {B} went to the {location}, {A} gave a {object} to"
+      }
+    },
+    {
+      "text": "Philip and Eugene were at the market. Philip handed the drink to",
+      "correct_answer": "Eugene",
+      "incorrect_answer": "Philip",
+      "template_id": 11,
+      "difficulty": "easy",
+      "metadata": {
+        "name_A": "Philip",
+        "name_B": "Eugene",
+        "name_C": "Nathan",
+        "location": "market",
+        "object": "drink",
+        "action": "sent",
+        "template": "{A} and {B} were at the {location}. {A} handed the {object} to"
+      }
+    },
+    {
+      "text": "At the cinema, Carolyn and Phyllis met. Carolyn passed the card to",
+      "correct_answer": "Phyllis",
+      "incorrect_answer": "Carolyn",
+      "template_id": 12,
+      "difficulty": "easy",
+      "metadata": {
+        "name_A": "Carolyn",
+        "name_B": "Phyllis",
+        "name_C": "Walter",
+        "location": "cinema",
+        "object": "card",
+        "action": "brought",
+        "template": "At the {location}, {A} and {B} met. {A} passed the {object} to"
+      }
+    },
+    {
+      "text": "After Carl and Christina arrived at the office, Carl gave a umbrella to",
+      "correct_answer": "Christina",
+      "incorrect_answer": "Carl",
+      "template_id": 13,
+      "difficulty": "medium",
+      "metadata": {
+        "name_A": "Carl",
+        "name_B": "Christina",
+        "name_C": "Sara",
+        "location": "office",
+        "object": "umbrella",
+        "action": "gave",
+        "template": "After {A} and {B} arrived at the {location}, {A} {action} a {object} to"
+      }
+    },
+    {
+      "text": "Noah, Thomas, and others went to the mall. Noah gave a pen to",
+      "correct_answer": "Thomas",
+      "incorrect_answer": "Noah",
+      "template_id": 14,
+      "difficulty": "medium",
+      "metadata": {
+        "name_A": "Noah",
+        "name_B": "Thomas",
+        "name_C": "Alan",
+        "location": "mall",
+        "object": "pen",
+        "action": "handed",
+        "template": "{A}, {B}, and others went to the {location}. {A} gave a {object} to"
+      }
+    },
+    {
+      "text": "When visiting the beach, Douglas and Julie found a phone. Douglas gave it to",
+      "correct_answer": "Julie",
+      "incorrect_answer": "Douglas",
+      "template_id": 15,
+      "difficulty": "medium",
+      "metadata": {
+        "name_A": "Douglas",
+        "name_B": "Julie",
+        "name_C": "Lois",
+        "location": "beach",
+        "object": "phone",
+        "action": "delivered",
+        "template": "When visiting the {location}, {A} and {B} found a {object}. {A} gave it to"
+      }
+    },
+    {
+      "text": "Elizabeth, Kathy, and Kimberly were at the restaurant. Elizabeth said something to Kimberly, then Elizabeth gave a pen to",
+      "correct_answer": "Kathy",
+      "incorrect_answer": "Elizabeth",
+      "template_id": 16,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Elizabeth",
+        "name_B": "Kathy",
+        "name_C": "Kimberly",
+        "location": "restaurant",
+        "object": "pen",
+        "action": "sent",
+        "template": "{A}, {B}, and {C} were at the {location}. {A} said something to {C}, then {A} gave a {object} to"
+      }
+    },
+    {
+      "text": "At the market, Keith met Annie. Later, Keith brought a ticket to",
+      "correct_answer": "Annie",
+      "incorrect_answer": "Keith",
+      "template_id": 17,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Keith",
+        "name_B": "Annie",
+        "name_C": "Diane",
+        "location": "market",
+        "object": "ticket",
+        "action": "brought",
+        "template": "At the {location}, {A} met {B}. Later, {A} {action} a {object} to"
+      }
+    },
+    {
+      "text": "Bobby and Peter decided to go to the airport. On the way, Bobby bought a drink. When they arrived, Bobby gave it to",
+      "correct_answer": "Peter",
+      "incorrect_answer": "Bobby",
+      "template_id": 18,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Bobby",
+        "name_B": "Peter",
+        "name_C": "Stephen",
+        "location": "airport",
+        "object": "drink",
+        "action": "gave",
+        "template": "{A} and {B} decided to go to the {location}. On the way, {A} bought a {object}. When they arrived, {A} gave it to"
+      }
+    },
+    {
+      "text": "Before Jeffrey and Benjamin left the cinema, Jeffrey wanted to give a ticket to",
+      "correct_answer": "Benjamin",
+      "incorrect_answer": "Jeffrey",
+      "template_id": 19,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Jeffrey",
+        "name_B": "Benjamin",
+        "name_C": "Nicole",
+        "location": "cinema",
+        "object": "ticket",
+        "action": "handed",
+        "template": "Before {A} and {B} left the {location}, {A} wanted to give a {object} to"
+      }
+    },
+    {
+      "text": "When Jennifer and Patricia went to the hospital, Jennifer gave a pen to",
+      "correct_answer": "Patricia",
+      "incorrect_answer": "Jennifer",
+      "template_id": 20,
+      "difficulty": "easy",
+      "metadata": {
+        "name_A": "Jennifer",
+        "name_B": "Patricia",
+        "name_C": "Mildred",
+        "location": "hospital",
+        "object": "pen",
+        "action": "gave",
+        "template": "When {A} and {B} went to the {location}, {A} gave a {object} to"
+      }
+    },
+    {
+      "text": "Marilyn and Lois were at the market. Marilyn handed the umbrella to",
+      "correct_answer": "Lois",
+      "incorrect_answer": "Marilyn",
+      "template_id": 21,
+      "difficulty": "easy",
+      "metadata": {
+        "name_A": "Marilyn",
+        "name_B": "Lois",
+        "name_C": "Ryan",
+        "location": "market",
+        "object": "umbrella",
+        "action": "handed",
+        "template": "{A} and {B} were at the {location}. {A} handed the {object} to"
+      }
+    },
+    {
+      "text": "At the hospital, Lawrence and Carol met. Lawrence passed the book to",
+      "correct_answer": "Carol",
+      "incorrect_answer": "Lawrence",
+      "template_id": 22,
+      "difficulty": "easy",
+      "metadata": {
+        "name_A": "Lawrence",
+        "name_B": "Carol",
+        "name_C": "Benjamin",
+        "location": "hospital",
+        "object": "book",
+        "action": "showed",
+        "template": "At the {location}, {A} and {B} met. {A} passed the {object} to"
+      }
+    },
+    {
+      "text": "After Rebecca and Crystal arrived at the museum, Rebecca passed a notebook to",
+      "correct_answer": "Crystal",
+      "incorrect_answer": "Rebecca",
+      "template_id": 23,
+      "difficulty": "medium",
+      "metadata": {
+        "name_A": "Rebecca",
+        "name_B": "Crystal",
+        "name_C": "Patrick",
+        "location": "museum",
+        "object": "notebook",
+        "action": "passed",
+        "template": "After {A} and {B} arrived at the {location}, {A} {action} a {object} to"
+      }
+    },
+    {
+      "text": "Brandon, Mary, and others went to the cinema. Brandon gave a book to",
+      "correct_answer": "Mary",
+      "incorrect_answer": "Brandon",
+      "template_id": 24,
+      "difficulty": "medium",
+      "metadata": {
+        "name_A": "Brandon",
+        "name_B": "Mary",
+        "name_C": "Gladys",
+        "location": "cinema",
+        "object": "book",
+        "action": "offered",
+        "template": "{A}, {B}, and others went to the {location}. {A} gave a {object} to"
+      }
+    },
+    {
+      "text": "When visiting the garden, Brenda and William found a notebook. Brenda gave it to",
+      "correct_answer": "William",
+      "incorrect_answer": "Brenda",
+      "template_id": 25,
+      "difficulty": "medium",
+      "metadata": {
+        "name_A": "Brenda",
+        "name_B": "William",
+        "name_C": "Ryan",
+        "location": "garden",
+        "object": "notebook",
+        "action": "passed",
+        "template": "When visiting the {location}, {A} and {B} found a {object}. {A} gave it to"
+      }
+    },
+    {
+      "text": "Mark, Walter, and Heather were at the library. Mark said something to Heather, then Mark gave a drink to",
+      "correct_answer": "Walter",
+      "incorrect_answer": "Mark",
+      "template_id": 26,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Mark",
+        "name_B": "Walter",
+        "name_C": "Heather",
+        "location": "library",
+        "object": "drink",
+        "action": "delivered",
+        "template": "{A}, {B}, and {C} were at the {location}. {A} said something to {C}, then {A} gave a {object} to"
+      }
+    },
+    {
+      "text": "At the restaurant, Andrew met Peggy. Later, Andrew delivered a letter to",
+      "correct_answer": "Peggy",
+      "incorrect_answer": "Andrew",
+      "template_id": 27,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Andrew",
+        "name_B": "Peggy",
+        "name_C": "Christine",
+        "location": "restaurant",
+        "object": "letter",
+        "action": "delivered",
+        "template": "At the {location}, {A} met {B}. Later, {A} {action} a {object} to"
+      }
+    },
+    {
+      "text": "Catherine and Raymond decided to go to the cafe. On the way, Catherine bought a phone. When they arrived, Catherine gave it to",
+      "correct_answer": "Raymond",
+      "incorrect_answer": "Catherine",
+      "template_id": 28,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Catherine",
+        "name_B": "Raymond",
+        "name_C": "Gerald",
+        "location": "cafe",
+        "object": "phone",
+        "action": "passed",
+        "template": "{A} and {B} decided to go to the {location}. On the way, {A} bought a {object}. When they arrived, {A} gave it to"
+      }
+    },
+    {
+      "text": "Before Bonnie and Logan left the garden, Bonnie wanted to give a card to",
+      "correct_answer": "Logan",
+      "incorrect_answer": "Bonnie",
+      "template_id": 29,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Bonnie",
+        "name_B": "Logan",
+        "name_C": "Jessica",
+        "location": "garden",
+        "object": "card",
+        "action": "delivered",
+        "template": "Before {A} and {B} left the {location}, {A} wanted to give a {object} to"
+      }
+    },
+    {
+      "text": "When Jacob and Roger went to the library, Jacob gave a umbrella to",
+      "correct_answer": "Roger",
+      "incorrect_answer": "Jacob",
+      "template_id": 30,
+      "difficulty": "easy",
+      "metadata": {
+        "name_A": "Jacob",
+        "name_B": "Roger",
+        "name_C": "Noah",
+        "location": "library",
+        "object": "umbrella",
+        "action": "gave",
+        "template": "When {A} and {B} went to the {location}, {A} gave a {object} to"
+      }
+    },
+    {
+      "text": "Gloria and Frances were at the office. Gloria handed the book to",
+      "correct_answer": "Frances",
+      "incorrect_answer": "Gloria",
+      "template_id": 31,
+      "difficulty": "easy",
+      "metadata": {
+        "name_A": "Gloria",
+        "name_B": "Frances",
+        "name_C": "Noah",
+        "location": "office",
+        "object": "book",
+        "action": "handed",
+        "template": "{A} and {B} were at the {location}. {A} handed the {object} to"
+      }
+    },
+    {
+      "text": "At the office, Wanda and Kelly met. Wanda passed the drink to",
+      "correct_answer": "Kelly",
+      "incorrect_answer": "Wanda",
+      "template_id": 32,
+      "difficulty": "easy",
+      "metadata": {
+        "name_A": "Wanda",
+        "name_B": "Kelly",
+        "name_C": "Donald",
+        "location": "office",
+        "object": "drink",
+        "action": "gave",
+        "template": "At the {location}, {A} and {B} met. {A} passed the {object} to"
+      }
+    },
+    {
+      "text": "After Wayne and Paul arrived at the office, Wayne delivered a pen to",
+      "correct_answer": "Paul",
+      "incorrect_answer": "Wayne",
+      "template_id": 33,
+      "difficulty": "medium",
+      "metadata": {
+        "name_A": "Wayne",
+        "name_B": "Paul",
+        "name_C": "Debra",
+        "location": "office",
+        "object": "pen",
+        "action": "delivered",
+        "template": "After {A} and {B} arrived at the {location}, {A} {action} a {object} to"
+      }
+    },
+    {
+      "text": "Douglas, Janet, and others went to the airport. Douglas gave a key to",
+      "correct_answer": "Janet",
+      "incorrect_answer": "Douglas",
+      "template_id": 34,
+      "difficulty": "medium",
+      "metadata": {
+        "name_A": "Douglas",
+        "name_B": "Janet",
+        "name_C": "Eric",
+        "location": "airport",
+        "object": "key",
+        "action": "delivered",
+        "template": "{A}, {B}, and others went to the {location}. {A} gave a {object} to"
+      }
+    },
+    {
+      "text": "When visiting the museum, Sarah and Jerry found a ticket. Sarah gave it to",
+      "correct_answer": "Jerry",
+      "incorrect_answer": "Sarah",
+      "template_id": 35,
+      "difficulty": "medium",
+      "metadata": {
+        "name_A": "Sarah",
+        "name_B": "Jerry",
+        "name_C": "Timothy",
+        "location": "museum",
+        "object": "ticket",
+        "action": "offered",
+        "template": "When visiting the {location}, {A} and {B} found a {object}. {A} gave it to"
+      }
+    },
+    {
+      "text": "Betty, Karen, and Shirley were at the park. Betty said something to Shirley, then Betty gave a gift to",
+      "correct_answer": "Karen",
+      "incorrect_answer": "Betty",
+      "template_id": 36,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Betty",
+        "name_B": "Karen",
+        "name_C": "Shirley",
+        "location": "park",
+        "object": "gift",
+        "action": "gave",
+        "template": "{A}, {B}, and {C} were at the {location}. {A} said something to {C}, then {A} gave a {object} to"
+      }
+    },
+    {
+      "text": "At the museum, Jessica met Norma. Later, Jessica passed a key to",
+      "correct_answer": "Norma",
+      "incorrect_answer": "Jessica",
+      "template_id": 37,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Jessica",
+        "name_B": "Norma",
+        "name_C": "Randy",
+        "location": "museum",
+        "object": "key",
+        "action": "passed",
+        "template": "At the {location}, {A} met {B}. Later, {A} {action} a {object} to"
+      }
+    },
+    {
+      "text": "Jerry and Marie decided to go to the restaurant. On the way, Jerry bought a ticket. When they arrived, Jerry gave it to",
+      "correct_answer": "Marie",
+      "incorrect_answer": "Jerry",
+      "template_id": 38,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Jerry",
+        "name_B": "Marie",
+        "name_C": "Michelle",
+        "location": "restaurant",
+        "object": "ticket",
+        "action": "sent",
+        "template": "{A} and {B} decided to go to the {location}. On the way, {A} bought a {object}. When they arrived, {A} gave it to"
+      }
+    },
+    {
+      "text": "Before Harold and Deborah left the library, Harold wanted to give a card to",
+      "correct_answer": "Deborah",
+      "incorrect_answer": "Harold",
+      "template_id": 39,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Harold",
+        "name_B": "Deborah",
+        "name_C": "Keith",
+        "location": "library",
+        "object": "card",
+        "action": "handed",
+        "template": "Before {A} and {B} left the {location}, {A} wanted to give a {object} to"
+      }
+    },
+    {
+      "text": "When Matthew and Beverly went to the store, Matthew gave a drink to",
+      "correct_answer": "Beverly",
+      "incorrect_answer": "Matthew",
+      "template_id": 40,
+      "difficulty": "easy",
+      "metadata": {
+        "name_A": "Matthew",
+        "name_B": "Beverly",
+        "name_C": "Janet",
+        "location": "store",
+        "object": "drink",
+        "action": "passed",
+        "template": "When {A} and {B} went to the {location}, {A} gave a {object} to"
+      }
+    },
+    {
+      "text": "Raymond and Karen were at the airport. Raymond handed the phone to",
+      "correct_answer": "Karen",
+      "incorrect_answer": "Raymond",
+      "template_id": 41,
+      "difficulty": "easy",
+      "metadata": {
+        "name_A": "Raymond",
+        "name_B": "Karen",
+        "name_C": "Amy",
+        "location": "airport",
+        "object": "phone",
+        "action": "brought",
+        "template": "{A} and {B} were at the {location}. {A} handed the {object} to"
+      }
+    },
+    {
+      "text": "At the store, Donald and Gregory met. Donald passed the bag to",
+      "correct_answer": "Gregory",
+      "incorrect_answer": "Donald",
+      "template_id": 42,
+      "difficulty": "easy",
+      "metadata": {
+        "name_A": "Donald",
+        "name_B": "Gregory",
+        "name_C": "Linda",
+        "location": "store",
+        "object": "bag",
+        "action": "showed",
+        "template": "At the {location}, {A} and {B} met. {A} passed the {object} to"
+      }
+    },
+    {
+      "text": "After Laura and Jesse arrived at the airport, Laura passed a letter to",
+      "correct_answer": "Jesse",
+      "incorrect_answer": "Laura",
+      "template_id": 43,
+      "difficulty": "medium",
+      "metadata": {
+        "name_A": "Laura",
+        "name_B": "Jesse",
+        "name_C": "Helen",
+        "location": "airport",
+        "object": "letter",
+        "action": "passed",
+        "template": "After {A} and {B} arrived at the {location}, {A} {action} a {object} to"
+      }
+    },
+    {
+      "text": "Lawrence, Zachary, and others went to the park. Lawrence gave a umbrella to",
+      "correct_answer": "Zachary",
+      "incorrect_answer": "Lawrence",
+      "template_id": 44,
+      "difficulty": "medium",
+      "metadata": {
+        "name_A": "Lawrence",
+        "name_B": "Zachary",
+        "name_C": "Mark",
+        "location": "park",
+        "object": "umbrella",
+        "action": "gave",
+        "template": "{A}, {B}, and others went to the {location}. {A} gave a {object} to"
+      }
+    },
+    {
+      "text": "When visiting the cinema, Matthew and Gloria found a ball. Matthew gave it to",
+      "correct_answer": "Gloria",
+      "incorrect_answer": "Matthew",
+      "template_id": 45,
+      "difficulty": "medium",
+      "metadata": {
+        "name_A": "Matthew",
+        "name_B": "Gloria",
+        "name_C": "Angela",
+        "location": "cinema",
+        "object": "ball",
+        "action": "handed",
+        "template": "When visiting the {location}, {A} and {B} found a {object}. {A} gave it to"
+      }
+    },
+    {
+      "text": "Dennis, Andrew, and Mildred were at the library. Dennis said something to Mildred, then Dennis gave a key to",
+      "correct_answer": "Andrew",
+      "incorrect_answer": "Dennis",
+      "template_id": 46,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Dennis",
+        "name_B": "Andrew",
+        "name_C": "Mildred",
+        "location": "library",
+        "object": "key",
+        "action": "brought",
+        "template": "{A}, {B}, and {C} were at the {location}. {A} said something to {C}, then {A} gave a {object} to"
+      }
+    },
+    {
+      "text": "At the park, Jacob met Julie. Later, Jacob brought a drink to",
+      "correct_answer": "Julie",
+      "incorrect_answer": "Jacob",
+      "template_id": 47,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Jacob",
+        "name_B": "Julie",
+        "name_C": "Roger",
+        "location": "park",
+        "object": "drink",
+        "action": "brought",
+        "template": "At the {location}, {A} met {B}. Later, {A} {action} a {object} to"
+      }
+    },
+    {
+      "text": "Denise and Doris decided to go to the beach. On the way, Denise bought a pen. When they arrived, Denise gave it to",
+      "correct_answer": "Doris",
+      "incorrect_answer": "Denise",
+      "template_id": 48,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Denise",
+        "name_B": "Doris",
+        "name_C": "Diane",
+        "location": "beach",
+        "object": "pen",
+        "action": "passed",
+        "template": "{A} and {B} decided to go to the {location}. On the way, {A} bought a {object}. When they arrived, {A} gave it to"
+      }
+    },
+    {
+      "text": "Before Jane and Ruby left the office, Jane wanted to give a pen to",
+      "correct_answer": "Ruby",
+      "incorrect_answer": "Jane",
+      "template_id": 49,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Jane",
+        "name_B": "Ruby",
+        "name_C": "Albert",
+        "location": "office",
+        "object": "pen",
+        "action": "brought",
+        "template": "Before {A} and {B} left the {location}, {A} wanted to give a {object} to"
+      }
+    },
+    {
+      "text": "When Eric and Lori went to the station, Eric gave a card to",
+      "correct_answer": "Lori",
+      "incorrect_answer": "Eric",
+      "template_id": 50,
+      "difficulty": "easy",
+      "metadata": {
+        "name_A": "Eric",
+        "name_B": "Lori",
+        "name_C": "Theresa",
+        "location": "station",
+        "object": "card",
+        "action": "offered",
+        "template": "When {A} and {B} went to the {location}, {A} gave a {object} to"
+      }
+    },
+    {
+      "text": "Lillian and Paul were at the hospital. Lillian handed the gift to",
+      "correct_answer": "Paul",
+      "incorrect_answer": "Lillian",
+      "template_id": 51,
+      "difficulty": "easy",
+      "metadata": {
+        "name_A": "Lillian",
+        "name_B": "Paul",
+        "name_C": "Robert",
+        "location": "hospital",
+        "object": "gift",
+        "action": "handed",
+        "template": "{A} and {B} were at the {location}. {A} handed the {object} to"
+      }
+    },
+    {
+      "text": "At the market, Christine and Douglas met. Christine passed the letter to",
+      "correct_answer": "Douglas",
+      "incorrect_answer": "Christine",
+      "template_id": 52,
+      "difficulty": "easy",
+      "metadata": {
+        "name_A": "Christine",
+        "name_B": "Douglas",
+        "name_C": "Kathleen",
+        "location": "market",
+        "object": "letter",
+        "action": "offered",
+        "template": "At the {location}, {A} and {B} met. {A} passed the {object} to"
+      }
+    },
+    {
+      "text": "After Andrew and Keith arrived at the station, Andrew delivered a package to",
+      "correct_answer": "Keith",
+      "incorrect_answer": "Andrew",
+      "template_id": 53,
+      "difficulty": "medium",
+      "metadata": {
+        "name_A": "Andrew",
+        "name_B": "Keith",
+        "name_C": "Mary",
+        "location": "station",
+        "object": "package",
+        "action": "delivered",
+        "template": "After {A} and {B} arrived at the {location}, {A} {action} a {object} to"
+      }
+    },
+    {
+      "text": "Janet, Wanda, and others went to the store. Janet gave a notebook to",
+      "correct_answer": "Wanda",
+      "incorrect_answer": "Janet",
+      "template_id": 54,
+      "difficulty": "medium",
+      "metadata": {
+        "name_A": "Janet",
+        "name_B": "Wanda",
+        "name_C": "Gabriel",
+        "location": "store",
+        "object": "notebook",
+        "action": "handed",
+        "template": "{A}, {B}, and others went to the {location}. {A} gave a {object} to"
+      }
+    },
+    {
+      "text": "When visiting the museum, Jonathan and Gerald found a letter. Jonathan gave it to",
+      "correct_answer": "Gerald",
+      "incorrect_answer": "Jonathan",
+      "template_id": 55,
+      "difficulty": "medium",
+      "metadata": {
+        "name_A": "Jonathan",
+        "name_B": "Gerald",
+        "name_C": "Ryan",
+        "location": "museum",
+        "object": "letter",
+        "action": "showed",
+        "template": "When visiting the {location}, {A} and {B} found a {object}. {A} gave it to"
+      }
+    },
+    {
+      "text": "Jordan, Katherine, and Nathan were at the beach. Jordan said something to Nathan, then Jordan gave a phone to",
+      "correct_answer": "Katherine",
+      "incorrect_answer": "Jordan",
+      "template_id": 56,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Jordan",
+        "name_B": "Katherine",
+        "name_C": "Nathan",
+        "location": "beach",
+        "object": "phone",
+        "action": "showed",
+        "template": "{A}, {B}, and {C} were at the {location}. {A} said something to {C}, then {A} gave a {object} to"
+      }
+    },
+    {
+      "text": "At the park, Virginia met Brenda. Later, Virginia brought a drink to",
+      "correct_answer": "Brenda",
+      "incorrect_answer": "Virginia",
+      "template_id": 57,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Virginia",
+        "name_B": "Brenda",
+        "name_C": "Roger",
+        "location": "park",
+        "object": "drink",
+        "action": "brought",
+        "template": "At the {location}, {A} met {B}. Later, {A} {action} a {object} to"
+      }
+    },
+    {
+      "text": "Dylan and Daniel decided to go to the beach. On the way, Dylan bought a letter. When they arrived, Dylan gave it to",
+      "correct_answer": "Daniel",
+      "incorrect_answer": "Dylan",
+      "template_id": 58,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Dylan",
+        "name_B": "Daniel",
+        "name_C": "James",
+        "location": "beach",
+        "object": "letter",
+        "action": "showed",
+        "template": "{A} and {B} decided to go to the {location}. On the way, {A} bought a {object}. When they arrived, {A} gave it to"
+      }
+    },
+    {
+      "text": "Before Samuel and Diana left the cafe, Samuel wanted to give a book to",
+      "correct_answer": "Diana",
+      "incorrect_answer": "Samuel",
+      "template_id": 59,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Samuel",
+        "name_B": "Diana",
+        "name_C": "Sharon",
+        "location": "cafe",
+        "object": "book",
+        "action": "handed",
+        "template": "Before {A} and {B} left the {location}, {A} wanted to give a {object} to"
+      }
+    },
+    {
+      "text": "When Joshua and Louise went to the park, Joshua gave a wallet to",
+      "correct_answer": "Louise",
+      "incorrect_answer": "Joshua",
+      "template_id": 60,
+      "difficulty": "easy",
+      "metadata": {
+        "name_A": "Joshua",
+        "name_B": "Louise",
+        "name_C": "Brandon",
+        "location": "park",
+        "object": "wallet",
+        "action": "sent",
+        "template": "When {A} and {B} went to the {location}, {A} gave a {object} to"
+      }
+    },
+    {
+      "text": "Sandra and Nicholas were at the station. Sandra handed the wallet to",
+      "correct_answer": "Nicholas",
+      "incorrect_answer": "Sandra",
+      "template_id": 61,
+      "difficulty": "easy",
+      "metadata": {
+        "name_A": "Sandra",
+        "name_B": "Nicholas",
+        "name_C": "Charles",
+        "location": "station",
+        "object": "wallet",
+        "action": "gave",
+        "template": "{A} and {B} were at the {location}. {A} handed the {object} to"
+      }
+    },
+    {
+      "text": "At the office, Russell and Nathan met. Russell passed the gift to",
+      "correct_answer": "Nathan",
+      "incorrect_answer": "Russell",
+      "template_id": 62,
+      "difficulty": "easy",
+      "metadata": {
+        "name_A": "Russell",
+        "name_B": "Nathan",
+        "name_C": "Kathryn",
+        "location": "office",
+        "object": "gift",
+        "action": "offered",
+        "template": "At the {location}, {A} and {B} met. {A} passed the {object} to"
+      }
+    },
+    {
+      "text": "After Dawn and Joyce arrived at the restaurant, Dawn sent a key to",
+      "correct_answer": "Joyce",
+      "incorrect_answer": "Dawn",
+      "template_id": 63,
+      "difficulty": "medium",
+      "metadata": {
+        "name_A": "Dawn",
+        "name_B": "Joyce",
+        "name_C": "Sarah",
+        "location": "restaurant",
+        "object": "key",
+        "action": "sent",
+        "template": "After {A} and {B} arrived at the {location}, {A} {action} a {object} to"
+      }
+    },
+    {
+      "text": "Patrick, Lisa, and others went to the cinema. Patrick gave a umbrella to",
+      "correct_answer": "Lisa",
+      "incorrect_answer": "Patrick",
+      "template_id": 64,
+      "difficulty": "medium",
+      "metadata": {
+        "name_A": "Patrick",
+        "name_B": "Lisa",
+        "name_C": "Richard",
+        "location": "cinema",
+        "object": "umbrella",
+        "action": "brought",
+        "template": "{A}, {B}, and others went to the {location}. {A} gave a {object} to"
+      }
+    },
+    {
+      "text": "When visiting the market, Jane and Paula found a package. Jane gave it to",
+      "correct_answer": "Paula",
+      "incorrect_answer": "Jane",
+      "template_id": 65,
+      "difficulty": "medium",
+      "metadata": {
+        "name_A": "Jane",
+        "name_B": "Paula",
+        "name_C": "Keith",
+        "location": "market",
+        "object": "package",
+        "action": "handed",
+        "template": "When visiting the {location}, {A} and {B} found a {object}. {A} gave it to"
+      }
+    },
+    {
+      "text": "Patricia, Christopher, and Cynthia were at the office. Patricia said something to Cynthia, then Patricia gave a phone to",
+      "correct_answer": "Christopher",
+      "incorrect_answer": "Patricia",
+      "template_id": 66,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Patricia",
+        "name_B": "Christopher",
+        "name_C": "Cynthia",
+        "location": "office",
+        "object": "phone",
+        "action": "delivered",
+        "template": "{A}, {B}, and {C} were at the {location}. {A} said something to {C}, then {A} gave a {object} to"
+      }
+    },
+    {
+      "text": "At the office, Ralph met Bruce. Later, Ralph passed a book to",
+      "correct_answer": "Bruce",
+      "incorrect_answer": "Ralph",
+      "template_id": 67,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Ralph",
+        "name_B": "Bruce",
+        "name_C": "Noah",
+        "location": "office",
+        "object": "book",
+        "action": "passed",
+        "template": "At the {location}, {A} met {B}. Later, {A} {action} a {object} to"
+      }
+    },
+    {
+      "text": "Susan and Wayne decided to go to the library. On the way, Susan bought a pen. When they arrived, Susan gave it to",
+      "correct_answer": "Wayne",
+      "incorrect_answer": "Susan",
+      "template_id": 68,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Susan",
+        "name_B": "Wayne",
+        "name_C": "Harold",
+        "location": "library",
+        "object": "pen",
+        "action": "offered",
+        "template": "{A} and {B} decided to go to the {location}. On the way, {A} bought a {object}. When they arrived, {A} gave it to"
+      }
+    },
+    {
+      "text": "Before Christina and Kathleen left the beach, Christina wanted to give a book to",
+      "correct_answer": "Kathleen",
+      "incorrect_answer": "Christina",
+      "template_id": 69,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Christina",
+        "name_B": "Kathleen",
+        "name_C": "Susan",
+        "location": "beach",
+        "object": "book",
+        "action": "handed",
+        "template": "Before {A} and {B} left the {location}, {A} wanted to give a {object} to"
+      }
+    },
+    {
+      "text": "When Austin and Patrick went to the market, Austin gave a ball to",
+      "correct_answer": "Patrick",
+      "incorrect_answer": "Austin",
+      "template_id": 70,
+      "difficulty": "easy",
+      "metadata": {
+        "name_A": "Austin",
+        "name_B": "Patrick",
+        "name_C": "Gloria",
+        "location": "market",
+        "object": "ball",
+        "action": "handed",
+        "template": "When {A} and {B} went to the {location}, {A} gave a {object} to"
+      }
+    },
+    {
+      "text": "Jean and Donna were at the beach. Jean handed the ticket to",
+      "correct_answer": "Donna",
+      "incorrect_answer": "Jean",
+      "template_id": 71,
+      "difficulty": "easy",
+      "metadata": {
+        "name_A": "Jean",
+        "name_B": "Donna",
+        "name_C": "Vincent",
+        "location": "beach",
+        "object": "ticket",
+        "action": "handed",
+        "template": "{A} and {B} were at the {location}. {A} handed the {object} to"
+      }
+    },
+    {
+      "text": "At the market, Jennifer and Teresa met. Jennifer passed the ball to",
+      "correct_answer": "Teresa",
+      "incorrect_answer": "Jennifer",
+      "template_id": 72,
+      "difficulty": "easy",
+      "metadata": {
+        "name_A": "Jennifer",
+        "name_B": "Teresa",
+        "name_C": "Jerry",
+        "location": "market",
+        "object": "ball",
+        "action": "brought",
+        "template": "At the {location}, {A} and {B} met. {A} passed the {object} to"
+      }
+    },
+    {
+      "text": "After James and Amanda arrived at the school, James brought a wallet to",
+      "correct_answer": "Amanda",
+      "incorrect_answer": "James",
+      "template_id": 73,
+      "difficulty": "medium",
+      "metadata": {
+        "name_A": "James",
+        "name_B": "Amanda",
+        "name_C": "Janet",
+        "location": "school",
+        "object": "wallet",
+        "action": "brought",
+        "template": "After {A} and {B} arrived at the {location}, {A} {action} a {object} to"
+      }
+    },
+    {
+      "text": "Andrew, Jane, and others went to the beach. Andrew gave a gift to",
+      "correct_answer": "Jane",
+      "incorrect_answer": "Andrew",
+      "template_id": 74,
+      "difficulty": "medium",
+      "metadata": {
+        "name_A": "Andrew",
+        "name_B": "Jane",
+        "name_C": "Elijah",
+        "location": "beach",
+        "object": "gift",
+        "action": "showed",
+        "template": "{A}, {B}, and others went to the {location}. {A} gave a {object} to"
+      }
+    },
+    {
+      "text": "When visiting the cafe, Virginia and Logan found a umbrella. Virginia gave it to",
+      "correct_answer": "Logan",
+      "incorrect_answer": "Virginia",
+      "template_id": 75,
+      "difficulty": "medium",
+      "metadata": {
+        "name_A": "Virginia",
+        "name_B": "Logan",
+        "name_C": "Lori",
+        "location": "cafe",
+        "object": "umbrella",
+        "action": "brought",
+        "template": "When visiting the {location}, {A} and {B} found a {object}. {A} gave it to"
+      }
+    },
+    {
+      "text": "Sara, Lawrence, and Ann were at the restaurant. Sara said something to Ann, then Sara gave a phone to",
+      "correct_answer": "Lawrence",
+      "incorrect_answer": "Sara",
+      "template_id": 76,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Sara",
+        "name_B": "Lawrence",
+        "name_C": "Ann",
+        "location": "restaurant",
+        "object": "phone",
+        "action": "brought",
+        "template": "{A}, {B}, and {C} were at the {location}. {A} said something to {C}, then {A} gave a {object} to"
+      }
+    },
+    {
+      "text": "At the cinema, Irene met Patricia. Later, Irene brought a notebook to",
+      "correct_answer": "Patricia",
+      "incorrect_answer": "Irene",
+      "template_id": 77,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Irene",
+        "name_B": "Patricia",
+        "name_C": "Andrea",
+        "location": "cinema",
+        "object": "notebook",
+        "action": "brought",
+        "template": "At the {location}, {A} met {B}. Later, {A} {action} a {object} to"
+      }
+    },
+    {
+      "text": "Catherine and James decided to go to the station. On the way, Catherine bought a phone. When they arrived, Catherine gave it to",
+      "correct_answer": "James",
+      "incorrect_answer": "Catherine",
+      "template_id": 78,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Catherine",
+        "name_B": "James",
+        "name_C": "Bruce",
+        "location": "station",
+        "object": "phone",
+        "action": "brought",
+        "template": "{A} and {B} decided to go to the {location}. On the way, {A} bought a {object}. When they arrived, {A} gave it to"
+      }
+    },
+    {
+      "text": "Before Teresa and Joan left the beach, Teresa wanted to give a card to",
+      "correct_answer": "Joan",
+      "incorrect_answer": "Teresa",
+      "template_id": 79,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Teresa",
+        "name_B": "Joan",
+        "name_C": "Tammy",
+        "location": "beach",
+        "object": "card",
+        "action": "delivered",
+        "template": "Before {A} and {B} left the {location}, {A} wanted to give a {object} to"
+      }
+    },
+    {
+      "text": "When Ruth and Rachel went to the airport, Ruth gave a package to",
+      "correct_answer": "Rachel",
+      "incorrect_answer": "Ruth",
+      "template_id": 80,
+      "difficulty": "easy",
+      "metadata": {
+        "name_A": "Ruth",
+        "name_B": "Rachel",
+        "name_C": "Douglas",
+        "location": "airport",
+        "object": "package",
+        "action": "handed",
+        "template": "When {A} and {B} went to the {location}, {A} gave a {object} to"
+      }
+    },
+    {
+      "text": "Jordan and Martha were at the beach. Jordan handed the drink to",
+      "correct_answer": "Martha",
+      "incorrect_answer": "Jordan",
+      "template_id": 81,
+      "difficulty": "easy",
+      "metadata": {
+        "name_A": "Jordan",
+        "name_B": "Martha",
+        "name_C": "Jane",
+        "location": "beach",
+        "object": "drink",
+        "action": "passed",
+        "template": "{A} and {B} were at the {location}. {A} handed the {object} to"
+      }
+    },
+    {
+      "text": "At the school, Lori and Logan met. Lori passed the letter to",
+      "correct_answer": "Logan",
+      "incorrect_answer": "Lori",
+      "template_id": 82,
+      "difficulty": "easy",
+      "metadata": {
+        "name_A": "Lori",
+        "name_B": "Logan",
+        "name_C": "Kyle",
+        "location": "school",
+        "object": "letter",
+        "action": "gave",
+        "template": "At the {location}, {A} and {B} met. {A} passed the {object} to"
+      }
+    },
+    {
+      "text": "After Daniel and Keith arrived at the library, Daniel brought a card to",
+      "correct_answer": "Keith",
+      "incorrect_answer": "Daniel",
+      "template_id": 83,
+      "difficulty": "medium",
+      "metadata": {
+        "name_A": "Daniel",
+        "name_B": "Keith",
+        "name_C": "Angela",
+        "location": "library",
+        "object": "card",
+        "action": "brought",
+        "template": "After {A} and {B} arrived at the {location}, {A} {action} a {object} to"
+      }
+    },
+    {
+      "text": "Kelly, Heather, and others went to the mall. Kelly gave a flower to",
+      "correct_answer": "Heather",
+      "incorrect_answer": "Kelly",
+      "template_id": 84,
+      "difficulty": "medium",
+      "metadata": {
+        "name_A": "Kelly",
+        "name_B": "Heather",
+        "name_C": "Tyler",
+        "location": "mall",
+        "object": "flower",
+        "action": "brought",
+        "template": "{A}, {B}, and others went to the {location}. {A} gave a {object} to"
+      }
+    },
+    {
+      "text": "When visiting the store, Walter and Justin found a gift. Walter gave it to",
+      "correct_answer": "Justin",
+      "incorrect_answer": "Walter",
+      "template_id": 85,
+      "difficulty": "medium",
+      "metadata": {
+        "name_A": "Walter",
+        "name_B": "Justin",
+        "name_C": "Tammy",
+        "location": "store",
+        "object": "gift",
+        "action": "brought",
+        "template": "When visiting the {location}, {A} and {B} found a {object}. {A} gave it to"
+      }
+    },
+    {
+      "text": "Peter, Patrick, and Jacqueline were at the hospital. Peter said something to Jacqueline, then Peter gave a ball to",
+      "correct_answer": "Patrick",
+      "incorrect_answer": "Peter",
+      "template_id": 86,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Peter",
+        "name_B": "Patrick",
+        "name_C": "Jacqueline",
+        "location": "hospital",
+        "object": "ball",
+        "action": "passed",
+        "template": "{A}, {B}, and {C} were at the {location}. {A} said something to {C}, then {A} gave a {object} to"
+      }
+    },
+    {
+      "text": "At the hospital, Gary met Sarah. Later, Gary delivered a umbrella to",
+      "correct_answer": "Sarah",
+      "incorrect_answer": "Gary",
+      "template_id": 87,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Gary",
+        "name_B": "Sarah",
+        "name_C": "Stephen",
+        "location": "hospital",
+        "object": "umbrella",
+        "action": "delivered",
+        "template": "At the {location}, {A} met {B}. Later, {A} {action} a {object} to"
+      }
+    },
+    {
+      "text": "Joan and Lois decided to go to the cafe. On the way, Joan bought a card. When they arrived, Joan gave it to",
+      "correct_answer": "Lois",
+      "incorrect_answer": "Joan",
+      "template_id": 88,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Joan",
+        "name_B": "Lois",
+        "name_C": "Virginia",
+        "location": "cafe",
+        "object": "card",
+        "action": "sent",
+        "template": "{A} and {B} decided to go to the {location}. On the way, {A} bought a {object}. When they arrived, {A} gave it to"
+      }
+    },
+    {
+      "text": "Before Diana and Shirley left the market, Diana wanted to give a key to",
+      "correct_answer": "Shirley",
+      "incorrect_answer": "Diana",
+      "template_id": 89,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Diana",
+        "name_B": "Shirley",
+        "name_C": "Michelle",
+        "location": "market",
+        "object": "key",
+        "action": "showed",
+        "template": "Before {A} and {B} left the {location}, {A} wanted to give a {object} to"
+      }
+    },
+    {
+      "text": "When Crystal and Debra went to the office, Crystal gave a pen to",
+      "correct_answer": "Debra",
+      "incorrect_answer": "Crystal",
+      "template_id": 90,
+      "difficulty": "easy",
+      "metadata": {
+        "name_A": "Crystal",
+        "name_B": "Debra",
+        "name_C": "Melissa",
+        "location": "office",
+        "object": "pen",
+        "action": "delivered",
+        "template": "When {A} and {B} went to the {location}, {A} gave a {object} to"
+      }
+    },
+    {
+      "text": "Joshua and Julia were at the office. Joshua handed the pen to",
+      "correct_answer": "Julia",
+      "incorrect_answer": "Joshua",
+      "template_id": 91,
+      "difficulty": "easy",
+      "metadata": {
+        "name_A": "Joshua",
+        "name_B": "Julia",
+        "name_C": "Bryan",
+        "location": "office",
+        "object": "pen",
+        "action": "offered",
+        "template": "{A} and {B} were at the {location}. {A} handed the {object} to"
+      }
+    },
+    {
+      "text": "At the restaurant, Willie and Janet met. Willie passed the letter to",
+      "correct_answer": "Janet",
+      "incorrect_answer": "Willie",
+      "template_id": 92,
+      "difficulty": "easy",
+      "metadata": {
+        "name_A": "Willie",
+        "name_B": "Janet",
+        "name_C": "Kenneth",
+        "location": "restaurant",
+        "object": "letter",
+        "action": "passed",
+        "template": "At the {location}, {A} and {B} met. {A} passed the {object} to"
+      }
+    },
+    {
+      "text": "After Jennifer and Sara arrived at the school, Jennifer brought a drink to",
+      "correct_answer": "Sara",
+      "incorrect_answer": "Jennifer",
+      "template_id": 93,
+      "difficulty": "medium",
+      "metadata": {
+        "name_A": "Jennifer",
+        "name_B": "Sara",
+        "name_C": "Brandon",
+        "location": "school",
+        "object": "drink",
+        "action": "brought",
+        "template": "After {A} and {B} arrived at the {location}, {A} {action} a {object} to"
+      }
+    },
+    {
+      "text": "Sarah, Wayne, and others went to the hospital. Sarah gave a ticket to",
+      "correct_answer": "Wayne",
+      "incorrect_answer": "Sarah",
+      "template_id": 94,
+      "difficulty": "medium",
+      "metadata": {
+        "name_A": "Sarah",
+        "name_B": "Wayne",
+        "name_C": "Frances",
+        "location": "hospital",
+        "object": "ticket",
+        "action": "gave",
+        "template": "{A}, {B}, and others went to the {location}. {A} gave a {object} to"
+      }
+    },
+    {
+      "text": "When visiting the store, Adam and Betty found a bag. Adam gave it to",
+      "correct_answer": "Betty",
+      "incorrect_answer": "Adam",
+      "template_id": 95,
+      "difficulty": "medium",
+      "metadata": {
+        "name_A": "Adam",
+        "name_B": "Betty",
+        "name_C": "Barbara",
+        "location": "store",
+        "object": "bag",
+        "action": "delivered",
+        "template": "When visiting the {location}, {A} and {B} found a {object}. {A} gave it to"
+      }
+    },
+    {
+      "text": "John, Russell, and Gabriel were at the mall. John said something to Gabriel, then John gave a ticket to",
+      "correct_answer": "Russell",
+      "incorrect_answer": "John",
+      "template_id": 96,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "John",
+        "name_B": "Russell",
+        "name_C": "Gabriel",
+        "location": "mall",
+        "object": "ticket",
+        "action": "passed",
+        "template": "{A}, {B}, and {C} were at the {location}. {A} said something to {C}, then {A} gave a {object} to"
+      }
+    },
+    {
+      "text": "At the cafe, Melissa met Peter. Later, Melissa gave a flower to",
+      "correct_answer": "Peter",
+      "incorrect_answer": "Melissa",
+      "template_id": 97,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Melissa",
+        "name_B": "Peter",
+        "name_C": "Dylan",
+        "location": "cafe",
+        "object": "flower",
+        "action": "gave",
+        "template": "At the {location}, {A} met {B}. Later, {A} {action} a {object} to"
+      }
+    },
+    {
+      "text": "Linda and Randy decided to go to the mall. On the way, Linda bought a package. When they arrived, Linda gave it to",
+      "correct_answer": "Randy",
+      "incorrect_answer": "Linda",
+      "template_id": 98,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Linda",
+        "name_B": "Randy",
+        "name_C": "Rachel",
+        "location": "mall",
+        "object": "package",
+        "action": "delivered",
+        "template": "{A} and {B} decided to go to the {location}. On the way, {A} bought a {object}. When they arrived, {A} gave it to"
+      }
+    },
+    {
+      "text": "Before Nicholas and Janice left the store, Nicholas wanted to give a bag to",
+      "correct_answer": "Janice",
+      "incorrect_answer": "Nicholas",
+      "template_id": 99,
+      "difficulty": "hard",
+      "metadata": {
+        "name_A": "Nicholas",
+        "name_B": "Janice",
+        "name_C": "Christine",
+        "location": "store",
+        "object": "bag",
+        "action": "gave",
+        "template": "Before {A} and {B} left the {location}, {A} wanted to give a {object} to"
+      }
+    }
+  ]
+}
