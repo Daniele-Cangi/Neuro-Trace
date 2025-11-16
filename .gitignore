@@ -38,16 +38,25 @@ env/
 *.ipynb
 
 # Data & Models (large files)
-runs/*/activations/*.pt
-runs/*/checkpoints/*.pt
-checkpoints/**/*.pt
+# Ignore entire directories with large training data
+runs/*/activations/
+checkpoints/*/
+
+# Ignore model files
+*.pt
+*.pth
 *.safetensors
 *.bin
+*.ckpt
+*.weights
 
-# Keep metadata
+# Ignore large JSON datasets (>50MB)
+runs/*/ioi_dataset.json
+
+# Keep small metadata files
 !runs/*/meta.json
-!runs/*/ioi_dataset.json
 !checkpoints/**/config.json
+!checkpoints/**/training_args.json
 
 # Results
 *.png
