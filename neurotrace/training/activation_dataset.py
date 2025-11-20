@@ -109,17 +109,19 @@ class ActivationDataset(IterableDataset):
                 if not isinstance(value, torch.Tensor):
                     continue
 
-                # value: [B, S, D]
-                if value.dim() != 3:
+                # value can be [B, S, D] or already flattened [N, D]
+                if value.dim() == 3:
+                    # 3D: [B, S, D] - flatten if requested
+                    activations = value.to(self.device)
+                    if self.flatten_sequences:
+                        B, S, D = activations.shape
+                        activations = activations.reshape(B * S, D)  # [B*S, D]
+                elif value.dim() == 2:
+                    # 2D: already flattened [N, D]
+                    activations = value.to(self.device)
+                else:
                     logger.debug(f"Skipping {key}: unexpected shape {tuple(value.shape)}")
                     continue
-
-                activations = value.to(self.device)
-
-                # Flatten sequences if requested
-                if self.flatten_sequences:
-                    B, S, D = activations.shape
-                    activations = activations.reshape(B * S, D)  # [B*S, D]
 
                 yield key, activations
 

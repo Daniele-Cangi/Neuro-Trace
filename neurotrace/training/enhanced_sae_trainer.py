@@ -170,9 +170,20 @@ class EnhancedSAETrainer:
         """
         self.sae.train()
         epoch_metrics = []
-        total_batches = len(dataloader)
+        
+        # Get total batches - must work correctly for proper training
+        try:
+            total_batches = len(dataloader)
+            print(f"  → Dataloader has {total_batches} batches")
+            logger.info(f"Dataloader reports {total_batches} batches")
+        except (TypeError, AttributeError) as e:
+            print(f"  ✗ Failed to get dataloader length: {e}")
+            logger.error(f"Failed to get dataloader length: {e}")
+            raise RuntimeError("Cannot determine number of batches - dataset must implement __len__")
 
+        batch_count = 0
         for batch_idx, batch in enumerate(dataloader, start=1):
+            batch_count += 1
             # Extract activations from batch
             # batch can be (layer_name, activations) or just activations
             if isinstance(batch, (list, tuple)):
@@ -243,10 +254,12 @@ class EnhancedSAETrainer:
                     current_lr=current_lr,
                 )
 
+                print(f"  {metrics}")  # Print directly to console
                 logger.info(str(metrics))
                 epoch_metrics.append(metrics)
                 self.metrics_history.append(metrics)
-
+        
+        print(f"  → Processed {batch_count} batches total")
         return epoch_metrics
 
     def train(

@@ -168,6 +168,10 @@ class CircuitRegistry:
         if parent_dir:
             os.makedirs(parent_dir, exist_ok=True)
         self._lock = threading.RLock()
+        # Keep a persistent connection for in-memory databases
+        self._persistent_conn: Optional[sqlite3.Connection] = None
+        if db_path == ":memory:":
+            self._persistent_conn = self._create_connection()
         self._init_db()
 
     def close(self) -> None:
@@ -184,28 +188,41 @@ class CircuitRegistry:
             finally:
                 conn.close()
 
-    def _connect(self) -> sqlite3.Connection:
+    def _create_connection(self) -> sqlite3.Connection:
+        """Create a new database connection."""
         conn = sqlite3.connect(self.db_path, check_same_thread=False)
         conn.execute("PRAGMA journal_mode=WAL;")
         conn.execute("PRAGMA synchronous=NORMAL;")
         return conn
 
+    def _connect(self) -> sqlite3.Connection:
+        """Get a connection (persistent for in-memory, new for file-based)."""
+        if self._persistent_conn is not None:
+            return self._persistent_conn
+        return self._create_connection()
+
     def _init_db(self) -> None:
-        with self._lock, self._connect() as conn:
-            conn.execute(
-                """
-                CREATE TABLE IF NOT EXISTS circuits (
-                    circuit_id TEXT PRIMARY KEY,
-                    model_name TEXT NOT NULL,
-                    task_tag   TEXT NOT NULL,
-                    vlo_mean   REAL,
-                    faithfulness REAL,
-                    created_at TEXT NOT NULL,
-                    blob       TEXT NOT NULL
+        with self._lock:
+            conn = self._connect()
+            try:
+                conn.execute(
+                    """
+                    CREATE TABLE IF NOT EXISTS circuits (
+                        circuit_id TEXT PRIMARY KEY,
+                        model_name TEXT NOT NULL,
+                        task_tag   TEXT NOT NULL,
+                        vlo_mean   REAL,
+                        faithfulness REAL,
+                        created_at TEXT NOT NULL,
+                        blob       TEXT NOT NULL
+                    )
+                    """
                 )
-                """
-            )
-            conn.commit()
+                conn.commit()
+            finally:
+                # Don't close persistent connection
+                if self._persistent_conn is None:
+                    conn.close()
 
     # ----------------------------- Public API -----------------------------
 
@@ -214,32 +231,38 @@ class CircuitRegistry:
         Insert or replace a circuit record.
         """
         blob = record.to_json()
-        with self._lock, self._connect() as conn:
-            conn.execute(
-                """
-                INSERT INTO circuits (
-                    circuit_id, model_name, task_tag,
-                    vlo_mean, faithfulness, created_at, blob
-                ) VALUES (?, ?, ?, ?, ?, ?, ?)
-                ON CONFLICT(circuit_id) DO UPDATE SET
-                    model_name=excluded.model_name,
-                    task_tag=excluded.task_tag,
-                    vlo_mean=excluded.vlo_mean,
-                    faithfulness=excluded.faithfulness,
-                    created_at=excluded.created_at,
-                    blob=excluded.blob
-                """,
-                (
-                    record.circuit_id,
-                    record.model_name,
-                    record.semantics.task_tag,
-                    record.causal_metrics.vlo_mean,
-                    record.causal_metrics.faithfulness,
-                    record.created_at,
-                    blob,
-                ),
-            )
-            conn.commit()
+        with self._lock:
+            conn = self._connect()
+            try:
+                conn.execute(
+                    """
+                    INSERT INTO circuits (
+                        circuit_id, model_name, task_tag,
+                        vlo_mean, faithfulness, created_at, blob
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?)
+                    ON CONFLICT(circuit_id) DO UPDATE SET
+                        model_name=excluded.model_name,
+                        task_tag=excluded.task_tag,
+                        vlo_mean=excluded.vlo_mean,
+                        faithfulness=excluded.faithfulness,
+                        created_at=excluded.created_at,
+                        blob=excluded.blob
+                    """,
+                    (
+                        record.circuit_id,
+                        record.model_name,
+                        record.semantics.task_tag,
+                        record.causal_metrics.vlo_mean,
+                        record.causal_metrics.faithfulness,
+                        record.created_at,
+                        blob,
+                    ),
+                )
+                conn.commit()
+            finally:
+                # Don't close persistent connection
+                if self._persistent_conn is None:
+                    conn.close()
 
     def get(self, circuit_id: str) -> Optional[CircuitRecord]:
         with self._lock:
@@ -250,7 +273,9 @@ class CircuitRegistry:
                 )
                 row = cur.fetchone()
             finally:
-                conn.close()
+                # Don't close persistent connection
+                if self._persistent_conn is None:
+                    conn.close()
         if not row:
             return None
         return CircuitRecord.from_json(row[0])
@@ -262,7 +287,9 @@ class CircuitRegistry:
                 conn.execute("DELETE FROM circuits WHERE circuit_id = ?", (circuit_id,))
                 conn.commit()
             finally:
-                conn.close()
+                # Don't close persistent connection
+                if self._persistent_conn is None:
+                    conn.close()
 
     def list(
         self,
@@ -306,7 +333,9 @@ class CircuitRegistry:
                 cur = conn.execute(query, tuple(params))
                 rows = cur.fetchall()
             finally:
-                conn.close()
+                # Don't close persistent connection
+                if self._persistent_conn is None:
+                    conn.close()
 
         return [CircuitRecord.from_json(row[0]) for row in rows]
 
@@ -325,7 +354,9 @@ class CircuitRegistry:
                     )
                     rows = cur.fetchall()
                 finally:
-                    conn.close()
+                    # Don't close persistent connection
+                    if self._persistent_conn is None:
+                        conn.close()
             if not rows:
                 break
             for row in rows:

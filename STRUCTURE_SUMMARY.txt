@@ -1,0 +1,51 @@
+# NeuroTrace - Clean Structure Summary
+
+## Files by Category
+
+### Production Scripts (6 files)
+✅ train_atlas_simple.py      - Train all 12 SAEs
+✅ validate_atlas.py           - Validate Atlas
+✅ run_atlas_analysis.py       - Complete analysis pipeline
+   capture_deep_dataset.py     - Capture activations
+   capture_ioi_activations.py  - IOI capture
+   setup.py                    - Installation
+
+### Core Library (47 modules in neurotrace/)
+- training/        (6 files) - SAE architecture & training
+- control/         (6 files) - Active steering system
+- visualization/   (5 files) - Interactive plots
+- causal/          (3 files) - VLO testing & circuit extraction
+- discovery/       (3 files) - Automated discovery
+- instrumentation/ (3 files) - Activation capture
+- state_indexer/   (3 files) - Feature database
+- datasets/        (3 files) - Task generators
+- analysis/        (2 files) - Geometric analysis
+- models/          (2 files) - Model wrappers
+
+### Support Files
+- examples/        (1 file)  - control_plane_steering_example.py
+- cli/             (3 files) - CLI tools
+- tests/           (1 file)  - test_system_diagnostic.py
+
+### Documentation
+- README.md              - Main documentation
+- PROJECT_OVERVIEW.md    - Complete structure guide
+- QUICK_START.md         - Quick reference
+- ATLAS_COMPLETE.md      - Results & statistics
+
+### Data & Results
+- checkpoints/all_layers_sae/     - 12 trained SAEs (650MB)
+- runs/deep_ioi_capture/          - Activation data (2GB)
+- circuits/atlas_circuits.db      - Circuit registry
+- visualizations/*.html           - Interactive plots
+- atlas_analysis_report.json      - Latest analysis
+
+### Archived (18 files)
+- archive_old_files/test_files/        (5 old tests)
+- archive_old_files/obsolete_files/    (9 obsolete scripts)
+- archive_old_files/one_time_scripts/  (4 one-time utilities)
+
+## Total Count
+Active: 58 files (6 scripts + 47 library + 5 support)
+Archived: 18 files
+Clean reduction: 66 → 58 files (14% cleanup)

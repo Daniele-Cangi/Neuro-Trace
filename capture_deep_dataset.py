@@ -123,8 +123,7 @@ def main():
     print(f"  Time: ~{est_time_min:.0f} minutes")
     print(f"  Disk: ~{est_disk_gb:.1f} GB")
     print()
-
-    input("Press ENTER to start capture (or Ctrl+C to cancel)...")
+    print("🚀 Starting capture...")
     print()
 
     # ========================================================================
@@ -226,8 +225,8 @@ def main():
             captured = {}
 
             def hook_fn(module, input, output):
-                # output[0] is the tensor [batch, seq, hidden_dim]
-                captured['activation'] = output[0].detach().cpu()
+                # MLP output is tensor [batch, seq, hidden_dim]
+                captured['activation'] = output.detach().cpu()
 
             hook = layer_module.register_forward_hook(hook_fn)
 

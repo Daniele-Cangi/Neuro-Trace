@@ -126,11 +126,14 @@ def train_layer_sae(
 
     # Train
     print(f"\n[3/3] Training SAE for Layer {layer_idx}...")
+    
+    # CRITICAL: Dataset yields pre-batched tensors from .pt files
+    # Use batch_size=None to avoid re-batching
     dataloader = DataLoader(
         dataset,
-        batch_size=config.batch_size,
-        shuffle=True,
-        num_workers=0,  # Windows compatibility
+        batch_size=None,  # Dataset already returns batches
+        shuffle=False,
+        num_workers=0,
     )
 
     try:
@@ -143,15 +146,20 @@ def train_layer_sae(
     layer_output_dir = output_dir / f"layer_{layer_idx}"
     layer_output_dir.mkdir(parents=True, exist_ok=True)
 
+    # Update trainer's checkpoint_dir before saving
+    trainer.config.checkpoint_dir = str(layer_output_dir)
     checkpoint_path = layer_output_dir / "final.pt"
-    trainer.save_checkpoint("final", save_dir=str(layer_output_dir))
+    trainer.save_checkpoint("final")
 
     # Get metrics
     summary = trainer.get_metrics_summary()
 
     print(f"\n✓ Layer {layer_idx} SAE training complete:")
-    print(f"  MSE: {summary['final_mse_loss']:.4f}")
-    print(f"  Dead features: {summary['final_dead_fraction']:.1%}")
+    if summary:
+        print(f"  MSE: {summary.get('final_mse_loss', 0.0):.4f}")
+        print(f"  Dead features: {summary.get('final_dead_fraction', 0.0):.1%}")
+    else:
+        print("  ⚠️  No metrics available (training may have been too short)")
     print(f"  Checkpoint: {checkpoint_path}")
 
     return {
@@ -196,8 +204,7 @@ def main():
 
     print(f"📊 Estimated total time: ~{est_total_time} minutes ({est_total_time/60:.1f} hours)")
     print()
-
-    input("Press ENTER to start training (or Ctrl+C to cancel)...")
+    print("🚀 Starting training automatically...")
     print()
 
     # Training configuration
@@ -218,7 +225,7 @@ def main():
         device=device,
         checkpoint_dir=str(output_dir),
         save_every_n_epochs=5,
-        log_every_n_batches=100,
+        log_every_n_batches=1,  # Log every batch (dataset has only ~8 batches)
         evaluate_every_n_epochs=1,
     )
 
@@ -257,8 +264,12 @@ def main():
     print(f"Trained SAEs for {len(results)} layers:")
     for result in results:
         print(f"\n  Layer {result['layer']}:")
-        print(f"    MSE: {result['metrics']['final_mse_loss']:.4f}")
-        print(f"    Dead features: {result['metrics']['final_dead_fraction']:.1%}")
+        metrics = result.get('metrics', {})
+        if metrics:
+            print(f"    MSE: {metrics.get('final_mse_loss', 0.0):.4f}")
+            print(f"    Dead features: {metrics.get('final_dead_fraction', 0.0):.1%}")
+        else:
+            print(f"    ⚠️  No metrics available")
         print(f"    Checkpoint: {result['checkpoint_path']}")
 
     print()

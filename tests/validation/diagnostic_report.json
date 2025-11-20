@@ -1,0 +1,126 @@
+{
+  "timestamp": "2025-11-16T23:10:48.241180",
+  "overall_status": "HEALTHY",
+  "tests": [
+    {
+      "test_name": "Activation Capture Fidelity",
+      "status": "PASS",
+      "score": 1.0,
+      "details": {
+        "max_difference": 0.0,
+        "layer_differences": {
+          "layer_0_mlp": 0.0,
+          "layer_1_mlp": 0.0,
+          "layer_2_mlp": 0.0,
+          "layer_3_mlp": 0.0,
+          "layer_4_mlp": 0.0,
+          "layer_5_mlp": 0.0,
+          "layer_6_mlp": 0.0,
+          "layer_7_mlp": 0.0,
+          "layer_8_mlp": 0.0,
+          "layer_9_mlp": 0.0,
+          "layer_10_mlp": 0.0,
+          "layer_11_mlp": 0.0
+        },
+        "num_layers_tested": 12
+      },
+      "critical_issues": [],
+      "recommendations": []
+    },
+    {
+      "test_name": "SAE Reconstruction Quality",
+      "status": "PASS",
+      "score": 1.0,
+      "details": {
+        "avg_mse": 0.011833374202251435,
+        "std_mse": 0.001792923652570159,
+        "avg_l0_sparsity": 64.0,
+        "batches_tested": 10,
+        "target_mse": 0.05
+      },
+      "critical_issues": [],
+      "recommendations": []
+    },
+    {
+      "test_name": "Steering Causality",
+      "status": "PASS",
+      "score": 1.0,
+      "details": {
+        "effect_rate": 1.0,
+        "num_prompts": 3,
+        "baseline_outputs": [
+          "When John and Mary went to the store, John gave a book to Mary to write down his name. So when John",
+          "Alice and Bob were talking. Alice said to Bob, \"Look, you've got a bunch",
+          "The cat and the dog fought. The cat bit the dog's head. The dog pulled the cat"
+        ],
+        "steered_outputs": [
+          "When John and Mary went to the store, John gave a book to the clerk who said, \"Take care to read",
+          "Alice and Bob were talking. Alice said to Bob, \"I see you're not good at",
+          "The cat and the dog fought. The cat bit the dog's face. That cat scratched the head"
+        ]
+      },
+      "critical_issues": [],
+      "recommendations": []
+    },
+    {
+      "test_name": "Neural Atlas Completeness",
+      "status": "WARNING",
+      "score": 0.08333333333333333,
+      "details": {
+        "available_layers": [
+          0
+        ],
+        "missing_layers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "coverage": "1/12"
+      },
+      "critical_issues": [
+        "Only 1/12 layers have SAEs"
+      ],
+      "recommendations": [
+        "Train SAEs for missing layers: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}"
+      ]
+    },
+    {
+      "test_name": "JSON Data Analysis",
+      "status": "PASS",
+      "score": 1.0,
+      "details": {
+        "total_json_files": 5,
+        "loaded_successfully": 5,
+        "failed_to_load": 0,
+        "categories": {
+          "discovery": 3,
+          "hybrid_analysis": 2
+        }
+      },
+      "critical_issues": [],
+      "recommendations": [
+        "Build systematic JSON aggregator tool"
+      ]
+    }
+  ],
+  "summary": {
+    "total_tests": 5,
+    "passed": 4,
+    "warnings": 1,
+    "failed": 0,
+    "average_score": 0.8166666666666668
+  },
+  "action_items": [
+    "Train SAEs for missing layers: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}",
+    "Build systematic JSON aggregator tool",
+    "Only 1/12 layers have SAEs"
+  ]
+}

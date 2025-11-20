@@ -1,0 +1,1604 @@
+{
+  "timestamp": "2025-11-19T15:43:51.144609",
+  "config": {
+    "num_examples": 100,
+    "layers_analyzed": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "total_features": 73728,
+    "top_k_per_layer": 20,
+    "min_correlation": 0.2
+  },
+  "discovered_features": [
+    {
+      "layer": 9,
+      "feature_idx": 3428,
+      "mean_activation": 0.014929251745343208,
+      "activation_frequency": 0.019999999552965164,
+      "correlation_with_success": -0.797623336315155
+    },
+    {
+      "layer": 10,
+      "feature_idx": 2844,
+      "mean_activation": 0.0363292396068573,
+      "activation_frequency": 0.029999999329447746,
+      "correlation_with_success": -0.6911298036575317
+    },
+    {
+      "layer": 8,
+      "feature_idx": 3488,
+      "mean_activation": 0.017623934894800186,
+      "activation_frequency": 0.029999999329447746,
+      "correlation_with_success": -0.6892503499984741
+    },
+    {
+      "layer": 11,
+      "feature_idx": 1462,
+      "mean_activation": 0.02548757568001747,
+      "activation_frequency": 0.029999999329447746,
+      "correlation_with_success": -0.6831905841827393
+    },
+    {
+      "layer": 11,
+      "feature_idx": 1935,
+      "mean_activation": 0.037161413580179214,
+      "activation_frequency": 0.029999999329447746,
+      "correlation_with_success": -0.6101508140563965
+    },
+    {
+      "layer": 4,
+      "feature_idx": 962,
+      "mean_activation": 0.011956846341490746,
+      "activation_frequency": 0.03999999910593033,
+      "correlation_with_success": -0.5948389768600464
+    },
+    {
+      "layer": 7,
+      "feature_idx": 2933,
+      "mean_activation": 0.07481302320957184,
+      "activation_frequency": 0.07000000029802322,
+      "correlation_with_success": -0.5891118049621582
+    },
+    {
+      "layer": 4,
+      "feature_idx": 3530,
+      "mean_activation": 0.01194761786609888,
+      "activation_frequency": 0.029999999329447746,
+      "correlation_with_success": -0.5779193043708801
+    },
+    {
+      "layer": 10,
+      "feature_idx": 5537,
+      "mean_activation": 0.014386867173016071,
+      "activation_frequency": 0.009999999776482582,
+      "correlation_with_success": -0.5714889764785767
+    },
+    {
+      "layer": 8,
+      "feature_idx": 2413,
+      "mean_activation": 0.010255001485347748,
+      "activation_frequency": 0.009999999776482582,
+      "correlation_with_success": -0.5714888572692871
+    },
+    {
+      "layer": 9,
+      "feature_idx": 112,
+      "mean_activation": 0.01248886901885271,
+      "activation_frequency": 0.009999999776482582,
+      "correlation_with_success": -0.5714887976646423
+    },
+    {
+      "layer": 10,
+      "feature_idx": 309,
+      "mean_activation": 0.011204643175005913,
+      "activation_frequency": 0.009999999776482582,
+      "correlation_with_success": -0.5714887976646423
+    },
+    {
+      "layer": 10,
+      "feature_idx": 1455,
+      "mean_activation": 0.0138197997584939,
+      "activation_frequency": 0.009999999776482582,
+      "correlation_with_success": -0.5714887976646423
+    },
+    {
+      "layer": 10,
+      "feature_idx": 1872,
+      "mean_activation": 0.010001507587730885,
+      "activation_frequency": 0.009999999776482582,
+      "correlation_with_success": -0.5714887976646423
+    },
+    {
+      "layer": 10,
+      "feature_idx": 3721,
+      "mean_activation": 0.014129120856523514,
+      "activation_frequency": 0.009999999776482582,
+      "correlation_with_success": -0.5714887976646423
+    },
+    {
+      "layer": 10,
+      "feature_idx": 4865,
+      "mean_activation": 0.014844108372926712,
+      "activation_frequency": 0.009999999776482582,
+      "correlation_with_success": -0.5714887976646423
+    },
+    {
+      "layer": 8,
+      "feature_idx": 481,
+      "mean_activation": 0.017894653603434563,
+      "activation_frequency": 0.009999999776482582,
+      "correlation_with_success": -0.5714886784553528
+    },
+    {
+      "layer": 10,
+      "feature_idx": 1884,
+      "mean_activation": 0.010126872919499874,
+      "activation_frequency": 0.009999999776482582,
+      "correlation_with_success": -0.5714886784553528
+    },
+    {
+      "layer": 11,
+      "feature_idx": 5217,
+      "mean_activation": 0.017649859189987183,
+      "activation_frequency": 0.009999999776482582,
+      "correlation_with_success": -0.5714886784553528
+    },
+    {
+      "layer": 9,
+      "feature_idx": 2834,
+      "mean_activation": 0.011056078597903252,
+      "activation_frequency": 0.009999999776482582,
+      "correlation_with_success": -0.5714885592460632
+    },
+    {
+      "layer": 11,
+      "feature_idx": 829,
+      "mean_activation": 0.010396675206720829,
+      "activation_frequency": 0.009999999776482582,
+      "correlation_with_success": -0.5714884400367737
+    },
+    {
+      "layer": 9,
+      "feature_idx": 1753,
+      "mean_activation": 0.012013724073767662,
+      "activation_frequency": 0.009999999776482582,
+      "correlation_with_success": -0.5714883804321289
+    },
+    {
+      "layer": 10,
+      "feature_idx": 2163,
+      "mean_activation": 0.011239336803555489,
+      "activation_frequency": 0.009999999776482582,
+      "correlation_with_success": -0.5714883804321289
+    },
+    {
+      "layer": 6,
+      "feature_idx": 3203,
+      "mean_activation": 0.05792032554745674,
+      "activation_frequency": 0.14000000059604645,
+      "correlation_with_success": -0.5647754669189453
+    },
+    {
+      "layer": 7,
+      "feature_idx": 2137,
+      "mean_activation": 0.015116696245968342,
+      "activation_frequency": 0.03999999910593033,
+      "correlation_with_success": -0.560543954372406
+    },
+    {
+      "layer": 8,
+      "feature_idx": 4513,
+      "mean_activation": 0.04140675440430641,
+      "activation_frequency": 0.05000000074505806,
+      "correlation_with_success": -0.5588988065719604
+    },
+    {
+      "layer": 8,
+      "feature_idx": 5065,
+      "mean_activation": 0.014155643992125988,
+      "activation_frequency": 0.019999999552965164,
+      "correlation_with_success": -0.5585441589355469
+    },
+    {
+      "layer": 10,
+      "feature_idx": 1876,
+      "mean_activation": 0.3362641930580139,
+      "activation_frequency": 0.07000000029802322,
+      "correlation_with_success": -0.5551921725273132
+    },
+    {
+      "layer": 7,
+      "feature_idx": 4410,
+      "mean_activation": 0.024426573887467384,
+      "activation_frequency": 0.05000000074505806,
+      "correlation_with_success": -0.5524112582206726
+    },
+    {
+      "layer": 8,
+      "feature_idx": 2838,
+      "mean_activation": 0.11552923172712326,
+      "activation_frequency": 0.10999999940395355,
+      "correlation_with_success": -0.5523138642311096
+    },
+    {
+      "layer": 3,
+      "feature_idx": 4364,
+      "mean_activation": 0.04355604946613312,
+      "activation_frequency": 0.14000000059604645,
+      "correlation_with_success": -0.5455493330955505
+    },
+    {
+      "layer": 8,
+      "feature_idx": 2556,
+      "mean_activation": 0.07157356292009354,
+      "activation_frequency": 0.05000000074505806,
+      "correlation_with_success": -0.544090211391449
+    },
+    {
+      "layer": 9,
+      "feature_idx": 4745,
+      "mean_activation": 0.04951716959476471,
+      "activation_frequency": 0.05000000074505806,
+      "correlation_with_success": -0.5418819189071655
+    },
+    {
+      "layer": 5,
+      "feature_idx": 2333,
+      "mean_activation": 0.016013646498322487,
+      "activation_frequency": 0.03999999910593033,
+      "correlation_with_success": -0.5406143069267273
+    },
+    {
+      "layer": 4,
+      "feature_idx": 2129,
+      "mean_activation": 0.07643759995698929,
+      "activation_frequency": 0.1899999976158142,
+      "correlation_with_success": -0.5394303798675537
+    },
+    {
+      "layer": 7,
+      "feature_idx": 2824,
+      "mean_activation": 0.01469514612108469,
+      "activation_frequency": 0.019999999552965164,
+      "correlation_with_success": -0.5329225063323975
+    },
+    {
+      "layer": 8,
+      "feature_idx": 446,
+      "mean_activation": 0.01671946980059147,
+      "activation_frequency": 0.019999999552965164,
+      "correlation_with_success": -0.5327094793319702
+    },
+    {
+      "layer": 7,
+      "feature_idx": 2354,
+      "mean_activation": 0.054953984916210175,
+      "activation_frequency": 0.05999999865889549,
+      "correlation_with_success": -0.5295714735984802
+    },
+    {
+      "layer": 9,
+      "feature_idx": 1435,
+      "mean_activation": 0.04859291389584541,
+      "activation_frequency": 0.03999999910593033,
+      "correlation_with_success": -0.5289127230644226
+    },
+    {
+      "layer": 8,
+      "feature_idx": 3461,
+      "mean_activation": 0.39816397428512573,
+      "activation_frequency": 0.07999999821186066,
+      "correlation_with_success": -0.5233082175254822
+    },
+    {
+      "layer": 8,
+      "feature_idx": 928,
+      "mean_activation": 0.013105589896440506,
+      "activation_frequency": 0.019999999552965164,
+      "correlation_with_success": -0.5185311436653137
+    },
+    {
+      "layer": 6,
+      "feature_idx": 3050,
+      "mean_activation": 0.05301321670413017,
+      "activation_frequency": 0.07000000029802322,
+      "correlation_with_success": -0.5173859596252441
+    },
+    {
+      "layer": 11,
+      "feature_idx": 5507,
+      "mean_activation": 0.0283315759152174,
+      "activation_frequency": 0.019999999552965164,
+      "correlation_with_success": -0.5102812051773071
+    },
+    {
+      "layer": 5,
+      "feature_idx": 3248,
+      "mean_activation": 0.05599220097064972,
+      "activation_frequency": 0.05999999865889549,
+      "correlation_with_success": -0.5096076726913452
+    },
+    {
+      "layer": 8,
+      "feature_idx": 228,
+      "mean_activation": 0.09552757441997528,
+      "activation_frequency": 0.07000000029802322,
+      "correlation_with_success": -0.5068483352661133
+    },
+    {
+      "layer": 8,
+      "feature_idx": 2425,
+      "mean_activation": 0.016741855069994926,
+      "activation_frequency": 0.019999999552965164,
+      "correlation_with_success": -0.5048587918281555
+    },
+    {
+      "layer": 10,
+      "feature_idx": 997,
+      "mean_activation": 0.023576416075229645,
+      "activation_frequency": 0.019999999552965164,
+      "correlation_with_success": -0.5041230320930481
+    },
+    {
+      "layer": 5,
+      "feature_idx": 4473,
+      "mean_activation": 0.043467774987220764,
+      "activation_frequency": 0.05999999865889549,
+      "correlation_with_success": -0.5032166838645935
+    },
+    {
+      "layer": 9,
+      "feature_idx": 685,
+      "mean_activation": 0.02551577053964138,
+      "activation_frequency": 0.019999999552965164,
+      "correlation_with_success": -0.5020352005958557
+    },
+    {
+      "layer": 7,
+      "feature_idx": 1911,
+      "mean_activation": 0.01843445934355259,
+      "activation_frequency": 0.03999999910593033,
+      "correlation_with_success": -0.5003616213798523
+    },
+    {
+      "layer": 6,
+      "feature_idx": 4838,
+      "mean_activation": 0.13297131657600403,
+      "activation_frequency": 0.20000000298023224,
+      "correlation_with_success": -0.5000473856925964
+    },
+    {
+      "layer": 9,
+      "feature_idx": 1255,
+      "mean_activation": 0.11221840977668762,
+      "activation_frequency": 0.05000000074505806,
+      "correlation_with_success": -0.49944543838500977
+    },
+    {
+      "layer": 9,
+      "feature_idx": 371,
+      "mean_activation": 0.0184596199542284,
+      "activation_frequency": 0.019999999552965164,
+      "correlation_with_success": -0.4980490207672119
+    },
+    {
+      "layer": 11,
+      "feature_idx": 5974,
+      "mean_activation": 0.01988215558230877,
+      "activation_frequency": 0.019999999552965164,
+      "correlation_with_success": -0.4974816143512726
+    },
+    {
+      "layer": 8,
+      "feature_idx": 1923,
+      "mean_activation": 0.012612556107342243,
+      "activation_frequency": 0.019999999552965164,
+      "correlation_with_success": -0.49648258090019226
+    },
+    {
+      "layer": 5,
+      "feature_idx": 640,
+      "mean_activation": 0.0155185516923666,
+      "activation_frequency": 0.03999999910593033,
+      "correlation_with_success": -0.4942142367362976
+    },
+    {
+      "layer": 9,
+      "feature_idx": 5994,
+      "mean_activation": 0.3074909448623657,
+      "activation_frequency": 0.07999999821186066,
+      "correlation_with_success": -0.49075937271118164
+    },
+    {
+      "layer": 9,
+      "feature_idx": 2857,
+      "mean_activation": 0.04983120411634445,
+      "activation_frequency": 0.05999999865889549,
+      "correlation_with_success": -0.4889717102050781
+    },
+    {
+      "layer": 8,
+      "feature_idx": 199,
+      "mean_activation": 0.012428837828338146,
+      "activation_frequency": 0.019999999552965164,
+      "correlation_with_success": -0.48506489396095276
+    },
+    {
+      "layer": 9,
+      "feature_idx": 1047,
+      "mean_activation": 0.02479463629424572,
+      "activation_frequency": 0.019999999552965164,
+      "correlation_with_success": -0.48367735743522644
+    },
+    {
+      "layer": 9,
+      "feature_idx": 4928,
+      "mean_activation": 0.49706947803497314,
+      "activation_frequency": 0.10999999940395355,
+      "correlation_with_success": -0.48308661580085754
+    },
+    {
+      "layer": 8,
+      "feature_idx": 1739,
+      "mean_activation": 0.014275899156928062,
+      "activation_frequency": 0.019999999552965164,
+      "correlation_with_success": -0.4813978970050812
+    },
+    {
+      "layer": 8,
+      "feature_idx": 4734,
+      "mean_activation": 0.01424985658377409,
+      "activation_frequency": 0.019999999552965164,
+      "correlation_with_success": -0.47984135150909424
+    },
+    {
+      "layer": 7,
+      "feature_idx": 1836,
+      "mean_activation": 0.10283554345369339,
+      "activation_frequency": 0.07999999821186066,
+      "correlation_with_success": -0.4792288839817047
+    },
+    {
+      "layer": 8,
+      "feature_idx": 1962,
+      "mean_activation": 0.014100129716098309,
+      "activation_frequency": 0.019999999552965164,
+      "correlation_with_success": -0.4781365394592285
+    },
+    {
+      "layer": 5,
+      "feature_idx": 495,
+      "mean_activation": 0.05171363055706024,
+      "activation_frequency": 0.07000000029802322,
+      "correlation_with_success": -0.47748863697052
+    },
+    {
+      "layer": 4,
+      "feature_idx": 854,
+      "mean_activation": 0.15253879129886627,
+      "activation_frequency": 0.2199999988079071,
+      "correlation_with_success": -0.4745216965675354
+    },
+    {
+      "layer": 6,
+      "feature_idx": 5079,
+      "mean_activation": 0.0623069666326046,
+      "activation_frequency": 0.07999999821186066,
+      "correlation_with_success": -0.4706389307975769
+    },
+    {
+      "layer": 7,
+      "feature_idx": 1848,
+      "mean_activation": 0.012817233800888062,
+      "activation_frequency": 0.019999999552965164,
+      "correlation_with_success": -0.47049325704574585
+    },
+    {
+      "layer": 8,
+      "feature_idx": 5525,
+      "mean_activation": 0.12971527874469757,
+      "activation_frequency": 0.07000000029802322,
+      "correlation_with_success": -0.46993687748908997
+    },
+    {
+      "layer": 8,
+      "feature_idx": 5710,
+      "mean_activation": 0.02632809802889824,
+      "activation_frequency": 0.029999999329447746,
+      "correlation_with_success": -0.469927579164505
+    },
+    {
+      "layer": 8,
+      "feature_idx": 3599,
+      "mean_activation": 0.014056575484573841,
+      "activation_frequency": 0.019999999552965164,
+      "correlation_with_success": -0.46952253580093384
+    },
+    {
+      "layer": 4,
+      "feature_idx": 1036,
+      "mean_activation": 0.02109004557132721,
+      "activation_frequency": 0.05999999865889549,
+      "correlation_with_success": -0.4679897129535675
+    },
+    {
+      "layer": 11,
+      "feature_idx": 2504,
+      "mean_activation": 0.015798378735780716,
+      "activation_frequency": 0.019999999552965164,
+      "correlation_with_success": -0.465440571308136
+    },
+    {
+      "layer": 9,
+      "feature_idx": 3538,
+      "mean_activation": 0.01826617866754532,
+      "activation_frequency": 0.019999999552965164,
+      "correlation_with_success": -0.465300977230072
+    },
+    {
+      "layer": 3,
+      "feature_idx": 169,
+      "mean_activation": 0.042696140706539154,
+      "activation_frequency": 0.14000000059604645,
+      "correlation_with_success": -0.4651637077331543
+    },
+    {
+      "layer": 2,
+      "feature_idx": 467,
+      "mean_activation": 0.023802952840924263,
+      "activation_frequency": 0.07000000029802322,
+      "correlation_with_success": -0.46512550115585327
+    },
+    {
+      "layer": 10,
+      "feature_idx": 3196,
+      "mean_activation": 0.06183855980634689,
+      "activation_frequency": 0.05000000074505806,
+      "correlation_with_success": -0.4626508951187134
+    },
+    {
+      "layer": 7,
+      "feature_idx": 4683,
+      "mean_activation": 0.1882144957780838,
+      "activation_frequency": 0.12999999523162842,
+      "correlation_with_success": -0.46249833703041077
+    },
+    {
+      "layer": 9,
+      "feature_idx": 135,
+      "mean_activation": 0.09874346852302551,
+      "activation_frequency": 0.07000000029802322,
+      "correlation_with_success": -0.4609498977661133
+    },
+    {
+      "layer": 5,
+      "feature_idx": 559,
+      "mean_activation": 0.06469324231147766,
+      "activation_frequency": 0.07999999821186066,
+      "correlation_with_success": -0.46079301834106445
+    },
+    {
+      "layer": 6,
+      "feature_idx": 4040,
+      "mean_activation": 0.010965569876134396,
+      "activation_frequency": 0.029999999329447746,
+      "correlation_with_success": -0.4606907069683075
+    },
+    {
+      "layer": 5,
+      "feature_idx": 2163,
+      "mean_activation": 0.11756301671266556,
+      "activation_frequency": 0.09000000357627869,
+      "correlation_with_success": -0.4601852595806122
+    },
+    {
+      "layer": 5,
+      "feature_idx": 2996,
+      "mean_activation": 0.024239208549261093,
+      "activation_frequency": 0.07999999821186066,
+      "correlation_with_success": -0.45915666222572327
+    },
+    {
+      "layer": 6,
+      "feature_idx": 5659,
+      "mean_activation": 0.0788373127579689,
+      "activation_frequency": 0.09000000357627869,
+      "correlation_with_success": -0.45606955885887146
+    },
+    {
+      "layer": 7,
+      "feature_idx": 2376,
+      "mean_activation": 0.14518718421459198,
+      "activation_frequency": 0.09000000357627869,
+      "correlation_with_success": -0.455107718706131
+    },
+    {
+      "layer": 9,
+      "feature_idx": 3310,
+      "mean_activation": 0.013140475377440453,
+      "activation_frequency": 0.019999999552965164,
+      "correlation_with_success": -0.45324820280075073
+    },
+    {
+      "layer": 11,
+      "feature_idx": 1463,
+      "mean_activation": 0.36641064286231995,
+      "activation_frequency": 0.07000000029802322,
+      "correlation_with_success": -0.452226847410202
+    },
+    {
+      "layer": 5,
+      "feature_idx": 556,
+      "mean_activation": 0.07416998594999313,
+      "activation_frequency": 0.07000000029802322,
+      "correlation_with_success": -0.45186883211135864
+    },
+    {
+      "layer": 5,
+      "feature_idx": 1063,
+      "mean_activation": 0.6814956665039062,
+      "activation_frequency": 0.7599999904632568,
+      "correlation_with_success": -0.4516715109348297
+    },
+    {
+      "layer": 6,
+      "feature_idx": 4181,
+      "mean_activation": 0.03706996887922287,
+      "activation_frequency": 0.07000000029802322,
+      "correlation_with_success": -0.4512954354286194
+    },
+    {
+      "layer": 9,
+      "feature_idx": 669,
+      "mean_activation": 0.01687389425933361,
+      "activation_frequency": 0.019999999552965164,
+      "correlation_with_success": -0.451153039932251
+    },
+    {
+      "layer": 3,
+      "feature_idx": 5981,
+      "mean_activation": 0.03923855349421501,
+      "activation_frequency": 0.11999999731779099,
+      "correlation_with_success": -0.44952577352523804
+    },
+    {
+      "layer": 10,
+      "feature_idx": 2190,
+      "mean_activation": 0.017130551859736443,
+      "activation_frequency": 0.019999999552965164,
+      "correlation_with_success": -0.4493042528629303
+    },
+    {
+      "layer": 7,
+      "feature_idx": 3493,
+      "mean_activation": 0.2231699377298355,
+      "activation_frequency": 0.10000000149011612,
+      "correlation_with_success": -0.4486616849899292
+    },
+    {
+      "layer": 5,
+      "feature_idx": 1888,
+      "mean_activation": 0.15590758621692657,
+      "activation_frequency": 0.09000000357627869,
+      "correlation_with_success": -0.4479489326477051
+    },
+    {
+      "layer": 7,
+      "feature_idx": 3065,
+      "mean_activation": 0.061861973255872726,
+      "activation_frequency": 0.07000000029802322,
+      "correlation_with_success": -0.4477052688598633
+    },
+    {
+      "layer": 7,
+      "feature_idx": 3740,
+      "mean_activation": 0.07148075103759766,
+      "activation_frequency": 0.07000000029802322,
+      "correlation_with_success": -0.44766250252723694
+    },
+    {
+      "layer": 9,
+      "feature_idx": 4026,
+      "mean_activation": 0.1301197111606598,
+      "activation_frequency": 0.07999999821186066,
+      "correlation_with_success": -0.44497328996658325
+    },
+    {
+      "layer": 10,
+      "feature_idx": 4036,
+      "mean_activation": 0.31686919927597046,
+      "activation_frequency": 0.09000000357627869,
+      "correlation_with_success": -0.44465401768684387
+    },
+    {
+      "layer": 6,
+      "feature_idx": 5635,
+      "mean_activation": 0.023611431941390038,
+      "activation_frequency": 0.05999999865889549,
+      "correlation_with_success": -0.4420928359031677
+    },
+    {
+      "layer": 6,
+      "feature_idx": 930,
+      "mean_activation": 0.045351915061473846,
+      "activation_frequency": 0.07000000029802322,
+      "correlation_with_success": -0.4417601227760315
+    },
+    {
+      "layer": 6,
+      "feature_idx": 5999,
+      "mean_activation": 0.05360934138298035,
+      "activation_frequency": 0.05999999865889549,
+      "correlation_with_success": -0.4414677023887634
+    },
+    {
+      "layer": 7,
+      "feature_idx": 6068,
+      "mean_activation": 0.06659017503261566,
+      "activation_frequency": 0.11999999731779099,
+      "correlation_with_success": -0.4408496916294098
+    },
+    {
+      "layer": 7,
+      "feature_idx": 1999,
+      "mean_activation": 0.013586828485131264,
+      "activation_frequency": 0.019999999552965164,
+      "correlation_with_success": -0.44018736481666565
+    },
+    {
+      "layer": 4,
+      "feature_idx": 821,
+      "mean_activation": 0.04742753878235817,
+      "activation_frequency": 0.09000000357627869,
+      "correlation_with_success": -0.43746086955070496
+    },
+    {
+      "layer": 4,
+      "feature_idx": 1177,
+      "mean_activation": 0.015620124526321888,
+      "activation_frequency": 0.029999999329447746,
+      "correlation_with_success": -0.4373231530189514
+    },
+    {
+      "layer": 11,
+      "feature_idx": 5467,
+      "mean_activation": 0.3296462893486023,
+      "activation_frequency": 0.11999999731779099,
+      "correlation_with_success": -0.4369232654571533
+    },
+    {
+      "layer": 5,
+      "feature_idx": 2521,
+      "mean_activation": 0.29363253712654114,
+      "activation_frequency": 0.14000000059604645,
+      "correlation_with_success": -0.4361442029476166
+    },
+    {
+      "layer": 3,
+      "feature_idx": 2785,
+      "mean_activation": 0.014550807885825634,
+      "activation_frequency": 0.05999999865889549,
+      "correlation_with_success": -0.43430331349372864
+    },
+    {
+      "layer": 4,
+      "feature_idx": 5344,
+      "mean_activation": 0.011917714960873127,
+      "activation_frequency": 0.029999999329447746,
+      "correlation_with_success": -0.4341028928756714
+    },
+    {
+      "layer": 5,
+      "feature_idx": 5329,
+      "mean_activation": 0.03752593696117401,
+      "activation_frequency": 0.12999999523162842,
+      "correlation_with_success": -0.43352851271629333
+    },
+    {
+      "layer": 9,
+      "feature_idx": 4763,
+      "mean_activation": 1.0098888874053955,
+      "activation_frequency": 0.5199999809265137,
+      "correlation_with_success": -0.43101564049720764
+    },
+    {
+      "layer": 3,
+      "feature_idx": 292,
+      "mean_activation": 0.06402484327554703,
+      "activation_frequency": 0.07000000029802322,
+      "correlation_with_success": -0.43043532967567444
+    },
+    {
+      "layer": 4,
+      "feature_idx": 1884,
+      "mean_activation": 0.03605438768863678,
+      "activation_frequency": 0.09000000357627869,
+      "correlation_with_success": -0.43016770482063293
+    },
+    {
+      "layer": 7,
+      "feature_idx": 5869,
+      "mean_activation": 0.11834181845188141,
+      "activation_frequency": 0.07000000029802322,
+      "correlation_with_success": -0.42931708693504333
+    },
+    {
+      "layer": 10,
+      "feature_idx": 2058,
+      "mean_activation": 0.353161096572876,
+      "activation_frequency": 0.10999999940395355,
+      "correlation_with_success": -0.42875829339027405
+    },
+    {
+      "layer": 2,
+      "feature_idx": 1610,
+      "mean_activation": 0.024051915854215622,
+      "activation_frequency": 0.10000000149011612,
+      "correlation_with_success": -0.4265846610069275
+    },
+    {
+      "layer": 0,
+      "feature_idx": 1262,
+      "mean_activation": 0.017933685332536697,
+      "activation_frequency": 0.10000000149011612,
+      "correlation_with_success": -0.42439842224121094
+    },
+    {
+      "layer": 6,
+      "feature_idx": 1695,
+      "mean_activation": 0.07322553545236588,
+      "activation_frequency": 0.09000000357627869,
+      "correlation_with_success": -0.42394959926605225
+    },
+    {
+      "layer": 9,
+      "feature_idx": 1643,
+      "mean_activation": 0.02181447111070156,
+      "activation_frequency": 0.029999999329447746,
+      "correlation_with_success": -0.4228583872318268
+    },
+    {
+      "layer": 3,
+      "feature_idx": 4934,
+      "mean_activation": 0.10188436508178711,
+      "activation_frequency": 0.09000000357627869,
+      "correlation_with_success": -0.42137840390205383
+    },
+    {
+      "layer": 6,
+      "feature_idx": 5530,
+      "mean_activation": 0.04439582675695419,
+      "activation_frequency": 0.09000000357627869,
+      "correlation_with_success": -0.42129409313201904
+    },
+    {
+      "layer": 6,
+      "feature_idx": 2137,
+      "mean_activation": 0.14224453270435333,
+      "activation_frequency": 0.10000000149011612,
+      "correlation_with_success": -0.4208909869194031
+    },
+    {
+      "layer": 4,
+      "feature_idx": 6011,
+      "mean_activation": 0.05175519362092018,
+      "activation_frequency": 0.07000000029802322,
+      "correlation_with_success": -0.4207454025745392
+    },
+    {
+      "layer": 7,
+      "feature_idx": 1254,
+      "mean_activation": 0.13888661563396454,
+      "activation_frequency": 0.11999999731779099,
+      "correlation_with_success": -0.41907447576522827
+    },
+    {
+      "layer": 10,
+      "feature_idx": 5503,
+      "mean_activation": 0.01484383549541235,
+      "activation_frequency": 0.019999999552965164,
+      "correlation_with_success": -0.4175245463848114
+    },
+    {
+      "layer": 4,
+      "feature_idx": 5771,
+      "mean_activation": 0.18336322903633118,
+      "activation_frequency": 0.17000000178813934,
+      "correlation_with_success": -0.41621989011764526
+    },
+    {
+      "layer": 5,
+      "feature_idx": 2396,
+      "mean_activation": 0.1697230190038681,
+      "activation_frequency": 0.11999999731779099,
+      "correlation_with_success": -0.4143524765968323
+    },
+    {
+      "layer": 4,
+      "feature_idx": 4129,
+      "mean_activation": 0.12317851930856705,
+      "activation_frequency": 0.10000000149011612,
+      "correlation_with_success": -0.4140501618385315
+    },
+    {
+      "layer": 10,
+      "feature_idx": 3340,
+      "mean_activation": 0.017414497211575508,
+      "activation_frequency": 0.019999999552965164,
+      "correlation_with_success": -0.4138987362384796
+    },
+    {
+      "layer": 5,
+      "feature_idx": 5621,
+      "mean_activation": 0.2738926410675049,
+      "activation_frequency": 0.3400000035762787,
+      "correlation_with_success": -0.4138954281806946
+    },
+    {
+      "layer": 3,
+      "feature_idx": 902,
+      "mean_activation": 0.0208249781280756,
+      "activation_frequency": 0.07000000029802322,
+      "correlation_with_success": -0.41371849179267883
+    },
+    {
+      "layer": 4,
+      "feature_idx": 4964,
+      "mean_activation": 0.07997903227806091,
+      "activation_frequency": 0.09000000357627869,
+      "correlation_with_success": -0.4127122461795807
+    },
+    {
+      "layer": 1,
+      "feature_idx": 3331,
+      "mean_activation": 0.02988695539534092,
+      "activation_frequency": 0.07999999821186066,
+      "correlation_with_success": -0.41236692667007446
+    },
+    {
+      "layer": 7,
+      "feature_idx": 1097,
+      "mean_activation": 0.019289689138531685,
+      "activation_frequency": 0.03999999910593033,
+      "correlation_with_success": -0.4110652208328247
+    },
+    {
+      "layer": 7,
+      "feature_idx": 5281,
+      "mean_activation": 0.37936484813690186,
+      "activation_frequency": 0.6200000047683716,
+      "correlation_with_success": -0.4098411202430725
+    },
+    {
+      "layer": 6,
+      "feature_idx": 119,
+      "mean_activation": 0.15953096747398376,
+      "activation_frequency": 0.23000000417232513,
+      "correlation_with_success": -0.4097636640071869
+    },
+    {
+      "layer": 3,
+      "feature_idx": 1279,
+      "mean_activation": 0.07112576812505722,
+      "activation_frequency": 0.07999999821186066,
+      "correlation_with_success": -0.4092024564743042
+    },
+    {
+      "layer": 7,
+      "feature_idx": 2019,
+      "mean_activation": 0.5325385928153992,
+      "activation_frequency": 0.3400000035762787,
+      "correlation_with_success": -0.4088376760482788
+    },
+    {
+      "layer": 6,
+      "feature_idx": 5572,
+      "mean_activation": 0.06734150648117065,
+      "activation_frequency": 0.07000000029802322,
+      "correlation_with_success": -0.4088170528411865
+    },
+    {
+      "layer": 6,
+      "feature_idx": 4512,
+      "mean_activation": 0.16686522960662842,
+      "activation_frequency": 0.25999999046325684,
+      "correlation_with_success": -0.40832483768463135
+    },
+    {
+      "layer": 5,
+      "feature_idx": 2626,
+      "mean_activation": 0.01125190407037735,
+      "activation_frequency": 0.029999999329447746,
+      "correlation_with_success": -0.40782761573791504
+    },
+    {
+      "layer": 11,
+      "feature_idx": 1597,
+      "mean_activation": 0.07928144186735153,
+      "activation_frequency": 0.03999999910593033,
+      "correlation_with_success": -0.40702733397483826
+    },
+    {
+      "layer": 3,
+      "feature_idx": 5687,
+      "mean_activation": 0.025122560560703278,
+      "activation_frequency": 0.07999999821186066,
+      "correlation_with_success": -0.4065741300582886
+    },
+    {
+      "layer": 6,
+      "feature_idx": 3877,
+      "mean_activation": 0.16533945500850677,
+      "activation_frequency": 0.07999999821186066,
+      "correlation_with_success": -0.40617337822914124
+    },
+    {
+      "layer": 4,
+      "feature_idx": 5856,
+      "mean_activation": 0.6063006520271301,
+      "activation_frequency": 0.8399999737739563,
+      "correlation_with_success": -0.406126469373703
+    },
+    {
+      "layer": 11,
+      "feature_idx": 3011,
+      "mean_activation": 0.03430107980966568,
+      "activation_frequency": 0.029999999329447746,
+      "correlation_with_success": -0.4054398238658905
+    },
+    {
+      "layer": 3,
+      "feature_idx": 1436,
+      "mean_activation": 0.027157459408044815,
+      "activation_frequency": 0.07999999821186066,
+      "correlation_with_success": -0.40507933497428894
+    },
+    {
+      "layer": 2,
+      "feature_idx": 2456,
+      "mean_activation": 0.04632246866822243,
+      "activation_frequency": 0.14000000059604645,
+      "correlation_with_success": -0.4045617878437042
+    },
+    {
+      "layer": 3,
+      "feature_idx": 68,
+      "mean_activation": 0.04431964084506035,
+      "activation_frequency": 0.14000000059604645,
+      "correlation_with_success": -0.4045051336288452
+    },
+    {
+      "layer": 3,
+      "feature_idx": 178,
+      "mean_activation": 0.023987460881471634,
+      "activation_frequency": 0.07999999821186066,
+      "correlation_with_success": -0.40409529209136963
+    },
+    {
+      "layer": 1,
+      "feature_idx": 4458,
+      "mean_activation": 0.060875505208969116,
+      "activation_frequency": 0.11999999731779099,
+      "correlation_with_success": -0.4040933847427368
+    },
+    {
+      "layer": 3,
+      "feature_idx": 3561,
+      "mean_activation": 0.01676393672823906,
+      "activation_frequency": 0.07000000029802322,
+      "correlation_with_success": -0.40362548828125
+    },
+    {
+      "layer": 11,
+      "feature_idx": 2593,
+      "mean_activation": 0.6660414338111877,
+      "activation_frequency": 0.23000000417232513,
+      "correlation_with_success": -0.40315884351730347
+    },
+    {
+      "layer": 5,
+      "feature_idx": 2058,
+      "mean_activation": 0.11210159212350845,
+      "activation_frequency": 0.17000000178813934,
+      "correlation_with_success": -0.40228861570358276
+    },
+    {
+      "layer": 3,
+      "feature_idx": 2437,
+      "mean_activation": 0.030981941148638725,
+      "activation_frequency": 0.07000000029802322,
+      "correlation_with_success": -0.40209782123565674
+    },
+    {
+      "layer": 5,
+      "feature_idx": 2205,
+      "mean_activation": 0.06134055554866791,
+      "activation_frequency": 0.10999999940395355,
+      "correlation_with_success": -0.4006217122077942
+    },
+    {
+      "layer": 4,
+      "feature_idx": 1387,
+      "mean_activation": 0.07602118700742722,
+      "activation_frequency": 0.07000000029802322,
+      "correlation_with_success": -0.39998430013656616
+    },
+    {
+      "layer": 4,
+      "feature_idx": 2664,
+      "mean_activation": 0.012938207015395164,
+      "activation_frequency": 0.03999999910593033,
+      "correlation_with_success": -0.39982518553733826
+    },
+    {
+      "layer": 3,
+      "feature_idx": 1796,
+      "mean_activation": 0.18183231353759766,
+      "activation_frequency": 0.1599999964237213,
+      "correlation_with_success": -0.39813923835754395
+    },
+    {
+      "layer": 10,
+      "feature_idx": 5378,
+      "mean_activation": 0.07102576643228531,
+      "activation_frequency": 0.05999999865889549,
+      "correlation_with_success": -0.39646366238594055
+    },
+    {
+      "layer": 6,
+      "feature_idx": 460,
+      "mean_activation": 0.27826306223869324,
+      "activation_frequency": 0.46000000834465027,
+      "correlation_with_success": -0.39546409249305725
+    },
+    {
+      "layer": 5,
+      "feature_idx": 2402,
+      "mean_activation": 0.011141479946672916,
+      "activation_frequency": 0.029999999329447746,
+      "correlation_with_success": -0.3954375684261322
+    },
+    {
+      "layer": 11,
+      "feature_idx": 3266,
+      "mean_activation": 0.02659354731440544,
+      "activation_frequency": 0.019999999552965164,
+      "correlation_with_success": -0.3943963348865509
+    },
+    {
+      "layer": 1,
+      "feature_idx": 61,
+      "mean_activation": 0.04911523684859276,
+      "activation_frequency": 0.18000000715255737,
+      "correlation_with_success": -0.3933219909667969
+    },
+    {
+      "layer": 4,
+      "feature_idx": 2272,
+      "mean_activation": 0.04043583944439888,
+      "activation_frequency": 0.07000000029802322,
+      "correlation_with_success": -0.39320865273475647
+    },
+    {
+      "layer": 1,
+      "feature_idx": 3986,
+      "mean_activation": 0.04337164759635925,
+      "activation_frequency": 0.10999999940395355,
+      "correlation_with_success": -0.39234447479248047
+    },
+    {
+      "layer": 10,
+      "feature_idx": 6126,
+      "mean_activation": 0.041743453592061996,
+      "activation_frequency": 0.029999999329447746,
+      "correlation_with_success": -0.3922484219074249
+    },
+    {
+      "layer": 4,
+      "feature_idx": 291,
+      "mean_activation": 0.016591330990195274,
+      "activation_frequency": 0.07000000029802322,
+      "correlation_with_success": -0.39200693368911743
+    },
+    {
+      "layer": 6,
+      "feature_idx": 5222,
+      "mean_activation": 0.7614299654960632,
+      "activation_frequency": 0.6800000071525574,
+      "correlation_with_success": -0.3919840455055237
+    },
+    {
+      "layer": 3,
+      "feature_idx": 1349,
+      "mean_activation": 0.03397388756275177,
+      "activation_frequency": 0.07999999821186066,
+      "correlation_with_success": -0.39173147082328796
+    },
+    {
+      "layer": 6,
+      "feature_idx": 2308,
+      "mean_activation": 0.031463559716939926,
+      "activation_frequency": 0.05000000074505806,
+      "correlation_with_success": -0.3907388746738434
+    },
+    {
+      "layer": 10,
+      "feature_idx": 4220,
+      "mean_activation": 0.25943174958229065,
+      "activation_frequency": 0.07000000029802322,
+      "correlation_with_success": -0.387376070022583
+    },
+    {
+      "layer": 3,
+      "feature_idx": 3182,
+      "mean_activation": 0.03149024397134781,
+      "activation_frequency": 0.07999999821186066,
+      "correlation_with_success": -0.38562920689582825
+    },
+    {
+      "layer": 11,
+      "feature_idx": 2281,
+      "mean_activation": 0.01623128168284893,
+      "activation_frequency": 0.019999999552965164,
+      "correlation_with_success": -0.38434362411499023
+    },
+    {
+      "layer": 4,
+      "feature_idx": 4565,
+      "mean_activation": 0.10733203589916229,
+      "activation_frequency": 0.2199999988079071,
+      "correlation_with_success": -0.3835907280445099
+    },
+    {
+      "layer": 3,
+      "feature_idx": 2089,
+      "mean_activation": 0.07202301174402237,
+      "activation_frequency": 0.11999999731779099,
+      "correlation_with_success": -0.38353991508483887
+    },
+    {
+      "layer": 5,
+      "feature_idx": 5476,
+      "mean_activation": 0.03252684324979782,
+      "activation_frequency": 0.10999999940395355,
+      "correlation_with_success": -0.3825528919696808
+    },
+    {
+      "layer": 4,
+      "feature_idx": 4205,
+      "mean_activation": 0.026235828176140785,
+      "activation_frequency": 0.09000000357627869,
+      "correlation_with_success": -0.3814796209335327
+    },
+    {
+      "layer": 11,
+      "feature_idx": 5990,
+      "mean_activation": 0.021657347679138184,
+      "activation_frequency": 0.019999999552965164,
+      "correlation_with_success": -0.38112226128578186
+    },
+    {
+      "layer": 1,
+      "feature_idx": 4813,
+      "mean_activation": 0.04830805957317352,
+      "activation_frequency": 0.12999999523162842,
+      "correlation_with_success": -0.38111963868141174
+    },
+    {
+      "layer": 11,
+      "feature_idx": 984,
+      "mean_activation": 1.319748878479004,
+      "activation_frequency": 0.30000001192092896,
+      "correlation_with_success": -0.37927335500717163
+    },
+    {
+      "layer": 2,
+      "feature_idx": 3906,
+      "mean_activation": 0.026792235672473907,
+      "activation_frequency": 0.10000000149011612,
+      "correlation_with_success": -0.37764692306518555
+    },
+    {
+      "layer": 2,
+      "feature_idx": 4332,
+      "mean_activation": 0.03894238546490669,
+      "activation_frequency": 0.07999999821186066,
+      "correlation_with_success": -0.37331199645996094
+    },
+    {
+      "layer": 2,
+      "feature_idx": 5388,
+      "mean_activation": 0.13130854070186615,
+      "activation_frequency": 0.27000001072883606,
+      "correlation_with_success": -0.3731471598148346
+    },
+    {
+      "layer": 1,
+      "feature_idx": 5653,
+      "mean_activation": 0.038182687014341354,
+      "activation_frequency": 0.11999999731779099,
+      "correlation_with_success": -0.3683863878250122
+    },
+    {
+      "layer": 1,
+      "feature_idx": 5075,
+      "mean_activation": 0.21737563610076904,
+      "activation_frequency": 0.699999988079071,
+      "correlation_with_success": -0.3635210394859314
+    },
+    {
+      "layer": 11,
+      "feature_idx": 1724,
+      "mean_activation": 3.331026554107666,
+      "activation_frequency": 0.9700000286102295,
+      "correlation_with_success": 0.3605417013168335
+    },
+    {
+      "layer": 1,
+      "feature_idx": 940,
+      "mean_activation": 0.02181389182806015,
+      "activation_frequency": 0.14000000059604645,
+      "correlation_with_success": -0.35950157046318054
+    },
+    {
+      "layer": 1,
+      "feature_idx": 2236,
+      "mean_activation": 0.026055043563246727,
+      "activation_frequency": 0.12999999523162842,
+      "correlation_with_success": -0.3590831458568573
+    },
+    {
+      "layer": 11,
+      "feature_idx": 6114,
+      "mean_activation": 0.01316688023507595,
+      "activation_frequency": 0.019999999552965164,
+      "correlation_with_success": -0.35787370800971985
+    },
+    {
+      "layer": 3,
+      "feature_idx": 132,
+      "mean_activation": 0.03844126686453819,
+      "activation_frequency": 0.10999999940395355,
+      "correlation_with_success": -0.35712161660194397
+    },
+    {
+      "layer": 2,
+      "feature_idx": 2578,
+      "mean_activation": 0.030375413596630096,
+      "activation_frequency": 0.10999999940395355,
+      "correlation_with_success": -0.35139036178588867
+    },
+    {
+      "layer": 1,
+      "feature_idx": 2750,
+      "mean_activation": 0.15965789556503296,
+      "activation_frequency": 0.7099999785423279,
+      "correlation_with_success": -0.349161297082901
+    },
+    {
+      "layer": 1,
+      "feature_idx": 4309,
+      "mean_activation": 0.05734436586499214,
+      "activation_frequency": 0.1899999976158142,
+      "correlation_with_success": -0.34788402915000916
+    },
+    {
+      "layer": 3,
+      "feature_idx": 6082,
+      "mean_activation": 0.1620168685913086,
+      "activation_frequency": 0.3400000035762787,
+      "correlation_with_success": -0.3472498953342438
+    },
+    {
+      "layer": 2,
+      "feature_idx": 3864,
+      "mean_activation": 0.031242189928889275,
+      "activation_frequency": 0.10000000149011612,
+      "correlation_with_success": -0.3447839021682739
+    },
+    {
+      "layer": 2,
+      "feature_idx": 5310,
+      "mean_activation": 0.03657693788409233,
+      "activation_frequency": 0.11999999731779099,
+      "correlation_with_success": -0.3427359163761139
+    },
+    {
+      "layer": 1,
+      "feature_idx": 1308,
+      "mean_activation": 0.05466430261731148,
+      "activation_frequency": 0.1899999976158142,
+      "correlation_with_success": -0.3422834575176239
+    },
+    {
+      "layer": 1,
+      "feature_idx": 5064,
+      "mean_activation": 0.04462253674864769,
+      "activation_frequency": 0.14000000059604645,
+      "correlation_with_success": -0.3318212628364563
+    },
+    {
+      "layer": 2,
+      "feature_idx": 5338,
+      "mean_activation": 0.26384589076042175,
+      "activation_frequency": 0.5799999833106995,
+      "correlation_with_success": -0.3293396830558777
+    },
+    {
+      "layer": 2,
+      "feature_idx": 5077,
+      "mean_activation": 0.5969674587249756,
+      "activation_frequency": 0.7300000190734863,
+      "correlation_with_success": -0.3247677981853485
+    },
+    {
+      "layer": 1,
+      "feature_idx": 6118,
+      "mean_activation": 0.019975505769252777,
+      "activation_frequency": 0.10999999940395355,
+      "correlation_with_success": -0.313062459230423
+    },
+    {
+      "layer": 11,
+      "feature_idx": 2338,
+      "mean_activation": 2.825920343399048,
+      "activation_frequency": 0.8999999761581421,
+      "correlation_with_success": 0.3120749592781067
+    },
+    {
+      "layer": 2,
+      "feature_idx": 4439,
+      "mean_activation": 0.03787929192185402,
+      "activation_frequency": 0.17000000178813934,
+      "correlation_with_success": -0.30927056074142456
+    },
+    {
+      "layer": 1,
+      "feature_idx": 2007,
+      "mean_activation": 0.2246369868516922,
+      "activation_frequency": 0.7799999713897705,
+      "correlation_with_success": -0.3039560914039612
+    },
+    {
+      "layer": 11,
+      "feature_idx": 1227,
+      "mean_activation": 6.915589809417725,
+      "activation_frequency": 0.9700000286102295,
+      "correlation_with_success": 0.29833516478538513
+    },
+    {
+      "layer": 2,
+      "feature_idx": 3865,
+      "mean_activation": 0.5050110816955566,
+      "activation_frequency": 0.949999988079071,
+      "correlation_with_success": -0.29184502363204956
+    },
+    {
+      "layer": 2,
+      "feature_idx": 3662,
+      "mean_activation": 0.2852635085582733,
+      "activation_frequency": 0.6399999856948853,
+      "correlation_with_success": -0.2880859076976776
+    },
+    {
+      "layer": 1,
+      "feature_idx": 94,
+      "mean_activation": 0.08803446590900421,
+      "activation_frequency": 0.25999999046325684,
+      "correlation_with_success": -0.2858929932117462
+    },
+    {
+      "layer": 1,
+      "feature_idx": 5476,
+      "mean_activation": 0.25440025329589844,
+      "activation_frequency": 0.8299999833106995,
+      "correlation_with_success": 0.2830115258693695
+    },
+    {
+      "layer": 2,
+      "feature_idx": 5787,
+      "mean_activation": 0.4281505346298218,
+      "activation_frequency": 0.6200000047683716,
+      "correlation_with_success": -0.2822185158729553
+    },
+    {
+      "layer": 1,
+      "feature_idx": 3947,
+      "mean_activation": 0.07315774261951447,
+      "activation_frequency": 0.27000001072883606,
+      "correlation_with_success": -0.2821880877017975
+    },
+    {
+      "layer": 2,
+      "feature_idx": 274,
+      "mean_activation": 0.0757439136505127,
+      "activation_frequency": 0.2199999988079071,
+      "correlation_with_success": -0.2658485770225525
+    },
+    {
+      "layer": 2,
+      "feature_idx": 5186,
+      "mean_activation": 0.01632474921643734,
+      "activation_frequency": 0.05999999865889549,
+      "correlation_with_success": -0.259550541639328
+    },
+    {
+      "layer": 1,
+      "feature_idx": 3993,
+      "mean_activation": 0.13521839678287506,
+      "activation_frequency": 0.6100000143051147,
+      "correlation_with_success": -0.2592523396015167
+    },
+    {
+      "layer": 2,
+      "feature_idx": 349,
+      "mean_activation": 0.010320217348635197,
+      "activation_frequency": 0.03999999910593033,
+      "correlation_with_success": -0.2561294138431549
+    },
+    {
+      "layer": 0,
+      "feature_idx": 709,
+      "mean_activation": 0.34897032380104065,
+      "activation_frequency": 0.8100000023841858,
+      "correlation_with_success": -0.25398966670036316
+    },
+    {
+      "layer": 2,
+      "feature_idx": 538,
+      "mean_activation": 0.9235012531280518,
+      "activation_frequency": 0.8999999761581421,
+      "correlation_with_success": -0.24911953508853912
+    },
+    {
+      "layer": 2,
+      "feature_idx": 5601,
+      "mean_activation": 0.06804214417934418,
+      "activation_frequency": 0.2199999988079071,
+      "correlation_with_success": -0.24672934412956238
+    },
+    {
+      "layer": 1,
+      "feature_idx": 1883,
+      "mean_activation": 0.03471703827381134,
+      "activation_frequency": 0.1599999964237213,
+      "correlation_with_success": -0.23720376193523407
+    },
+    {
+      "layer": 0,
+      "feature_idx": 5680,
+      "mean_activation": 1.0153411626815796,
+      "activation_frequency": 0.9700000286102295,
+      "correlation_with_success": -0.20866356790065765
+    }
+  ],
+  "summary": {
+    "total_important_features": 223,
+    "features_per_layer": {
+      "0": 3,
+      "1": 20,
+      "2": 20,
+      "3": 20,
+      "4": 20,
+      "5": 20,
+      "6": 20,
+      "7": 20,
+      "8": 20,
+      "9": 20,
+      "10": 20,
+      "11": 20
+    },
+    "elapsed_time_seconds": 5.761171340942383
+  }
+}

@@ -11,10 +11,13 @@ Questo modulo fornisce:
 
 from .exhaustive_scanner import ExhaustiveCircuitScanner, ScanConfig, ScanResult
 from .component_interaction_matrix import ComponentInteractionMatrix
+from .feature_circuit_discoverer import FeatureCircuitDiscoverer, FeatureImportance
 
 __all__ = [
     "ExhaustiveCircuitScanner",
     "ScanConfig",
     "ScanResult",
     "ComponentInteractionMatrix",
+    "FeatureCircuitDiscoverer",
+    "FeatureImportance",
 ]

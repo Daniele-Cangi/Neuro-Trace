@@ -274,13 +274,42 @@ class VLOTester:
     ) -> Callable:
         """
         Create hook function for intervention.
+
+        For attention_head: component_idx specifies which head to ablate (0-11 for GPT-2)
+        For mlp: component_idx is ignored (ablate entire MLP)
         """
         if intervention_type == InterventionType.ZERO_ABLATION:
             def hook(module, input, output):
                 if isinstance(output, tuple):
                     # Attention outputs: (hidden_states, *extras)
-                    modified = torch.zeros_like(output[0])
-                    return (modified, *output[1:])
+                    original = output[0]
+
+                    # If targeting specific attention head, only ablate that head
+                    if component_type == "attention_head" and component_idx is not None:
+                        # For GPT-2: hidden_states shape is [batch, seq, hidden_dim]
+                        # We need to zero out the contribution of specific head
+                        # Each head output is hidden_dim/num_heads dimensions
+                        # This requires reshaping to [batch, seq, num_heads, head_dim]
+
+                        batch_size, seq_len, hidden_dim = original.shape
+                        num_heads = 12  # GPT-2 has 12 heads
+                        head_dim = hidden_dim // num_heads
+
+                        # Reshape to separate heads
+                        reshaped = original.view(batch_size, seq_len, num_heads, head_dim)
+
+                        # Zero out specific head
+                        modified = reshaped.clone()
+                        modified[:, :, component_idx, :] = 0
+
+                        # Reshape back
+                        modified = modified.view(batch_size, seq_len, hidden_dim)
+
+                        return (modified, *output[1:])
+                    else:
+                        # Ablate entire module (MLP or full attention)
+                        modified = torch.zeros_like(original)
+                        return (modified, *output[1:])
                 else:
                     return torch.zeros_like(output)
 
@@ -288,9 +317,26 @@ class VLOTester:
             def hook(module, input, output):
                 if isinstance(output, tuple):
                     original = output[0]
-                    mean_activation = original.mean(dim=0, keepdim=True)
-                    modified = mean_activation.expand_as(original)
-                    return (modified, *output[1:])
+
+                    if component_type == "attention_head" and component_idx is not None:
+                        # Mean ablation for specific head
+                        batch_size, seq_len, hidden_dim = original.shape
+                        num_heads = 12
+                        head_dim = hidden_dim // num_heads
+
+                        reshaped = original.view(batch_size, seq_len, num_heads, head_dim)
+                        modified = reshaped.clone()
+
+                        # Replace head with mean activation
+                        head_mean = reshaped[:, :, component_idx, :].mean(dim=0, keepdim=True)
+                        modified[:, :, component_idx, :] = head_mean.expand(batch_size, seq_len, head_dim)
+
+                        modified = modified.view(batch_size, seq_len, hidden_dim)
+                        return (modified, *output[1:])
+                    else:
+                        mean_activation = original.mean(dim=0, keepdim=True)
+                        modified = mean_activation.expand_as(original)
+                        return (modified, *output[1:])
                 else:
                     mean_activation = output.mean(dim=0, keepdim=True)
                     return mean_activation.expand_as(output)

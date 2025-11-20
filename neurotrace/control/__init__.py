@@ -31,6 +31,8 @@ from .controller import (
     CircuitController,
 )
 from .sae_feature_store import SAEFeatureStore
+from .enhanced_sae_feature_store import EnhancedSAEFeatureStore
+from .hierarchical_steering import HierarchicalSteering, SteeringConfig
 
 __all__ = [
     # Registry
@@ -51,6 +53,10 @@ __all__ = [
     "ActiveCircuit",
     "ControlTrace",
     "CircuitController",
-    # Feature store
+    # Feature stores
     "SAEFeatureStore",
+    "EnhancedSAEFeatureStore",
+    # Hierarchical steering
+    "HierarchicalSteering",
+    "SteeringConfig",
 ]

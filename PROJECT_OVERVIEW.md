@@ -1,396 +1,368 @@
-# NeuroTrace: Project Overview
+# NeuroTrace - Project Overview
 
-**Neural Network Interpretability Framework**
-
----
-
-## Mission
-
-Build a comprehensive framework for understanding and controlling transformer neural networks through automated circuit discovery, sparse autoencoder training, and active intervention.
+**Complete structure and functionality documentation**
+Last Updated: 2025-11-17
 
 ---
 
-## Current Status
+## Project Status
 
-**Version**: 1.0.0
-**Phase**: Research Complete
-**Date**: 2025-11-16
-
-✅ All core components implemented
-✅ SOTA SAE training pipeline operational
-✅ Circuit discovery validated
-✅ Hybrid analysis completed
-✅ Novel research findings documented
+**Infrastructure**: ✅ Complete
+**Research**: 🔄 In Progress
+**Atlas**: ✅ All 12 layers trained (36,864 features)
 
 ---
 
-## Project Structure
+## Core Components
+
+### 1. Production Scripts (Ready to Use)
+
+#### Training
+- **`train_atlas_simple.py`** ⭐ PRIMARY TRAINER
+  - Trains SAEs for all 12 layers
+  - Usage: `python train_atlas_simple.py --layers all`
+  - Output: `checkpoints/all_layers_sae/layer_X/final.pt`
+  - Status: ✅ Working (5.3 min/layer on consumer GPU)
+
+#### Validation
+- **`validate_atlas.py`** ⭐ ATLAS VALIDATOR
+  - Validates all 12 trained SAEs
+  - Shows MSE, L0, dead features, overlap
+  - Output: Quality report + summary JSON
+  - Status: ✅ Working
+
+#### Analysis
+- **`run_atlas_analysis.py`** ⭐ COMPLETE PIPELINE
+  - Loads all 12 SAEs
+  - Cross-layer feature analysis
+  - Circuit registry loading
+  - 3D visualization generation
+  - Output: `atlas_analysis_report.json` + HTML viz
+  - Status: ✅ Working
+
+### 2. Library Structure (`neurotrace/`)
 
 ```
-NeuroTrace/
-│
-├── README.md                    # Main entry point
-├── PROJECT_OVERVIEW.md          # This file
-│
-├── docs/                        # All documentation
-│   ├── INDEX.md                # Documentation map
-│   ├── research/               # Research findings
-│   │   ├── FINAL_RESULTS.md   # Primary results
-│   │   └── DISCOVERY_RESULTS.md
-│   ├── implementation/         # Technical docs
-│   │   ├── ENHANCED_SAE_COMPLETE.md
-│   │   ├── CONTROL_PLANE.md
-│   │   ├── HYBRID_SAE_ROADMAP.md
-│   │   ├── SAELENS_ANALYSIS.md
-│   │   ├── SAE_DATA_REQUIREMENTS.md
-│   │   └── ... (8 more)
-│   └── archive/               # Historical docs
-│       └── ... (9 docs)
-│
-├── neurotrace/                # Core framework
-│   ├── core/                 # Tracing engine
-│   ├── datasets/             # IOI, etc.
-│   ├── discovery/            # VLO scanner
-│   ├── training/             # SAE (SOTA)
-│   ├── steering/             # Control plane
-│   └── visualization/        # Dashboards
-│
-├── checkpoints/              # Trained models
-│   └── layer0_sae/          # 100K IOI SAE
-│       └── final.pt         # Main checkpoint (55MB)
-│
-├── results/                 # Analysis outputs
-│   └── hybrid_analysis/    # Feature analysis
-│
-├── runs/                   # Experimental data
-│   └── deep_ioi_capture/  # 100K examples (2GB)
-│
-└── scripts/               # Utility scripts
-    ├── capture_deep_dataset.py
-    ├── train_layer0_sae.py
-    ├── hybrid_sae_analysis.py
-    └── train_all_layers_sae.py
-```
-
----
-
-## Core Discovery
-
-### Layer 0 MLP Dominance
-
-**Finding**: Layer 0 MLP in GPT-2 accounts for 70% of causal importance in IOI task through structural pattern detection.
-
-**Evidence**:
-- VLO = 5.276 (Value of Learned Organization)
-- 62 significant components identified
-- Features detect syntax ("gave X to"), not semantics
-- Contradicts literature expecting Layer 9 dominance
-
-**Implication**: Small language models rely on structural shortcuts rather than deep semantic understanding.
-
----
-
-## Technology Stack
-
-### Core Framework
-
-```python
 neurotrace/
-├── core/          # PyTorch-based tracing
-├── datasets/      # Template-based generation
-├── discovery/     # Causal importance metrics
-├── training/      # SOTA SAE with:
-│                  # - Decoder normalization
-│                  # - Ghost gradients
-│                  # - Top-K activation
-│                  # - Pre-bias correction
-├── steering/      # Active intervention
-└── visualization/ # Plotly dashboards
+├── __init__.py                          # Package initialization
+├── config.py                            # Global configuration
+│
+├── models/                              # Model wrappers
+│   ├── __init__.py
+│   └── wrapper.py                       # TargetModelWrapper for GPT-2
+│
+├── instrumentation/                     # Activation capture
+│   ├── __init__.py
+│   ├── adaptive_hook_manager.py         # Hook registration & management
+│   └── adaptive_activations_buffer.py   # Memory-efficient activation storage
+│
+├── training/                            # SAE training
+│   ├── __init__.py
+│   ├── enhanced_sae.py                  # ⭐ EnhancedSAE architecture
+│   ├── enhanced_sae_trainer.py          # ⭐ Trainer with ghost grads
+│   ├── activation_dataset.py            # Dataset loader for activations
+│   ├── sae_checkpoint.py                # Checkpoint save/load
+│   └── sae_trainer.py                   # Base SAE trainer
+│
+├── control/                             # ⭐ ACTIVE CONTROL PLANE
+│   ├── __init__.py
+│   ├── enhanced_sae_feature_store.py    # ⭐ Load all 12 SAEs
+│   ├── sae_feature_store.py             # Base feature store
+│   ├── circuit_registry.py              # ⭐ Circuit database (SQLite)
+│   ├── controller.py                    # Active steering controller
+│   └── steering_builder.py              # Build steering vectors from SAEs
+│
+├── causal/                              # Causal discovery
+│   ├── __init__.py
+│   ├── vlo_tester.py                    # ⭐ VLO (Value of Learned Org) testing
+│   └── circuit_extractor.py             # Extract circuits from VLO results
+│
+├── discovery/                           # Automated discovery
+│   ├── __init__.py
+│   ├── exhaustive_scanner.py            # Scan all components systematically
+│   └── component_interaction_matrix.py  # Component interaction analysis
+│
+├── state_indexer/                       # Feature database
+│   ├── __init__.py
+│   ├── sae_feature_extractor.py         # Extract features from SAEs
+│   └── vector_state_db.py               # Vector database for features
+│
+├── visualization/                       # ⭐ VISUALIZATIONS
+│   ├── __init__.py
+│   ├── activation_explorer.py           # ⭐ 3D PCA/t-SNE/UMAP plots
+│   ├── circuit_graph.py                 # Interactive circuit graphs (pyvis)
+│   ├── metrics_plotter.py               # Training metrics plots
+│   └── sae_feature_viz.py               # SAE feature visualization
+│
+├── datasets/                            # Task generators
+│   ├── __init__.py
+│   ├── ioi_generator.py                 # IOI dataset generation
+│   └── task_generator.py                # Generic task generator
+│
+└── analysis/                            # Geometric analysis
+    ├── __init__.py
+    └── geometric.py                     # LID, spectral analysis
 ```
 
-### Dependencies
+### 3. Utility Scripts (Root Directory)
 
-- **PyTorch**: Neural network operations
-- **Transformers**: HuggingFace models
-- **Plotly**: Interactive visualization
-- **NumPy/SciPy**: Numerical computing
+#### Active Use
+- **`setup.py`** - Package installation
+- **`capture_deep_dataset.py`** - Capture activations for all 12 layers
+- **`capture_ioi_activations.py`** - Capture IOI-specific activations
 
----
+#### One-Time / Debug (Can Archive)
+- `train_layer0_sae.py` - Original Layer 0 trainer (superseded by train_atlas_simple.py)
+- `compare_trainings.py` - Compare old vs new training (one-time analysis)
+- `classify_files.py` - File classification utility (one-time)
+- `hybrid_sae_analysis.py` - SAE comparison analysis (one-time)
 
-## Key Metrics
+### 4. CLI Tools (`cli/`)
 
-### Dataset Scale
+- **`train_sae.py`** - CLI wrapper for SAE training
+- `run_phase1_capture.py` - Phase 1 capture runner
+- `neuro_control_run.py` - Control plane CLI
 
-- **IOI Examples**: 100,000
-- **Total Tokens**: 44,358,144
-- **Layers Captured**: All 12
-- **Batch Files**: 2,000
-- **Disk Usage**: ~2-3 GB
+### 5. Examples (`examples/`)
 
-### SAE Training Quality
+- **`control_plane_steering_example.py`** - Steering demonstration
 
-- **MSE Loss**: 0.0124 (target: < 0.12)
-- **Dead Features**: 0.0% during training
-- **L0 Sparsity**: 64.0 (exact)
-- **Training Time**: ~10 minutes
-- **Parameters**: 4.7M
+### 6. Tests (`tests/`)
 
-### Feature Analysis
-
-- **Total Features**: 3,072
-- **Active on Test**: 423 (13.8%)
-- **Top Feature Freq**: 96.7%
-- **Max Activation**: 19.96
+- **`validation/test_system_diagnostic.py`** - System health check (81.7% pass)
 
 ---
 
-## Scientific Contributions
+## Data Structure
 
-### 1. Early Structural Processing
-
-**Novel Finding**: Layer 0 MLP learns structural patterns before semantic processing occurs.
-
-**Support**:
-- Top features activate on syntax ("gave [object] to")
-- Temporal markers ("When X and Y...")
-- Position detection, not meaning detection
-
-### 2. SOTA SAE Implementation
-
-**Publication-Quality** sparse autoencoder with all modern techniques:
-- Matches Anthropic/Google architecture
-- 0% dead features achieved
-- Monosemantic feature extraction
-
-### 3. Hybrid Analysis Methodology
-
-**Framework** for comparing custom vs pre-trained SAEs:
-- Layer-specific training
-- Baseline comparison
-- Feature-level analysis
+```
+Analisi_Neurale/
+│
+├── checkpoints/
+│   └── all_layers_sae/              # ⭐ THE ATLAS
+│       ├── layer_0/final.pt         # 3,072 features
+│       ├── layer_1/final.pt
+│       ├── ...
+│       └── layer_11/final.pt
+│       └── training_summary.json    # Training stats
+│
+├── runs/
+│   └── deep_ioi_capture/
+│       └── 20251116_171258/
+│           ├── activations/         # 100K samples × 12 layers
+│           │   ├── batch_00001.pt
+│           │   └── ...
+│           └── ioi_dataset.json     # IOI examples
+│
+├── circuits/
+│   └── atlas_circuits.db            # ⭐ SQLite registry (3 circuits)
+│
+├── visualizations/
+│   └── layer_features_pca_3d.html   # ⭐ Interactive 3D plot (4.5MB)
+│
+└── atlas_analysis_report.json       # ⭐ Latest analysis results
+```
 
 ---
 
-## Use Cases
+## Workflow: How Everything Connects
 
-### 1. Research
+### Phase 1: Data Capture
+```bash
+# Capture activations for all layers
+python capture_deep_dataset.py
+# Output: runs/deep_ioi_capture/*/activations/
+```
 
-**Understanding Neural Networks**:
+### Phase 2: Atlas Training
+```bash
+# Train all 12 SAEs
+python train_atlas_simple.py --layers all
+# Output: checkpoints/all_layers_sae/layer_*/final.pt
+# Time: ~63 minutes total (5.3 min/layer)
+```
+
+### Phase 3: Validation
+```bash
+# Validate Atlas quality
+python validate_atlas.py
+# Checks: MSE, sparsity, dead features, overlap
+```
+
+### Phase 4: Analysis
+```bash
+# Run complete analysis pipeline
+python run_atlas_analysis.py
+# Outputs:
+#   - atlas_analysis_report.json
+#   - visualizations/layer_features_pca_3d.html
+```
+
+### Phase 5: Research (In Progress)
 ```python
-from neurotrace import NeuroTrace
+# Load Atlas
+from neurotrace.control import EnhancedSAEFeatureStore
+store = EnhancedSAEFeatureStore()
+for i in range(12):
+    store.load_sae(f'checkpoints/all_layers_sae/layer_{i}/final.pt', i)
 
-nt = NeuroTrace(model_name="gpt2")
-results = nt.discover_circuits(examples, method="vlo")
-# Identify causal pathways
+# Access circuits
+from neurotrace.control import CircuitRegistry
+registry = CircuitRegistry('circuits/atlas_circuits.db')
+circuits = registry.list()
+
+# Visualize
+from neurotrace.visualization import CircuitGraphVisualizer
+viz = CircuitGraphVisualizer()
+viz.visualize_circuit(circuits[0], 'output.html')
 ```
 
-### 2. Feature Extraction
+---
 
-**Monosemantic Features**:
+## Key Modules Explained
+
+### EnhancedSAE Architecture
+**File**: `neurotrace/training/enhanced_sae.py`
+
+Features:
+- **Gated encoder**: Better feature separation
+- **Decoder normalization**: Prevents feature suppression
+- **Ghost gradients**: Revives dead features
+- **Top-k activation**: Exactly 64 active features per input
+
 ```python
-from neurotrace.training import create_enhanced_sae
-
-sae = create_enhanced_sae(input_dim=768, dict_mult=4)
-features = sae.encode(activations)
-# Extract interpretable features
+class EnhancedSAE(nn.Module):
+    encoder: nn.Linear        # [hidden, dict_size]
+    encoder_gate: nn.Linear   # [hidden, dict_size]
+    decoder: nn.Linear        # [dict_size, hidden]
+    # Top-k=64, L1 coefficient auto-adjusted
 ```
 
-### 3. Active Steering
+### EnhancedSAEFeatureStore
+**File**: `neurotrace/control/enhanced_sae_feature_store.py`
 
-**Model Control**:
+Purpose: Load and manage all 12 trained SAEs
+
 ```python
-steering = create_steering_vector(sae, feature_id=42, strength=2.0)
-output = nt.generate_with_steering(prompt, steering_vector=steering)
-# Intervene in model behavior
+store = EnhancedSAEFeatureStore()
+store.load_sae('checkpoints/all_layers_sae/layer_0/final.pt', layer=0)
+sae = store.saes[0]  # Access Layer 0 SAE
 ```
 
-### 4. Visualization
+### CircuitRegistry
+**File**: `neurotrace/control/circuit_registry.py`
 
-**Interactive Analysis**:
+Purpose: SQLite database for discovered circuits
+
 ```python
-nt.visualize_results(results, interactive=True)
-# Explore circuits visually
+registry = CircuitRegistry('circuits/atlas_circuits.db')
+circuits = registry.list(task_tag='ioi', min_vlo=0.5)
+registry.upsert(new_circuit)
+```
+
+### ActivationExplorer
+**File**: `neurotrace/visualization/activation_explorer.py`
+
+Purpose: 3D visualization with PCA/t-SNE/UMAP
+
+```python
+explorer = ActivationExplorer()
+fig = explorer.plot_activations_3d(
+    activations,
+    labels=layer_names,
+    method=DimReductionMethod.PCA,
+    output_path='viz.html'
+)
 ```
 
 ---
 
-## Performance
+## Files to Archive/Remove
 
-### Computational Requirements
+### Can Archive (One-Time Use):
+1. `classify_files.py` - File classification (already done)
+2. `compare_trainings.py` - Training comparison (already analyzed)
+3. `hybrid_sae_analysis.py` - SAE comparison (completed)
+4. `train_layer0_sae.py` - Old trainer (superseded)
 
-| Component | Time | Memory | GPU |
-|-----------|------|--------|-----|
-| Circuit Discovery | 15 min | 2 GB | 6 GB |
-| Dataset Capture | 45 min | 8 GB | 6 GB |
-| SAE Training | 10 min | 4 GB | 6 GB |
-| Feature Analysis | 1 min | 2 GB | Optional |
-
-### Scalability
-
-- Tested up to **100K examples**
-- **12 layers** simultaneous processing
-- Optimized for **6GB VRAM**
-- Batch processing enabled
+### Keep (Active Use):
+1. `train_atlas_simple.py` ⭐ - Primary trainer
+2. `validate_atlas.py` ⭐ - Validation
+3. `run_atlas_analysis.py` ⭐ - Analysis pipeline
+4. `capture_deep_dataset.py` - Data capture
+5. `setup.py` - Installation
 
 ---
 
-## Documentation Map
+## Atlas Statistics
 
-### Essential Reading
+**Training**:
+- Layers: 12/12 ✅
+- Features per layer: 3,072
+- Total features: 36,864
+- Training time: 63.6 minutes total
+- GPU: Consumer (6GB VRAM)
 
-1. **[README.md](README.md)** - Quick start & API
-2. **[FINAL_RESULTS.md](docs/research/FINAL_RESULTS.md)** - Main findings
-3. **[INDEX.md](docs/INDEX.md)** - Complete doc map
+**Quality**:
+- Excellent (MSE < 0.01): 5 layers
+- Good (0.01-0.02): 3 layers
+- Acceptable (0.02-0.05): 2 layers
+- Monitor (>= 0.05): 2 layers (10, 11)
 
-### Technical Deep Dives
+**Sparsity**:
+- L0: Exactly 64.0 (top-k enforcement)
+- Dead features: 0.0% across all layers
 
-- **[ENHANCED_SAE_COMPLETE.md](docs/implementation/ENHANCED_SAE_COMPLETE.md)** - SAE architecture
-- **[HYBRID_SAE_ROADMAP.md](docs/implementation/HYBRID_SAE_ROADMAP.md)** - Analysis workflow
-- **[CONTROL_PLANE.md](docs/implementation/CONTROL_PLANE.md)** - Steering system
-
-### Reference
-
-- **[SAE_DATA_REQUIREMENTS.md](docs/implementation/SAE_DATA_REQUIREMENTS.md)** - Data analysis
-- **[SAELENS_ANALYSIS.md](docs/implementation/SAELENS_ANALYSIS.md)** - Baseline comparison
-- **[DISCOVERY_RESULTS.md](docs/research/DISCOVERY_RESULTS.md)** - Validation data
-
----
-
-## Development Timeline
-
-### Phase 1: Foundation (Complete)
-- ✅ Core tracing engine
-- ✅ IOI dataset generation
-- ✅ Visualization system
-
-### Phase 2: Discovery (Complete)
-- ✅ VLO scanning implementation
-- ✅ Circuit discovery validation
-- ✅ Layer 0 MLP dominance identified
-
-### Phase 3: SAE Training (Complete)
-- ✅ Enhanced SAE architecture
-- ✅ Deep dataset capture (100K)
-- ✅ SOTA training pipeline
-- ✅ 0% dead features achieved
-
-### Phase 4: Hybrid Analysis (Complete)
-- ✅ SAELens integration
-- ✅ Feature analysis on 1K test examples
-- ✅ Structural vs semantic hypothesis confirmed
-
-### Phase 5: Documentation (Complete)
-- ✅ Comprehensive README
-- ✅ Research findings documented
-- ✅ Implementation guides
-- ✅ Documentation indexed
+**Specialization**:
+- Cross-layer overlap: 0%
+- Each layer processes distinct information
 
 ---
 
-## Future Directions
+## Next Steps (Research)
 
-### Immediate Next Steps
-
-1. **SAELens Baseline Comparison**
-   - Load Layer 9 pre-trained SAE
-   - Run on same IOI test set
-   - Confirm semantic vs structural difference
-
-2. **Complete Neural Cartography**
-   - Train SAE on all 12 layers
-   - Cross-layer feature comparison
-   - Information flow analysis
-
-3. **Cross-Model Validation**
-   - Test on GPT-2 Medium/Large
-   - Verify Layer 0 dominance generalizes
-   - Explore model size effects
-
-### Long-Term Vision
-
-1. **Real-Time Steering Interface**
-   - Interactive feature manipulation
-   - Live model control
-   - Behavior debugging tools
-
-2. **Publication Preparation**
-   - "Early Structural Processing in Small Language Models"
-   - ICLR/NeurIPS Interpretability Workshop
-   - Open-source release
-
-3. **Framework Extension**
-   - Support more models (LLaMA, Claude, etc.)
-   - Additional tasks beyond IOI
-   - Multi-modal interpretability
+1. **Circuit Discovery**: Use VLOTester on full Atlas
+2. **Validation**: Causal testing of discovered circuits
+3. **Steering**: Multi-layer steering experiments
+4. **Analysis**: Cross-layer feature evolution patterns
+5. **Publication**: Document and release findings
 
 ---
 
-## Key Files Reference
+## Dependencies
 
-### Documentation
+**Required**:
+- torch >= 2.0
+- transformers >= 4.30
+- numpy, scipy
+- scikit-learn
 
-| File | Purpose |
-|------|---------|
-| README.md | Main entry point |
-| PROJECT_OVERVIEW.md | This document |
-| docs/INDEX.md | Documentation map |
-| docs/research/FINAL_RESULTS.md | Primary findings |
-
-### Code
-
-| File | Purpose |
-|------|---------|
-| neurotrace/ | Core framework |
-| scripts/train_layer0_sae.py | SAE training |
-| scripts/hybrid_sae_analysis.py | Feature analysis |
-| scripts/capture_deep_dataset.py | Data capture |
-
-### Data
-
-| File | Purpose |
-|------|---------|
-| checkpoints/layer0_sae/final.pt | Trained SAE |
-| runs/deep_ioi_capture/... | 100K dataset |
-| results/hybrid_analysis/... | Analysis output |
+**Optional**:
+- plotly (3D visualizations) ✅ Installed
+- pyvis (circuit graphs) ❌ Not installed
+- umap-learn (UMAP reduction) ❌ Not installed
 
 ---
 
-## Contact & Citation
+## Quick Reference
 
-### For Questions
-
-- Research findings: See [FINAL_RESULTS.md](docs/research/FINAL_RESULTS.md)
-- Implementation: See [ENHANCED_SAE_COMPLETE.md](docs/implementation/ENHANCED_SAE_COMPLETE.md)
-- Getting started: See [README.md](README.md)
-
-### Citation
-
-```bibtex
-@software{neurotrace2025,
-  title={NeuroTrace: Neural Network Interpretability Framework},
-  author={NeuroTrace Team},
-  year={2025},
-  note={Early Structural Processing in Small Language Models},
-  url={https://github.com/...}
-}
+**Load Atlas**:
+```python
+from neurotrace.control import EnhancedSAEFeatureStore
+store = EnhancedSAEFeatureStore()
+for i in range(12):
+    store.load_sae(f'checkpoints/all_layers_sae/layer_{i}/final.pt', i)
 ```
 
----
+**Run Analysis**:
+```bash
+python run_atlas_analysis.py
+```
 
-## Summary
-
-**NeuroTrace** is a complete, production-ready framework for neural network interpretability, featuring:
-
-✅ **Automated Circuit Discovery** - VLO-based causal analysis
-✅ **SOTA SAE Training** - Publication-quality feature extraction
-✅ **Active Steering** - Real-time model control
-✅ **Novel Research** - Early structural processing discovery
-
-**Status**: Research complete, publication-ready, extensible for future work.
+**View Results**:
+- Report: `atlas_analysis_report.json`
+- 3D viz: `visualizations/layer_features_pca_3d.html`
 
 ---
 
-**Last Updated**: 2025-11-16
-**Version**: 1.0.0
-**License**: Research code
-**Documentation**: Comprehensive, organized, maintained
+**Infrastructure Complete. Research Ready.** 🚀

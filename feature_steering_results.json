@@ -1,0 +1,284 @@
+{
+  "timestamp": "2025-11-19T17:14:43.243161",
+  "config": {
+    "num_examples": 100,
+    "features_tested": 8,
+    "clamping_strengths": [
+      2.0,
+      5.0,
+      10.0
+    ],
+    "baseline_accuracy": 0.97,
+    "baseline_logit_diff": 3.7096820068359375
+  },
+  "steering_results": [
+    {
+      "layer": 10,
+      "feature_idx": 2844,
+      "correlation_with_success": -0.6911298036575317,
+      "activation_frequency": 0.029999999329447746,
+      "baseline_logit_diff": 3.7096820068359375,
+      "baseline_accuracy": 0.97,
+      "clamping_tests": [
+        {
+          "clamp_value": 2.0,
+          "steered_logit_diff": 3.6719190216064455,
+          "steered_accuracy": 0.97,
+          "steering_effect": -0.03776298522949206,
+          "accuracy_change": 0.0
+        },
+        {
+          "clamp_value": 5.0,
+          "steered_logit_diff": 3.660731544494629,
+          "steered_accuracy": 0.97,
+          "steering_effect": -0.0489504623413084,
+          "accuracy_change": 0.0
+        },
+        {
+          "clamp_value": 10.0,
+          "steered_logit_diff": 3.6414347457885743,
+          "steered_accuracy": 0.97,
+          "steering_effect": -0.06824726104736323,
+          "accuracy_change": 0.0
+        }
+      ],
+      "max_steering_effect": -0.06824726104736323,
+      "max_accuracy_change": 0.0
+    },
+    {
+      "layer": 8,
+      "feature_idx": 3488,
+      "correlation_with_success": -0.6892503499984741,
+      "activation_frequency": 0.029999999329447746,
+      "baseline_logit_diff": 3.7096820068359375,
+      "baseline_accuracy": 0.97,
+      "clamping_tests": [
+        {
+          "clamp_value": 2.0,
+          "steered_logit_diff": 3.711177101135254,
+          "steered_accuracy": 0.97,
+          "steering_effect": 0.0014950942993166016,
+          "accuracy_change": 0.0
+        },
+        {
+          "clamp_value": 5.0,
+          "steered_logit_diff": 3.6984975433349607,
+          "steered_accuracy": 0.97,
+          "steering_effect": -0.011184463500976793,
+          "accuracy_change": 0.0
+        },
+        {
+          "clamp_value": 10.0,
+          "steered_logit_diff": 3.6646352005004883,
+          "steered_accuracy": 0.96,
+          "steering_effect": -0.04504680633544922,
+          "accuracy_change": -1.0000000000000009
+        }
+      ],
+      "max_steering_effect": -0.04504680633544922,
+      "max_accuracy_change": -1.0000000000000009
+    },
+    {
+      "layer": 9,
+      "feature_idx": 3428,
+      "correlation_with_success": -0.797623336315155,
+      "activation_frequency": 0.019999999552965164,
+      "baseline_logit_diff": 3.7096820068359375,
+      "baseline_accuracy": 0.97,
+      "clamping_tests": [
+        {
+          "clamp_value": 2.0,
+          "steered_logit_diff": 3.6949485397338866,
+          "steered_accuracy": 0.97,
+          "steering_effect": -0.014733467102050923,
+          "accuracy_change": 0.0
+        },
+        {
+          "clamp_value": 5.0,
+          "steered_logit_diff": 3.6879663467407227,
+          "steered_accuracy": 0.97,
+          "steering_effect": -0.02171566009521486,
+          "accuracy_change": 0.0
+        },
+        {
+          "clamp_value": 10.0,
+          "steered_logit_diff": 3.672784614562988,
+          "steered_accuracy": 0.97,
+          "steering_effect": -0.036897392272949414,
+          "accuracy_change": 0.0
+        }
+      ],
+      "max_steering_effect": -0.036897392272949414,
+      "max_accuracy_change": 0.0
+    },
+    {
+      "layer": 11,
+      "feature_idx": 2338,
+      "correlation_with_success": 0.3120749592781067,
+      "activation_frequency": 0.8999999761581421,
+      "baseline_logit_diff": 3.7096820068359375,
+      "baseline_accuracy": 0.97,
+      "clamping_tests": [
+        {
+          "clamp_value": 2.0,
+          "steered_logit_diff": 3.693675231933594,
+          "steered_accuracy": 0.97,
+          "steering_effect": -0.01600677490234359,
+          "accuracy_change": 0.0
+        },
+        {
+          "clamp_value": 5.0,
+          "steered_logit_diff": 3.6886974716186525,
+          "steered_accuracy": 0.97,
+          "steering_effect": -0.02098453521728505,
+          "accuracy_change": 0.0
+        },
+        {
+          "clamp_value": 10.0,
+          "steered_logit_diff": 3.680148582458496,
+          "steered_accuracy": 0.97,
+          "steering_effect": -0.029533424377441442,
+          "accuracy_change": 0.0
+        }
+      ],
+      "max_steering_effect": -0.029533424377441442,
+      "max_accuracy_change": 0.0
+    },
+    {
+      "layer": 11,
+      "feature_idx": 1935,
+      "correlation_with_success": -0.6101508140563965,
+      "activation_frequency": 0.029999999329447746,
+      "baseline_logit_diff": 3.7096820068359375,
+      "baseline_accuracy": 0.97,
+      "clamping_tests": [
+        {
+          "clamp_value": 2.0,
+          "steered_logit_diff": 3.696149444580078,
+          "steered_accuracy": 0.97,
+          "steering_effect": -0.013532562255859304,
+          "accuracy_change": 0.0
+        },
+        {
+          "clamp_value": 5.0,
+          "steered_logit_diff": 3.6949048614501954,
+          "steered_accuracy": 0.97,
+          "steering_effect": -0.014777145385742152,
+          "accuracy_change": 0.0
+        },
+        {
+          "clamp_value": 10.0,
+          "steered_logit_diff": 3.6925300216674803,
+          "steered_accuracy": 0.97,
+          "steering_effect": -0.017151985168457173,
+          "accuracy_change": 0.0
+        }
+      ],
+      "max_steering_effect": -0.017151985168457173,
+      "max_accuracy_change": 0.0
+    },
+    {
+      "layer": 11,
+      "feature_idx": 1724,
+      "correlation_with_success": 0.3605417013168335,
+      "activation_frequency": 0.9700000286102295,
+      "baseline_logit_diff": 3.7096820068359375,
+      "baseline_accuracy": 0.97,
+      "clamping_tests": [
+        {
+          "clamp_value": 2.0,
+          "steered_logit_diff": 3.7005376052856445,
+          "steered_accuracy": 0.97,
+          "steering_effect": -0.009144401550293058,
+          "accuracy_change": 0.0
+        },
+        {
+          "clamp_value": 5.0,
+          "steered_logit_diff": 3.7058519744873046,
+          "steered_accuracy": 0.97,
+          "steering_effect": -0.0038300323486328836,
+          "accuracy_change": 0.0
+        },
+        {
+          "clamp_value": 10.0,
+          "steered_logit_diff": 3.714415168762207,
+          "steered_accuracy": 0.97,
+          "steering_effect": 0.004733161926269602,
+          "accuracy_change": 0.0
+        }
+      ],
+      "max_steering_effect": 0.004733161926269602,
+      "max_accuracy_change": 0.0
+    },
+    {
+      "layer": 11,
+      "feature_idx": 1462,
+      "correlation_with_success": -0.6831905841827393,
+      "activation_frequency": 0.029999999329447746,
+      "baseline_logit_diff": 3.7096820068359375,
+      "baseline_accuracy": 0.97,
+      "clamping_tests": [
+        {
+          "clamp_value": 2.0,
+          "steered_logit_diff": 3.7001217651367186,
+          "steered_accuracy": 0.97,
+          "steering_effect": -0.009560241699218874,
+          "accuracy_change": 0.0
+        },
+        {
+          "clamp_value": 5.0,
+          "steered_logit_diff": 3.704851188659668,
+          "steered_accuracy": 0.97,
+          "steering_effect": -0.0048308181762695135,
+          "accuracy_change": 0.0
+        },
+        {
+          "clamp_value": 10.0,
+          "steered_logit_diff": 3.712468452453613,
+          "steered_accuracy": 0.97,
+          "steering_effect": 0.0027864456176756036,
+          "accuracy_change": 0.0
+        }
+      ],
+      "max_steering_effect": 0.0027864456176756036,
+      "max_accuracy_change": 0.0
+    },
+    {
+      "layer": 11,
+      "feature_idx": 1227,
+      "correlation_with_success": 0.29833516478538513,
+      "activation_frequency": 0.9700000286102295,
+      "baseline_logit_diff": 3.7096820068359375,
+      "baseline_accuracy": 0.97,
+      "clamping_tests": [
+        {
+          "clamp_value": 2.0,
+          "steered_logit_diff": 3.6992584228515626,
+          "steered_accuracy": 0.97,
+          "steering_effect": -0.010423583984374929,
+          "accuracy_change": 0.0
+        },
+        {
+          "clamp_value": 5.0,
+          "steered_logit_diff": 3.70265869140625,
+          "steered_accuracy": 0.97,
+          "steering_effect": -0.007023315429687482,
+          "accuracy_change": 0.0
+        },
+        {
+          "clamp_value": 10.0,
+          "steered_logit_diff": 3.7080165100097657,
+          "steered_accuracy": 0.97,
+          "steering_effect": -0.0016654968261717862,
+          "accuracy_change": 0.0
+        }
+      ],
+      "max_steering_effect": -0.0016654968261717862,
+      "max_accuracy_change": 0.0
+    }
+  ],
+  "statistics": {
+    "strong_effects_count": 0,
+    "elapsed_time_seconds": 6.325512409210205
+  }
+}
