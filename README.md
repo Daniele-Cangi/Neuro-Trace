@@ -1329,31 +1329,28 @@ output = controller.generate(prompt, max_new_tokens=20)
 
 ---
 
-## Next Steps (Phase 4)
+## 🚀 Future Roadmap (Post-Phase 14)
 
-### Feature-Level Steering
+With the **Integrated Defence System** successfully validated, the project moves towards scaling and generalization.
 
-**Objective**: Control IOI behavior via feature intervention
+### 1. Scale Up
+- **Objective**: Apply the defense architecture to larger models (GPT-2 Medium, GPT-2 Large).
+- **Hypothesis**: Larger models may have more robust "Task Boost" vectors but also more complex "Alien" structures.
 
-**Method**:
-1. Suppress Layer 9 F3428 ("IOI Killer")
-2. Amplify Layer 11 F1724 ("Success Marker")
-3. Test accuracy improvement
+### 2. Task Generalization
+- **Objective**: Test the "Task Boosting" strategy on other algorithmic tasks (e.g., Greater-Than, Gender Bias, Factual Recall).
+- **Goal**: Verify if the "Boost + Gate" pattern is a universal defense mechanism for transformer circuits.
 
-**Expected Result**: Baseline ~69% → Steered >85% accuracy
+### 3. Detector Distillation
+- **Objective**: Optimize the **Context Classifier** and **Needs Boost Detector**.
+- **Goal**: Reduce the computational overhead (currently minimal) to negligible levels for real-time inference.
 
-**Implementation**: `feature_steering_demo.py` (to be created)
-
-### Feature VLO Testing
-
-**Objective**: Validate causal importance of discovered features
-
-**Method**: Ablate individual features, measure VLO
-1. Test Layer 9 F3428 (expected VLO > 2.0)
-2. Test Layer 11 F1724 (expected VLO < -1.0, negative because helps)
-3. Rank top 10 features by causal importance
-
-**Implementation**: `test_feature_vlo.py` (to be created)
+### 4. Publication
+- **Objective**: Formalize the findings into a research paper.
+- **Key Contributions**:
+    1.  Discovery of the "Alien" nature of Task Boost vectors (Phase 10B).
+    2.  Quantification of Collateral Damage in static defenses (Phase 11).
+    3.  The "Integrated Defence" architecture achieving zero-cost robustness (Phase 14).
 
 ---
 
