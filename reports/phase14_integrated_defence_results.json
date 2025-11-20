@@ -1,0 +1,49 @@
+{
+  "ioi": {
+    "baseline": {
+      "correct": 487,
+      "hard_correct": 65,
+      "total": 500,
+      "hard_total": 78,
+      "gate_activations": 0
+    },
+    "no_defence": {
+      "correct": 238,
+      "hard_correct": 1,
+      "total": 500,
+      "hard_total": 78,
+      "gate_activations": 0
+    },
+    "static_defence": {
+      "correct": 494,
+      "hard_correct": 72,
+      "total": 500,
+      "hard_total": 78,
+      "gate_activations": 500
+    },
+    "gated_defence_v3": {
+      "correct": 474,
+      "hard_correct": 66,
+      "total": 500,
+      "hard_total": 78,
+      "gate_activations": 242
+    }
+  },
+  "wiki": {
+    "baseline": {
+      "nll_sum": 70587.40343403816,
+      "tokens": 16498,
+      "gate_activations": 0
+    },
+    "static_defence": {
+      "nll_sum": 82115.5313334465,
+      "tokens": 16498,
+      "gate_activations": 300
+    },
+    "domain_guarded": {
+      "nll_sum": 70587.40343403816,
+      "tokens": 16498,
+      "gate_activations": 0
+    }
+  }
+}

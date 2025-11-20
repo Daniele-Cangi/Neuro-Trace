@@ -1,0 +1,113 @@
+{
+  "baseline": {
+    "test_acc": 0.976,
+    "hard_acc": 0.7
+  },
+  "scales": [
+    {
+      "norm": 5.0,
+      "boost_only": {
+        "test_acc": 0.984,
+        "hard_acc": 0.8
+      },
+      "attack_only": {
+        "test_acc": 0.43,
+        "hard_acc": 0.0
+      },
+      "attack_plus_boost": {
+        "test_acc": 0.444,
+        "hard_acc": 0.0
+      }
+    },
+    {
+      "norm": 10.0,
+      "boost_only": {
+        "test_acc": 0.99,
+        "hard_acc": 0.875
+      },
+      "attack_only": {
+        "test_acc": 0.43,
+        "hard_acc": 0.0
+      },
+      "attack_plus_boost": {
+        "test_acc": 0.46,
+        "hard_acc": 0.0
+      }
+    },
+    {
+      "norm": 20.0,
+      "boost_only": {
+        "test_acc": 0.994,
+        "hard_acc": 0.925
+      },
+      "attack_only": {
+        "test_acc": 0.43,
+        "hard_acc": 0.0
+      },
+      "attack_plus_boost": {
+        "test_acc": 0.548,
+        "hard_acc": 0.0
+      }
+    },
+    {
+      "norm": 30.0,
+      "boost_only": {
+        "test_acc": 0.994,
+        "hard_acc": 0.925
+      },
+      "attack_only": {
+        "test_acc": 0.43,
+        "hard_acc": 0.0
+      },
+      "attack_plus_boost": {
+        "test_acc": 0.648,
+        "hard_acc": 0.05
+      }
+    },
+    {
+      "norm": 50.0,
+      "boost_only": {
+        "test_acc": 0.992,
+        "hard_acc": 0.925
+      },
+      "attack_only": {
+        "test_acc": 0.43,
+        "hard_acc": 0.0
+      },
+      "attack_plus_boost": {
+        "test_acc": 0.852,
+        "hard_acc": 0.55
+      }
+    },
+    {
+      "norm": 80.0,
+      "boost_only": {
+        "test_acc": 0.996,
+        "hard_acc": 0.975
+      },
+      "attack_only": {
+        "test_acc": 0.43,
+        "hard_acc": 0.0
+      },
+      "attack_plus_boost": {
+        "test_acc": 0.964,
+        "hard_acc": 0.9
+      }
+    },
+    {
+      "norm": 112.0,
+      "boost_only": {
+        "test_acc": 0.998,
+        "hard_acc": 1.0
+      },
+      "attack_only": {
+        "test_acc": 0.43,
+        "hard_acc": 0.0
+      },
+      "attack_plus_boost": {
+        "test_acc": 0.984,
+        "hard_acc": 0.925
+      }
+    }
+  ]
+}

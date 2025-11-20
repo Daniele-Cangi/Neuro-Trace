@@ -1,0 +1,26 @@
+{
+  "baseline": {
+    "test_acc": 0.976,
+    "test_diff": 3.609909484863281,
+    "hard_acc": 0.7,
+    "hard_diff": 0.1387929916381836
+  },
+  "boost_only": {
+    "test_acc": 0.998,
+    "test_diff": 21.57635386717878,
+    "hard_acc": 1.0,
+    "hard_diff": 15.3239658447681
+  },
+  "attack_only": {
+    "test_acc": 0.43,
+    "test_diff": -0.46686491394042967,
+    "hard_acc": 0.0,
+    "hard_diff": -3.904894256591797
+  },
+  "attack_plus_boost": {
+    "test_acc": 0.984,
+    "test_diff": 17.5584302918911,
+    "hard_acc": 0.925,
+    "hard_diff": 11.696188759803771
+  }
+}

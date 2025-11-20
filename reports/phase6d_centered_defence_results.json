@@ -1,0 +1,43 @@
+{
+  "layer": 10,
+  "baseline": {
+    "train": {
+      "accuracy": 0.9785,
+      "logit_diff": 3.4923118438720704
+    },
+    "test": {
+      "accuracy": 0.976,
+      "logit_diff": 3.609909484863281
+    }
+  },
+  "attack_only": {
+    "train": {
+      "accuracy": 0.3735,
+      "logit_diff": -0.6471359329223633
+    },
+    "test": {
+      "accuracy": 0.43,
+      "logit_diff": -0.46686491394042967
+    }
+  },
+  "defence_only_centered": {
+    "train": {
+      "accuracy": 0.963,
+      "logit_diff": 3.4296905336380004
+    },
+    "test": {
+      "accuracy": 0.97,
+      "logit_diff": 3.529690784454346
+    }
+  },
+  "attack_plus_defence_centered": {
+    "train": {
+      "accuracy": 0.604,
+      "logit_diff": 0.7436941242218018
+    },
+    "test": {
+      "accuracy": 0.614,
+      "logit_diff": 0.9142123565673829
+    }
+  }
+}

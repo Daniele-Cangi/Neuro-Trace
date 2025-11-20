@@ -1,0 +1,25 @@
+{
+  "layer": 10,
+  "baseline": {
+    "accuracy": 0.9785,
+    "logit_diff": 3.4923118438720704
+  },
+  "task_direction": {
+    "ridge_lambda": 0.001
+  },
+  "virus_subspace": {
+    "k": 4
+  },
+  "metrics": {
+    "cos_theta_task_virus_1d": 0.005997334141284227,
+    "theta_task_virus_1d_deg": 89.65637600544143,
+    "energy_task_in_virus_subspace": 0.008708277717232704,
+    "energy_mean_activation_in_virus_subspace": 0.8847208023071289,
+    "principal_angles_deg": [
+      47.73973456795506,
+      84.58331384331365,
+      85.79966203155658,
+      89.29776485392259
+    ]
+  }
+}

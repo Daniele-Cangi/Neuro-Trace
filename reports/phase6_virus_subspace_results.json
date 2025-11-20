@@ -1,0 +1,77 @@
+{
+  "timestamp": "2025-11-20T13:19:51.461321",
+  "layer": 10,
+  "reference_lambda": 0.001,
+  "singular_values": [
+    37.21605682373047,
+    15.595437049865723,
+    3.2417027950286865,
+    1.940352439880371,
+    3.5366090287425322e-06
+  ],
+  "results": [
+    {
+      "k": 1,
+      "delta_norm": 204.48541259765625,
+      "num_effective_features": 6131,
+      "train": {
+        "baseline_diff": 3.4923118438720704,
+        "steered_diff": -28.089387648884205,
+        "delta_diff": -31.581699492756275,
+        "baseline_acc": 0.7425,
+        "steered_acc": 0.003,
+        "delta_acc": -0.7395
+      },
+      "test": {
+        "baseline_diff": 3.609909484863281,
+        "steered_diff": -27.71204676193744,
+        "delta_diff": -31.32195624680072,
+        "baseline_acc": 0.754,
+        "steered_acc": 0.008,
+        "delta_acc": -0.746
+      }
+    },
+    {
+      "k": 2,
+      "delta_norm": 201.14747619628906,
+      "num_effective_features": 6132,
+      "train": {
+        "baseline_diff": 3.4923118438720704,
+        "steered_diff": -28.176393106410746,
+        "delta_diff": -31.668704950282816,
+        "baseline_acc": 0.7425,
+        "steered_acc": 0.0035,
+        "delta_acc": -0.7390000000000001
+      },
+      "test": {
+        "baseline_diff": 3.609909484863281,
+        "steered_diff": -27.776153468862177,
+        "delta_diff": -31.386062953725457,
+        "baseline_acc": 0.754,
+        "steered_acc": 0.008,
+        "delta_acc": -0.746
+      }
+    },
+    {
+      "k": 4,
+      "delta_norm": 200.51486206054688,
+      "num_effective_features": 6129,
+      "train": {
+        "baseline_diff": 3.4923118438720704,
+        "steered_diff": -28.318765816714265,
+        "delta_diff": -31.811077660586335,
+        "baseline_acc": 0.7425,
+        "steered_acc": 0.0035,
+        "delta_acc": -0.7390000000000001
+      },
+      "test": {
+        "baseline_diff": 3.609909484863281,
+        "steered_diff": -27.94337142862426,
+        "delta_diff": -31.55328091348754,
+        "baseline_acc": 0.754,
+        "steered_acc": 0.008,
+        "delta_acc": -0.746
+      }
+    }
+  ]
+}

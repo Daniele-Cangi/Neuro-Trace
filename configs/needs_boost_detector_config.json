@@ -1,0 +1,17 @@
+{
+    "input_features": [
+        "logit_diff_clean",
+        "logit_diff_attacked",
+        "delta_logit_diff",
+        "proj_clean",
+        "proj_attacked"
+    ],
+    "input_dim": 5,
+    "hidden_dim": 16,
+    "threshold": 0.5,
+    "metrics": {
+        "test_acc": 0.994,
+        "precision": 0.9957983193277311,
+        "recall": 0.9916317991631799
+    }
+}

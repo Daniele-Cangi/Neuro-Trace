@@ -1,0 +1,117 @@
+{
+  "layer": 10,
+  "config": {
+    "layer": 10,
+    "train_size": 2000,
+    "test_size": 500,
+    "borderline_threshold": 1.5,
+    "ridge_lambda": 0.1,
+    "alphas": [
+      0.5,
+      1.0,
+      2.0,
+      3.0
+    ]
+  },
+  "baseline": {
+    "train": {
+      "accuracy": 0.9785,
+      "logit_diff": 3.4923118438720704
+    },
+    "test": {
+      "accuracy": 0.976,
+      "logit_diff": 3.609909484863281
+    },
+    "hard_subset": {
+      "count": 63,
+      "accuracy": 0.8095238095238095,
+      "logit_diff": 0.5484654260060143
+    }
+  },
+  "alphas": [
+    {
+      "alpha": 0.5,
+      "test": {
+        "accuracy": 0.976,
+        "logit_diff": 3.6083022994995115,
+        "delta_acc": 0.0
+      },
+      "hard": {
+        "accuracy": 0.8095238095238095,
+        "logit_diff": 0.5500223068963914,
+        "delta_acc": 0.0
+      }
+    },
+    {
+      "alpha": 1.0,
+      "test": {
+        "accuracy": 0.976,
+        "logit_diff": 3.606667922973633,
+        "delta_acc": 0.0
+      },
+      "hard": {
+        "accuracy": 0.8095238095238095,
+        "logit_diff": 0.551580096048022,
+        "delta_acc": 0.0
+      }
+    },
+    {
+      "alpha": 2.0,
+      "test": {
+        "accuracy": 0.976,
+        "logit_diff": 3.603361282348633,
+        "delta_acc": 0.0
+      },
+      "hard": {
+        "accuracy": 0.8095238095238095,
+        "logit_diff": 0.5547840178958954,
+        "delta_acc": 0.0
+      }
+    },
+    {
+      "alpha": 3.0,
+      "test": {
+        "accuracy": 0.976,
+        "logit_diff": 3.600003288269043,
+        "delta_acc": 0.0
+      },
+      "hard": {
+        "accuracy": 0.8095238095238095,
+        "logit_diff": 0.5580386812724765,
+        "delta_acc": 0.0
+      }
+    }
+  ],
+  "virus_interaction": {
+    "attack_only": {
+      "test": {
+        "accuracy": 0.43,
+        "logit_diff": -0.46686491394042967
+      },
+      "hard": {
+        "accuracy": 0.0,
+        "logit_diff": -3.722183590843564
+      }
+    },
+    "boost_only": {
+      "test": {
+        "accuracy": 0.976,
+        "logit_diff": 3.603361282348633
+      },
+      "hard": {
+        "accuracy": 0.8095238095238095,
+        "logit_diff": 0.5547840178958954
+      }
+    },
+    "attack_plus_boost": {
+      "test": {
+        "accuracy": 0.436,
+        "logit_diff": -0.45161219787597656
+      },
+      "hard": {
+        "accuracy": 0.0,
+        "logit_diff": -3.7011742364792597
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+    "config": {
+        "layer": 10,
+        "train_size": 2000,
+        "test_size": 500,
+        "hard_threshold": 1.5,
+        "gate_threshold": 3.0,
+        "alpha_attack": 1.0,
+        "beta_boost": 2.0,
+        "device": "cuda",
+        "virus_path": "checkpoints/adversarial_delta_layer10.pt",
+        "boost_path": "checkpoints/learned_task_boost_layer10_R25.pt"
+    },
+    "baseline": {
+        "accuracy": 0.976,
+        "hard_accuracy": 0.8095238095238095
+    },
+    "no_defence": {
+        "accuracy": 0.522,
+        "hard_accuracy": 0.0
+    },
+    "static_defence": {
+        "accuracy": 0.992,
+        "hard_accuracy": 0.9365079365079365
+    },
+    "gated_defence": {
+        "accuracy": 0.862,
+        "hard_accuracy": 0.9365079365079365,
+        "gate_rate": 0.396,
+        "false_positive_rate": 0.372
+    }
+}

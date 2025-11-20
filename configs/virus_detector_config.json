@@ -1,0 +1,15 @@
+{
+    "input_features": [
+        "current_logit_diff",
+        "current_proj_virus",
+        "current_norm",
+        "base_logit_diff",
+        "susceptibility_delta"
+    ],
+    "input_dim": 5,
+    "hidden_dim": 16,
+    "metrics": {
+        "test_acc": 1.0,
+        "test_auc": 1.0
+    }
+}

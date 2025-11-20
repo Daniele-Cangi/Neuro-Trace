@@ -2,8 +2,8 @@
 
 A comprehensive framework for deep neural network analysis, featuring automated circuit discovery, sparse autoencoder training, and active steering capabilities.
 
-**Version**: 5.0.0
-**Status**: ✅ Phase 5A Complete - Layer Vulnerability Landscape Mapped (Layer 0-7: ~97% drop, Layer 11: 0.4% drop)
+**Version**: 8.0.0
+**Status**: ✅ Phase 14 Complete - Integrated Defence System Validated
 **Last Updated**: 2025-11-20
 **Atlas**: 12/12 Layers Validated (73,728 Features Total)
 
@@ -11,20 +11,392 @@ A comprehensive framework for deep neural network analysis, featuring automated 
 
 ## Overview
 
-NeuroTrace is a research framework for understanding and controlling transformer neural networks through:
+NeuroTrace is a research framework for understanding and controlling transformer neural networks. The project has evolved from passive analysis to active defense:
 
-1. **Automated Circuit Discovery** - Identify causal pathways in neural networks
-2. **Sparse Autoencoder Training** - Extract monosemantic features with SOTA architecture
-3. **Feature-Level Analysis** - Discover which specific features drive model behavior
-4. **Active Steering** - Real-time intervention on model behavior
+1. **Atlas (Phases 1-3)**: Mapped the network's components and features.
+2. **Causality (Phase 4)**: Discovered that causal control lives in the residual stream, not sparse features.
+3. **Vulnerability (Phase 5)**: Identified that early layers are highly vulnerable to adversarial attacks.
+4. **Defense (Phases 6-7)**: Developed "Task Boosting" - an active defense strategy that neutralizes attacks by injecting optimized task vectors.
+5. **Smart Gating (Phases 8-9)**: Implemented intelligent detectors ("Needs Boost") to activate defense only when necessary.
+6. **Analysis (Phases 10-12)**: Analyzed the "alien" nature of the boost vector and its collateral damage on general text.
+7. **Integration (Phases 13-14)**: Built the final "Integrated Defence System" with Domain Guard and Damage Guard, achieving zero collateral damage.
 
 ---
 
-## 🎉 Latest Achievement: Phase 5A Layer Vulnerability Sweep COMPLETE
+## 📂 Repository Structure
 
-**Layer-wise Adversarial Vulnerability Landscape - November 20, 2025**
+The project is organized as follows:
 
-Trained adversarial steering vectors for **all 12 layers** (0-11) using the Phase 4B gradient-based method. Discovered a dramatic vulnerability gradient across network depth: **Layers 0-7 are almost fully vulnerable (≈-97% accuracy drop), layers 8-9 remain highly vulnerable, layer 10 moderately vulnerable (≈-60%), layer 11 almost invariant (0.4% drop). Adversarial control is possible across most of the depth, but the final layer behaves as a robustness buffer.**
+- **`phases/`**: Contains the main execution scripts for each research phase (e.g., `phase14_integrated_defence.py`).
+- **`reports/`**: Stores detailed markdown reports and JSON result files for each phase.
+- **`checkpoints/`**: Saved models, vectors, and detectors (e.g., `context_classifier_layer10.pt`).
+- **`configs/`**: Configuration files for detectors and experiments.
+- **`neurotrace/`**: Core Python package containing reusable modules (`models`, `datasets`, `control`).
+- **`legacy/`**: Archived scripts from previous iterations and utility tools.
+
+---
+
+## 🏆 Latest Achievement: Phase 14 (Integrated Defence)
+
+### Integrated Defence System - November 20, 2025
+
+Successfully implemented the final **Integrated Defence System** combining **Domain Guard** (Context Classifier), **Damage Guard** (Needs Boost Detector), and **Active Defense** (Task Boost).
+
+**Results**:
+
+| Mode | IOI Acc | Wiki PPL | Gate Rate | Collateral Damage |
+|---|---|---|---|---|
+| **Baseline** | 97.4% | 72.14 | 0% | - |
+| **Static Defence** | 98.8% | 145.08 | 100% | +101% (Severe) |
+| **Integrated Defence** | **94.8%** | **72.14** | **48.4%** | **0.0% (None)** |
+
+**Conclusion**:
+The system achieves the "Holy Grail" of AI Defense:
+1.  **Robustness**: Restores accuracy under attack (94.8%).
+2.  **Safety**: Zero impact on general capabilities (PPL 72.14).
+3.  **Efficiency**: Only activates when strictly necessary.
+
+---
+
+## 🔬 Phase 13: Context Classifier (Domain Guard)
+
+**Domain Awareness - November 20, 2025**
+
+Trained a lightweight binary classifier (Layer 10 activations) to distinguish between "IOI Task" and "General Text" (WikiText).
+
+- **Accuracy**: 100.00%
+- **False Positive Rate**: 0.00%
+- **Role**: Acts as the first line of defense, completely disabling the system when the model is processing general text, ensuring zero collateral damage.
+
+---
+
+## 🔬 Phase 12: SAE Purification
+
+**Attempting Sparse Reconstruction - November 20, 2025**
+
+Attempted to replace the dense "Task Boost" vector with a sparse combination of SAE features (Top-K) to reduce collateral damage.
+
+**Results**:
+- **K=50 Features**: Reduced PPL spike from 145 to 100, but still +38% damage compared to baseline.
+- **Conclusion**: Purification is insufficient. The "alien" nature of the boost vector means it cannot be cleanly approximated by sparse features without loss of power or added noise. **Gating is the only viable solution.**
+
+---
+
+## 🔬 Phase 11: Collateral Damage Assessment
+
+**Static Defence Impact on General Text - November 20, 2025**
+
+Measured the "doping effect" of the static defence (Task Boost Layer 10, R=25) on generic language modeling performance using WikiText-2.
+
+### Phase 11 Results
+
+| Mode | N_tokens | NLL | Perplexity | Impact |
+|------|----------|-----|------------|--------|
+| **Baseline** | 16,498 | 4.2785 | **72.14** | - |
+| **Static Defence** | 16,498 | 4.9773 | **145.08** | **+101%** |
+
+### Key Findings
+
+1. **High Collateral Damage**: The static defence **doubles the perplexity** (+72.95) on generic text.
+2. **Doping Effect**: The model becomes hyper-specialized for IOI but "hallucinates" or degrades on normal English text.
+3. **Justification for Gating**: This result proves that **Static Defence is not viable** for production. The **Gated Defence (Phase 9)** is strictly necessary to activate the boost ONLY when an attack is detected, preserving general capabilities (PPL ~72) while defending IOI.
+
+---
+
+## 🔬 Phase 10B: Boost SAE Decomposition
+
+**Atlas ↔ Boost Connection - November 20, 2025**
+
+Attempted to decompose the learned "Task Boost" vector (Phase 7D) into the interpretable SAE feature space (Phase 2) to see if it corresponds to a sparse combination of features.
+
+### Decomposition Results
+
+- **Boost Norm**: 25.00
+- **Alpha Norm (Linear)**: 44.76
+
+| K Features | Energy Ratio | Norm Ratio | Recon Error |
+|------------|--------------|------------|-------------|
+| 10 | 4.8% | 40.1% | 25.37 |
+| 100 | 22.6% | 92.9% | 28.58 |
+| 6144 (All) | 100.0% | 272.2% | 62.44 |
+
+### Key Insight: The Boost is "Alien"
+
+The Task Boost vector is **highly dense** and does **not** live in the sparse feature manifold learned by the SAE.
+1. **Poor Reconstruction**: Even using all 6,144 features, the reconstruction error is massive (62.44 vs norm 25.00).
+2. **Constructive Interference**: The linear projection explodes the norm (272%), indicating the boost vector exploits directions that are not aligned with the clean, sparse dictionary features.
+3. **Conclusion**: Gradient descent found a "hack" in the residual stream that forces the task output, but this direction is orthogonal to the model's natural interpretable features.
+
+---
+
+## 🧠 Phase 9: Smart Defence Systems
+
+**Objective**: Transition from "brute force" defense (always-on, high metabolic cost) to "smart" defense systems that only intervene when necessary.
+
+### Phase 9D: Gated Defence V3 (Needs Boost)
+
+**Goal**: Use the "Needs Boost" detector to gate the constrained task boost.
+
+**Results**:
+
+| Mode | Test Acc | Hard Acc | Gate Rate | FP Rate |
+|---|---|---|---|---|
+| **Baseline** | 97.4% | 83.3% | - | - |
+| **No Defence** | 47.6% | 1.3% | - | - |
+| **Static Defence** | 98.8% | 92.3% | 100% | - |
+| **Gated V3** | **97.4%** | **92.3%** | **51.0%** | **0.0%** |
+
+**Conclusion**:
+
+- **Perfect Precision**: The system *never* intervenes when the model is already correct (0.0% FP).
+- **Optimal Efficiency**: It cuts the intervention cost by half (51% vs 100%) compared to static defense.
+- **Full Restoration**: It restores the hard accuracy to the same level as the static defense (92.3%).
+- **Verdict**: This is the superior defense strategy.
+
+### Phase 9C: "Needs Boost" Detector
+
+**Goal**: Train an MLP to detect *functional damage* (prediction flip), not just the presence of the virus.
+
+**Method**:
+
+- Trained on 2000 examples (Clean vs Attacked).
+- Features: Logit diffs, projections, norms.
+- Label: 1 if Attack causes error, 0 otherwise.
+
+**Results**:
+
+- **Test Accuracy**: **99.4%**
+- **Precision**: 99.6%
+- **Recall**: 99.2%
+- **Finding**: We can reliably predict *before* the final output whether the attack will succeed or fail.
+
+### Phase 9B: Gated Defence V2 (Virus Detector)
+
+**Goal**: Gate the defense using a simple "Virus Detector".
+
+**Results**:
+
+- **Gate Rate**: 100% (The virus is always present).
+- **FP Rate**: 47.6% (Defends even when not needed).
+- **Conclusion**: Detecting the *presence* of the attack is not enough for efficient defense; we need to detect the *impact*.
+
+### Phase 9A: Virus Detector
+
+**Goal**: Train an MLP to detect if the adversarial vector is present in the residual stream.
+
+**Results**:
+
+- **Test Accuracy**: **100.0%**
+- **AUC**: 1.000
+- **Finding**: The adversarial vector is easily detectable, but its presence doesn't always imply failure.
+
+---
+
+## ⚔️ Phase 8: Immune Gating & War Surface
+
+**Objective**: Understand the interaction between Attack and Defense vectors and attempt simple gating mechanisms.
+
+### Phase 8B: War Surface (Grid Search)
+
+**Goal**: Map the interaction surface between Attack Scale ($\alpha$) and Boost Scale ($\beta$).
+
+**Results**:
+
+- **Neutralization Ratio**: To counter an attack of $\alpha=1.0$, a boost of $\beta \approx 3.0$ is required.
+- **Heatmap**: Shows a clear linear boundary between "Collapsed" and "Restored" states.
+
+### Phase 8A: Immune Gating (Confidence-Based)
+
+**Goal**: Gate the defense based on model confidence (logit difference).
+
+**Results**:
+
+- **Gate Rate**: 39.6%
+- **Hard Acc**: 93.7%
+- **FP Rate**: 37.2%
+- **Conclusion**: Simple confidence thresholding works but is less precise than the learned detectors in Phase 9.
+
+---
+
+## 🎯 Phase 7D: Constrained Task Boost
+
+**Objective**: Train a specific boost vector with a **strict norm constraint** ($R=25.0$) to see if we can optimize for efficiency rather than raw power.
+
+**Method**: Projected Gradient Descent (clipping norm to 25.0 at every step).
+
+**Results**:
+
+- **Clean Performance**:
+  - **Test Acc**: **99.4%** (Excellent)
+  - **Hard Subset**: **92.5%** (Strong improvement)
+- **Virus Defense**:
+  - **Attack + Boost**: **84.4%** (Partial Success)
+
+**Conclusion**:
+
+- A specialized, constrained vector is **much more efficient** than a scaled-down version of the unconstrained vector (84.4% vs 54.8% at similar norms).
+- We can achieve **significant protection** (84% accuracy) with constrained norms, though total neutralization requires higher energy.
+- **Final Verdict**: Active defense is viable and highly effective.
+
+---
+
+## ⚖️ Phase 7C: Boost Scaling Analysis
+
+**Objective**: Determine if the protective effect of Phase 7B survives at lower, more constrained norms.
+
+**Results**:
+
+| Norm | Mode | Test Acc | Hard Acc |
+|---|---|---|---|
+| **5.0** | Attack + Boost | 44.4% | 0.0% |
+| **20.0** | Attack + Boost | 54.8% | 0.0% |
+| **50.0** | Attack + Boost | 85.2% | 55.0% |
+| **80.0** | Attack + Boost | 96.4% | 90.0% |
+| **112.0** | Attack + Boost | 98.4% | 92.5% |
+
+**Finding**: The defense requires high energy. At low-magnitude norms (~20-30), the boost is insufficient to counter the attack (Acc ~55%). To fully neutralize the attack, the boost must overpower the adversarial vector with norm > 50.
+
+---
+
+## 🚀 Phase 7B: Learned Task Boost (Gradient Descent)
+
+**Objective**: Learn a "Task Enhancement" vector $v_{boost}$ via direct gradient descent optimization to maximize logit difference on hard examples.
+
+**Method**:
+
+- **Loss Function**: $L = L_{hard} + \lambda L_{easy} + \lambda ||v||^2$
+  - $L_{hard}$: Maximize logit diff on errors/borderline cases.
+  - $L_{easy}$: Penalize degradation of correct examples (margin loss).
+- **Optimization**: Adam, 20 epochs.
+
+**Results (Layer 10)**:
+
+- **Learned Vector**: Norm $||v|| \approx 112$ (Very high energy).
+- **Clean Performance**:
+  - **Test Acc**: 97.6% -> **99.8%** (+2.2%)
+  - **Hard Subset**: 70.0% -> **100.0%** (Perfect correction)
+- **Virus Defense**:
+  - **Attack Only**: 43.0%
+  - **Attack + Boost**: **98.4%** (Full Neutralization)
+
+**Conclusion**: We found a robust countermeasure for Layer 10. By injecting high-energy signal in the optimized direction, we can completely override the adversarial vector and even improve baseline performance.
+
+---
+
+## 📉 Phase 7: Task Boost Experiment (Linear)
+
+**Objective**: Test if injecting a "Task Direction" vector (learned via Ridge Regression on clean activations) improves performance on hard examples or defends against the virus.
+
+**Method**:
+
+1. Captured clean activations $H$ and logit differences $y$.
+2. Solved for $w$ in $Hw \approx y$ (Ridge Regression).
+3. Injected $v_{task} = w / ||w||$ with varying $\alpha$.
+
+**Results**:
+
+- **Clean Data**: No improvement (Acc 97.6% -> 97.6%).
+- **Hard Subset**: No improvement (Acc 80.9% -> 80.9%).
+- **Virus Defense**: No effect (Acc 43.0% -> 43.6%).
+- **Conclusion**: A simple linear regression direction is insufficient to "boost" the model or counter the virus. The task manifold is likely more complex or the virus attacks a different subspace.
+
+---
+
+## 🛡️ Phase 6D: Centered Defence
+
+**Objective**: Test a refined defense strategy that preserves the mean activation while removing the virus subspace.
+
+**Method**:
+
+1. **Center**: Subtract mean activation ($h' = h - \mu$).
+2. **Project**: Remove virus subspace from centered residual ($h'' = (I - BB^T)h'$).
+3. **Restore**: Add mean activation back ($h_{final} = h'' + \mu$).
+
+**Results (Layer 10)**:
+
+| Scenario | Test Accuracy | Logit Diff | Interpretation |
+|----------|---------------|------------|----------------|
+| **Baseline** | 97.6% | +3.61 | Normal behavior |
+| **Attack Only** | 43.0% | -0.47 | Attack degrades performance |
+| **Defence Only** | **97.0%** | +3.53 | **SUCCESS**: Clean performance preserved |
+| **Attack + Defence** | **61.4%** | +0.91 | **PARTIAL SUCCESS**: Attack mitigated (+18%) |
+
+**Conclusion**:
+
+- **Hypothesis Confirmed**: Preserving the mean activation prevents the model collapse seen in Phase 6B.
+- **Defense Viability**: The centered defense is safe to deploy (minimal impact on clean data) and offers moderate protection, recovering significant accuracy.
+- **Remaining Gap**: The attack is not fully neutralized (61% vs 97%), suggesting the virus also operates via non-linear interactions or components not fully captured by the top-4 PCA directions.
+
+---
+
+## 🔍 Phase 6C: Task vs Virus Subspace Comparison
+
+**Objective**: Investigate the catastrophic failure of the Phase 6B defense. Why did removing the "Virus Subspace" destroy the model's performance on clean data?
+
+**Method**:
+
+1. **Task Direction**: Computed via Ridge Regression on clean activations (predicting logit difference).
+2. **Virus Subspace**: Computed via PCA on sparse virus vectors (Phase 5B).
+3. **Mean Activation**: Computed the mean of clean residual stream activations.
+4. **Comparison**: Measured Cosine Similarity and Energy overlap between these subspaces.
+
+**Results**:
+
+- **Task vs Virus**: The Virus Subspace is **orthogonal** to the Task Direction (Cosine Similarity ≈ 0.006). The virus does NOT mimic the task feature.
+- **Mean vs Virus**: The Virus Subspace has a **massive overlap** with the Mean Activation (Energy ≈ 0.88).
+- **Interpretation**: The virus attacks by hijacking the **"DC component"** (mean state) of the residual stream. In Phase 6B, projecting out the virus subspace inadvertently removed this critical mean component, effectively "blinding" the model.
+
+---
+
+## 🛡️ Phase 6B: Virus Defence via Subspace Projection
+
+**Objective**: Attempt to defend the model against the virus by projecting the residual stream **orthogonally** to the discovered "virus subspace" (removing the attack direction).
+
+**Hypothesis**: If the virus exploits a non-essential direction, removing that subspace should neutralize the attack while preserving clean performance.
+
+**Results (Layer 10)**:
+
+| Scenario | Test Accuracy | Logit Diff | Interpretation |
+|----------|---------------|------------|----------------|
+| **Baseline (Clean)** | 97.6% | +3.61 | Normal model behavior |
+| **Attack Only** | 0.8% | -27.94 | Attack is successful |
+| **Defence Only (Clean)** | **0.2%** | -28.22 | **Significant Performance Drop** |
+| **Attack + Defence** | 0.2% | -28.21 | Defense fails to restore function |
+
+**Key Finding**:
+The "Virus Subspace" appears to be **aligned with the critical task subspace**.
+
+- Projecting out the virus direction (Defence Only) significantly impacts the model's ability to perform the task on clean data (Acc drops from 97.6% to 0.2%).
+- This suggests the virus attacks by **manipulating the core features** used for the Indirect Object Identification (IOI) task.
+- **Conclusion**: Simple linear subspace removal is **not** an effective defense for this type of attack in this layer. Future defenses may need to be non-linear or feature-specific.
+
+---
+
+## 🦠 Phase 6: Virus Subspace Decomposition
+
+**Objective**: Determine the dimensionality of the "Sparse SAE Virus" (adversarial feature combination) discovered in Phase 5B for Layer 10.
+
+**Method**:
+
+1. Collected multiple sparse virus vectors (alphas) trained with different L1 regularization strengths.
+2. Performed Principal Component Analysis (PCA) on these vectors in the SAE feature space.
+3. Reconstructed the virus using only the top-k principal components and measured attack effectiveness.
+
+**Results (Layer 10)**:
+
+- **Dimensionality**: The virus is low-rank. The **first principal component (k=1)** explains the majority of the variance.
+- **Attack Efficiency**:
+  - **Full Virus**: Test Acc **0.8%**
+  - **k=1 Reconstruction**: Test Acc **0.8%** (Identical effectiveness)
+- **Conclusion**: The adversarial attack, despite involving ~6000 active features (dense in feature space), can be approximated by a **single direction** in the residual stream.
+
+---
+
+## 🔬 Phase 5A: Layer Vulnerability Sweep
+
+### Layer-wise Adversarial Vulnerability Landscape - November 20, 2025
+
+Trained adversarial steering vectors for **all 12 layers** (0-11) using the Phase 4B gradient-based method. Discovered a vulnerability gradient across network depth: **Layers 0-7 are highly vulnerable (≈-97% accuracy drop), layers 8-9 remain vulnerable, layer 10 moderately vulnerable (≈-60%), layer 11 almost invariant (0.4% drop). Adversarial control is possible across most of the depth, but the final layer behaves as a robustness buffer.**
 
 ### Phase 5A Results
 
@@ -49,25 +421,29 @@ Trained adversarial steering vectors for **all 12 layers** (0-11) using the Phas
 
 ### Key Findings
 
-#### 1. **Dramatic Vulnerability Gradient**
-- **Early layers (0-7)**: -97.2% average accuracy drop (catastrophically vulnerable)
-- **Mid layers (8-9)**: -92.2% to -95.8% (highly vulnerable)
+#### 1. **Vulnerability Gradient**
+
+- **Early layers (0-7)**: -97.2% average accuracy drop (highly vulnerable)
+- **Mid layers (8-9)**: -92.2% to -95.8% (vulnerable)
 - **Late layer (10)**: -60.2% (moderately vulnerable)
-- **Final layer (11)**: **-0.4%** (almost invulnerable!)
+- **Final layer (11)**: **-0.4%** (robust)
 
 #### 2. **Statistical Analysis**
+
 - Mean vulnerability: **-85.5% ± 27.6%**
 - Vulnerability range: **96.8%** spread (Layer 0: -97.2%, Layer 11: -0.4%)
 - **Significant correlation** (r=0.630, p=0.028): Shallower layers MORE vulnerable
 
 #### 3. **Layer 11 Robustness**
-- Final layer shows **near-complete immunity** to adversarial steering
+
+- Final layer shows **strong resistance** to adversarial steering
 - Effect magnitude: -0.023 (vs -28.543 for Layer 0)
 - Delta norm: 10.15 (vs 23.94 for Layer 0) - optimization couldn't find strong attack
 - **Interpretation**: Late-stage processing has strong robustness mechanisms
 
 #### 4. **Vulnerability Pattern**
-- Layers 0-7: Uniform catastrophic vulnerability (~97% drop)
+
+- Layers 0-7: Uniform high vulnerability (~97% drop)
 - Layer 8: First sign of resistance (95.8% drop)
 - Layer 9: More resistance (92.2% drop)
 - Layer 10: Significant robustness (60.2% drop)
@@ -76,6 +452,7 @@ Trained adversarial steering vectors for **all 12 layers** (0-11) using the Phas
 ### Training Configuration
 
 Same as Phase 4B for all layers:
+
 - **Training examples**: 2,000 (237 borderline with logit_diff < 1.5)
 - **Test examples**: 500
 - **Epochs per layer**: 20
@@ -85,43 +462,30 @@ Same as Phase 4B for all layers:
 
 ### Implications
 
-1. **Strategic Attack Surface**: Adversarial attacks should target Layers 0-7 for maximum damage
-2. **Defensive Priorities**: Protect early/mid layers; Layer 11 already robust
-3. **Architecture Insight**: GPT-2's final layer acts as a **robustness buffer** against perturbations
-4. **Multi-layer Attacks**: Layers 0-10 are all vulnerable → potential for multi-layer combinations
-5. **Generalization**: Vulnerability gradient may be universal across transformer architectures
+1. **Strategic Attack Surface**: Adversarial attacks are most effective on Layers 0-7.
+2. **Defensive Priorities**: Protect early/mid layers; Layer 11 already robust.
+3. **Architecture Insight**: GPT-2's final layer acts as a **robustness buffer** against perturbations.
+4. **Multi-layer Attacks**: Layers 0-10 are all vulnerable → potential for multi-layer combinations.
+5. **Generalization**: Vulnerability gradient may be universal across transformer architectures.
 
 ### Checkpoints
 
 All 12 adversarial deltas saved:
+
 - [checkpoints/adversarial_delta_layer0.pt](checkpoints/adversarial_delta_layer0.pt) through [adversarial_delta_layer11.pt](checkpoints/adversarial_delta_layer11.pt)
-
-### Next Steps
-
-**Phase 5B - Sparse SAE Virus**:
-- Learn adversarial vectors **directly in SAE feature space** (α coefficients)
-- Add L1 regularization to enforce sparsity
-- Trace sparsity-performance curve: #features active → accuracy drop
-- Answer: Can we achieve -60% drop with <100 interpretable features?
-
-**Future Work**:
-- Multi-layer delta combinations (e.g., Layer 5 + Layer 9)
-- Defensive steering on Layer 11 (enhance robustness)
-- Cross-task generalization (test deltas on non-IOI tasks)
-
-See [PHASE5A_LAYER_SWEEP.md](PHASE5A_LAYER_SWEEP.md) and [phase5a_layer_sweep_results.json](phase5a_layer_sweep_results.json) for complete analysis.
 
 ---
 
-## 🔬 Phase 4B: Adversarial Steering BREAKTHROUGH
+## 🔬 Phase 4B: Adversarial Steering Milestone
 
-**Residual Stream Steering - November 19, 2025**
+### Residual Stream Steering - November 19, 2025
 
-Successfully learned an adversarial steering vector that **destroys IOI performance** via gradient-based optimization in the residual stream. Test accuracy dropped from 97.2% to 36.8% (-60.4%), validating that **residual stream directions causally control IOI**, while SAE feature-level steering (Phase 4A) showed only weak effects.
+Successfully learned an adversarial steering vector that **severely degrades IOI performance** via gradient-based optimization in the residual stream. Test accuracy dropped from 97.2% to 36.8% (-60.4%), validating that **residual stream directions causally control IOI**, while SAE feature-level steering (Phase 4A) showed only weak effects.
 
 ### Phase 4B Results
 
 **Setup**:
+
 - **Target Layer**: Layer 10 (residual stream injection)
 - **Optimization**: Gradient descent on δ ∈ ℝ⁷⁶⁸ to minimize logit_diff + λ||δ||²
 - **Training Set**: 237 borderline examples (0 < logit_diff < 1.5)
@@ -136,24 +500,28 @@ Successfully learned an adversarial steering vector that **destroys IOI performa
 | **Train** (2000) | 3.492 (97.9%) | -0.654 (37.2%) | **-4.146** | **-60.6%** |
 | **Test** (500) | 3.474 (97.2%) | -0.706 (36.8%) | **-4.180** | **-60.4%** |
 
-### Key Findings
+### Phase 4B Key Findings
 
 #### 1. **Residual Stream is the Causal Locus**
+
 - **Phase 4A** (SAE features): Effect = +0.160, Accuracy Δ = -1.7% ❌
 - **Phase 4B** (residual delta): Effect = **-4.180**, Accuracy Δ = **-60.4%** ✅
 - **Implication**: IOI causality lives in residual stream space, not sparse feature space
 
 #### 2. **Gradient-Based Optimization Works**
+
 - Trained on only 237 borderline examples (11.8% of dataset)
 - Generalizes perfectly: Train effect (-4.146) ≈ Test effect (-4.180)
 - Loss progression: +0.880 → -3.297 (inverted logit difference!)
 
 #### 3. **Single Vector Destroys IOI**
+
 - One 768-dimensional vector (||δ|| = 29.738) sufficient
 - No multi-layer coordination needed
 - Layer 10 highly vulnerable to adversarial steering
 
 #### 4. **Borderline Examples Most Vulnerable**
+
 - Borderline accuracy: 100% → 1.3% (-98.7%)
 - Full dataset accuracy: 97.9% → 37.2% (-60.6%)
 - Adversarial delta exploits decision boundary uncertainty
@@ -172,7 +540,7 @@ Successfully learned an adversarial steering vector that **destroys IOI performa
 
 ### Training Dynamics
 
-```
+```text
 Epoch  1: Loss=+0.880  LogitDiff=+0.880  ||δ||=1.543
 Epoch  5: Loss=+0.311  LogitDiff=+0.267  ||δ||=7.457
 Epoch 10: Loss=-0.656  LogitDiff=-0.869  ||δ||=15.476
@@ -182,7 +550,7 @@ Epoch 20: Loss=-2.453  LogitDiff=-3.297  ||δ||=29.738
 
 Smooth convergence with consistent generalization throughout training.
 
-### Implications
+### Phase 4B Implications
 
 1. **Residual > Features**: Causality for dense tasks (IOI) lives in residual stream, not sparse decomposition
 2. **SAE Purpose**: Features are for **interpretation**, not **control**
@@ -192,12 +560,14 @@ Smooth convergence with consistent generalization throughout training.
 ### Next Steps
 
 **Phase 4B-B - Feature Space Decomposition**:
+
 - Project adversarial δ onto SAE feature basis
 - Identify which features compose the "virus"
 - Test if top-K features reconstruct adversarial effect
 - Connect Phase 3 (feature discovery) with Phase 4B (steering)
 
 **Future Work**:
+
 - Layer sweep (0-11): Find most/least vulnerable layers
 - Multi-layer delta combinations
 - Test generalization to other tasks (beyond IOI)
@@ -209,13 +579,14 @@ See [adversarial_steering_layer10_results.json](adversarial_steering_layer10_res
 
 ## 🔬 Phase 4B-B: Adversarial Virus in SAE Feature Space
 
-**Feature Space Decomposition - November 19, 2025**
+### Feature Space Decomposition - November 19, 2025
 
 Projected the learned adversarial steering vector onto the SAE feature basis to understand its composition and test if sparse subsets can reconstruct the adversarial effect.
 
 ### Decomposition Results
 
 **Projection Quality**:
+
 - **||δ|| (original)**: 29.738
 - **||δ_hat (SAE projection)**: 26.377
 - **Projection ratio**: **88.7%** ✅ Virus lives primarily in SAE space
@@ -251,6 +622,7 @@ Projected the learned adversarial steering vector onto the SAE feature basis to 
 ### Phase 3 vs Virus Features
 
 **Overlap Analysis**:
+
 - Phase 3 discovered 20 features in Layer 10 (correlational markers)
 - Top-100 virus features: 100 most important for adversarial effect
 - **Overlap**: **0/100** (0.0%)
@@ -259,7 +631,7 @@ Projected the learned adversarial steering vector onto the SAE feature basis to 
 
 ### Top Virus Features (Layer 10)
 
-```
+```text
 Top 10 features by |alpha| (causal importance):
 1. F57     alpha=+0.360
 2. F5805   alpha=-0.358
@@ -300,7 +672,7 @@ See [adversarial_delta_feature_decomposition_layer10.json](adversarial_delta_fea
 
 ## 🔬 Phase 4A: Feature Causality Testing Complete
 
-**Rigorous VLO Testing - November 19, 2025**
+### Rigorous VLO Testing - November 19, 2025
 
 Successfully validated that IOI is a **dense/distributed task**, not sparse feature-based. Feature-level interventions show weak causal effects, confirming component-level analysis (Phase 1) as the correct approach.
 
@@ -311,14 +683,16 @@ Successfully validated that IOI is a **dense/distributed task**, not sparse feat
 - **Single Feature Clamping** (+10.0): Effect = -0.068 (no effect)
 - **Multi-Feature Steering** (top 5): Effect = +0.160, Accuracy Δ = -1.7% (weak)
 
-### Key Findings
+### Phase 4A Key Findings
 
 #### 1. **IOI is Dense/Distributed**
+
 - **Layer 0 MLP** (Phase 1): VLO = **5.276** ✅ Strong causal effect
 - **Individual Features** (Phase 4A): |VLO| < 0.07 ❌ No causal effect
 - **Implication**: IOI emerges from distributed activation patterns, not sparse features
 
 #### 2. **Features are Correlational Markers**
+
 - **Layer 9 F3428** ("IOI Killer", r=-0.798):
   - Ablation: VLO = -0.005 (removing has no effect)
   - Clamping +10: Effect = -0.037 (forcing has no effect)
@@ -326,18 +700,20 @@ Successfully validated that IOI is a **dense/distributed task**, not sparse feat
 - **Analogy**: Like sweating when hot → correlated with heat, but turning off sweat doesn't cool you
 
 #### 3. **Multi-Feature Circuit Test**
+
 - **Test**: Ablate/clamp top 5 negative features together on 237 borderline examples
 - **Results**:
   - Ablate all 5: Effect = +0.099, Accuracy Δ = -1.7%
   - Clamp to P99: Effect = +0.160, Accuracy Δ = -1.7%
 - **Conclusion**: Even combined, features show weak circuit-level causality
 
-#### 4. **Borderline Analysis Reveals Truth**
+#### 4. **Borderline Analysis Reveals Mechanism**
+
 - Dataset: 2,000 examples, 237 borderline (11.8%, logit_diff < 1.5)
 - Borderline baseline accuracy: **100%** (model already solves hard cases perfectly)
 - **Implication**: High redundancy prevents single/multi-feature steering from working
 
-### Scientific Validation
+### Phase 4A Scientific Validation
 
 **What We Validated** ✅:
 - Phase 3 correlations are statistically real (r=-0.798 is significant)
@@ -449,7 +825,7 @@ Layer 11:  20 features  ✨ (only layer with positive features)
 4. **Layer 11, F1462**: r=-0.683, 3% freq → Output layer inhibition
 5. **Layer 11, F1935**: r=-0.610, 3% freq → Decision suppression
 
-### Scientific Significance
+### Phase 3 Scientific Significance
 
 **Enables**:
 - **Feature-Level Steering**: Suppress "IOI Killer" feature to improve accuracy
@@ -655,46 +1031,52 @@ for feat in important_features[:10]:
 ```
 Analisi_Neurale/
 ├── neurotrace/                        # Core framework
+│   ├── analysis/                     # Analysis tools
+│   ├── causal/                       # Causal intervention tools
+│   ├── control/                      # Steering and control
+│   ├── datasets/                     # Dataset generation (IOI)
+│   ├── discovery/                    # Circuit discovery
+│   ├── instrumentation/              # Model hooking and tracing
 │   ├── models/                       # Model wrappers
-│   ├── instrumentation/              # Hook management
-│   ├── training/                     # SAE architecture (EnhancedSAE)
-│   ├── control/                      # Feature store, steering
-│   ├── discovery/                    # Circuit & feature discovery
-│   ├── causal/                       # VLO testing
-│   ├── datasets/                     # IOI dataset generator
-│   └── visualization/                # Analysis tools
+│   ├── training/                     # SAE training
+│   └── visualization/                # Plotting tools
 │
-├── checkpoints/
-│   └── all_layers_sae/               # ✅ Complete 12-layer Atlas
-│       ├── layer_0/final.pt          # 6,144 features, MSE=0.0109
-│       ├── layer_1/final.pt          # 6,144 features, MSE=0.0062
-│       ├── ...
-│       └── layer_11/final.pt         # 6,144 features, MSE=0.0837
-│       └── training_summary.json     # Complete validation results
+├── checkpoints/                       # Saved models and vectors
+│   ├── adversarial_delta_layer*.pt   # Attack vectors
+│   ├── learned_task_boost_layer*.pt  # Defense vectors
+│   ├── virus_detector_layer*.pt      # Detectors
+│   └── all_layers_sae/               # Sparse Autoencoders
 │
-├── D:/NeuroTrace/                    # Production data (external)
-│   └── 20251118_123433/              # ✅ 100K IOI capture (98GB)
-│       ├── activations/              # 3,125 batch files, all 12 layers
-│       └── ioi_dataset.json          # 100K IOI examples
+├── cli/                               # Command Line Interface
 │
-├── docs/
-│   ├── research/
-│   │   └── FINAL_RESULTS.md          # Phase 1 results
-│   └── implementation/
-│       └── ENHANCED_SAE_COMPLETE.md  # SAE architecture docs
+├── docs/                              # Documentation
 │
-├── Scripts
-│   ├── train_atlas_simple.py        # ✅ Atlas training (12/12 validated)
-│   ├── discover_feature_circuits.py # ✅ Feature discovery (Phase 3)
-│   ├── discover_real_circuits.py    # Component-level VLO testing
-│   ├── check_phase3_readiness.py    # ✅ Infrastructure verification
-│   └── capture_deep_dataset.py      # Activation capture
+├── results/                           # Experiment results (JSON)
 │
-└── Output Files
-    ├── feature_circuit_discovery.json  # ✅ Phase 3 results (223 features)
-    ├── ATLAS_COMPLETE.md               # ✅ Complete Phase 2+3 analysis
-    ├── PHASE3_READY.md                 # Phase 3 infrastructure guide
-    └── QUICK_START.md                  # Getting started guide
+├── scripts/                           # Utility scripts
+│
+├── tests/                             # Unit tests
+│
+├── Phase Scripts (Root)
+│   ├── phase4b_...py                 # Adversarial Steering
+│   ├── phase5a_...py                 # Layer Sweep
+│   ├── phase5b_...py                 # Sparse Virus
+│   ├── phase6b_...py                 # Virus Defence
+│   ├── phase6c_...py                 # Subspace Analysis
+│   ├── phase6d_...py                 # Centered Defence
+│   ├── phase7_...py                  # Linear Task Boost
+│   ├── phase7b_...py                 # Learned Task Boost
+│   ├── phase7c_...py                 # Boost Scaling
+│   ├── phase7d_...py                 # Constrained Boost
+│   ├── phase8a_...py                 # Immune Gating
+│   ├── phase8b_...py                 # War Surface
+│   ├── phase9a_...py                 # Virus Detector
+│   ├── phase9b_...py                 # Gated Defence V2
+│   ├── phase9c_...py                 # Needs Boost Detector
+│   ├── phase9d_...py                 # Gated Defence V3
+│   └── phase10_...py                 # Alien Generalization
+│
+└── README.md                          # Project documentation
 ```
 
 ---

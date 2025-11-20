@@ -1,0 +1,117 @@
+{
+  "layer": 10,
+  "baseline": {
+    "train": {
+      "accuracy": 0.9785,
+      "logit_diff": 3.4923118438720704
+    },
+    "test": {
+      "accuracy": 0.976,
+      "logit_diff": 3.609909484863281
+    }
+  },
+  "k_values": [
+    {
+      "k": 1,
+      "basis_dim": 1,
+      "defence_only": {
+        "train": {
+          "accuracy": 0.0005,
+          "logit_diff": -28.62894332708232
+        },
+        "test": {
+          "accuracy": 0.002,
+          "logit_diff": -28.216007947761565
+        }
+      },
+      "attack_only": {
+        "train": {
+          "accuracy": 0.0035,
+          "logit_diff": -28.318765319163212
+        },
+        "test": {
+          "accuracy": 0.008,
+          "logit_diff": -27.943370669728147
+        }
+      },
+      "attack_plus_defence": {
+        "train": {
+          "accuracy": 0.0,
+          "logit_diff": -28.59263700719329
+        },
+        "test": {
+          "accuracy": 0.002,
+          "logit_diff": -28.211378633126618
+        }
+      }
+    },
+    {
+      "k": 2,
+      "basis_dim": 2,
+      "defence_only": {
+        "train": {
+          "accuracy": 0.001,
+          "logit_diff": -28.304872338126646
+        },
+        "test": {
+          "accuracy": 0.002,
+          "logit_diff": -27.96669554463029
+        }
+      },
+      "attack_only": {
+        "train": {
+          "accuracy": 0.0035,
+          "logit_diff": -28.318765319163212
+        },
+        "test": {
+          "accuracy": 0.008,
+          "logit_diff": -27.943370669728147
+        }
+      },
+      "attack_plus_defence": {
+        "train": {
+          "accuracy": 0.0005,
+          "logit_diff": -28.1683113117367
+        },
+        "test": {
+          "accuracy": 0.0,
+          "logit_diff": -27.85596055728942
+        }
+      }
+    },
+    {
+      "k": 4,
+      "basis_dim": 4,
+      "defence_only": {
+        "train": {
+          "accuracy": 0.0,
+          "logit_diff": -27.681179049098866
+        },
+        "test": {
+          "accuracy": 0.0,
+          "logit_diff": -27.462613227987664
+        }
+      },
+      "attack_only": {
+        "train": {
+          "accuracy": 0.0035,
+          "logit_diff": -28.318765319163212
+        },
+        "test": {
+          "accuracy": 0.008,
+          "logit_diff": -27.943370669728147
+        }
+      },
+      "attack_plus_defence": {
+        "train": {
+          "accuracy": 0.0,
+          "logit_diff": -27.541268669096752
+        },
+        "test": {
+          "accuracy": 0.0,
+          "logit_diff": -27.33815820213407
+        }
+      }
+    }
+  ]
+}
