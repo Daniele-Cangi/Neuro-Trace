@@ -22,6 +22,7 @@ NeuroTrace is a research framework for understanding and controlling transformer
 7. **Integration (Phases 13-14)**: Built the final "Integrated Defence System" with Domain Guard and Damage Guard, achieving zero collateral damage.
 
 ---
+<img width="1408" height="752" alt="Gemini_Generated_Image_i3yqiki3yqiki3yq" src="https://github.com/user-attachments/assets/52181323-1171-4db4-90a8-64f5c940c108" />
 
 ## 📂 Repository Structure
 
