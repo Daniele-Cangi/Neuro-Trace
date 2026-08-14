@@ -149,21 +149,6 @@ The project therefore treats later phases as corrections and refinements of earl
 
 ---
 
-## Scope and non-claims
-
-NeuroTrace currently does **not** claim:
-
-- a universal transformer defense mechanism;
-- production-ready adversarial robustness;
-- generalization beyond the evaluated models/tasks without additional experiments;
-- that SAE correlations are causal by default;
-- that a 0% observed error or side-effect rate implies a true population rate of zero;
-- that the tested residual-stream interventions are safe for arbitrary prompts or domains;
-- external validation, certification, or state-of-the-art performance.
-
-The strongest claims supported by this repository are local to the declared experimental protocols.
-
----
 
 ## Repository structure
 
