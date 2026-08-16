@@ -246,6 +246,19 @@ The next useful tests are not stronger wording; they are broader evidence:
 - compare against simpler baselines and alternative intervention methods;
 - quantify confidence intervals and failure rates rather than relying on single-point metrics.
 
+### Contributing to the research frontier
+
+External contributions are especially useful when they test whether a NeuroTrace result survives outside the conditions that produced it. The current priority surfaces are:
+
+- **cross-seed reproducibility** of intervention and gating results;
+- **cross-task / cross-model replication** of the reported causal and layer-depth patterns;
+- **gating and detector behavior under distribution shift**;
+- **stronger simple baselines** that may explain or match a learned intervention.
+
+A contribution does not need to confirm the existing hypothesis. Clean failures to replicate, transfer failures, detector breakdowns, or simpler competing explanations are valuable results.
+
+See [`CONTRIBUTING.md`](CONTRIBUTING.md) for evidence boundaries, experiment proposal guidance, and claim discipline.
+
 ---
 
 ## References
